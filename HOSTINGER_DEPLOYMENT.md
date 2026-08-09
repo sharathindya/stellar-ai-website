@@ -16,27 +16,28 @@ This repository is fully configured for seamless, automated deployment to **Host
 
 ---
 
-## 🛠️ Step 1: Create & Push to GitHub
+## 🛠️ Step 1: Push to GitHub
 
-### Option A: Using GitHub Web Interface (Recommended)
-1. Go to [GitHub - New Repository](https://github.com/new).
-2. Set Repository Name (e.g. `stellar-ai-website`).
-3. Select **Public** or **Private** and click **Create repository** (Do not check "Add README" or ".gitignore" as we already have them).
-4. Run the following commands in your terminal inside this project folder:
+Your git remote has already been updated to:
+`https://github.com/sharathindya/stellar-ai-website.git`
 
-```bash
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/stellar-ai-website.git
-git push -u origin main
-git push origin deploy
-```
+### 1️⃣ Make sure the repository exists on GitHub
+If you haven't created the repository on GitHub yet:
+1. Go to [https://github.com/new](https://github.com/new).
+2. Repository name: `stellar-ai-website`
+3. Click **Create repository** (Do NOT add README or .gitignore).
 
-*(Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username).*
+### 2️⃣ Log in & Push from Terminal
+Run in your Terminal:
 
-### Option B: Using GitHub CLI (`gh`)
-Run in your terminal:
 ```bash
 gh auth login
-gh repo create stellar-ai-website --public --source=. --remote=origin --push
+```
+*(Follow the brief on-screen prompt to authenticate GitHub).*
+
+Then push both branches:
+```bash
+git push -u origin main
 git push origin deploy
 ```
 
@@ -48,9 +49,9 @@ git push origin deploy
 2. Go to **Websites** -> Click **Manage** next to your domain.
 3. In the left sidebar or search bar, open **Advanced** -> **Git**.
 4. Fill in the **Create a New Repository** form:
-   - **Repository URL**: `https://github.com/YOUR_GITHUB_USERNAME/stellar-ai-website.git`
+   - **Repository URL**: `https://github.com/sharathindya/stellar-ai-website.git`
    - **Branch**: `deploy`
-   - **Install Directory**: `public_html` (leave default or specify target folder)
+   - **Install Directory**: `public_html`
 5. Click **Create**.
 6. Click **Deploy** to instantly launch your website live!
 
@@ -61,15 +62,4 @@ git push origin deploy
 Whenever you push new changes to the `main` branch, the GitHub Action workflow (`.github/workflows/deploy-to-hostinger.yml`) will automatically:
 1. Build your Vite React application (`npm run build`)
 2. Push the updated built files directly to the `deploy` branch.
-3. Hostinger (if Webhook or Auto Deploy is enabled in hPanel) will instantly refresh your live site!
-
----
-
-## 📧 Contact Form Configuration on Hostinger
-
-`contact-handler.php` uses PHP `mail()` by default or custom SMTP environment variables.
-To configure Hostinger SMTP (Optional):
-- `SMTP_HOST`: `smtp.hostinger.com`
-- `SMTP_PORT`: `465`
-- `SMTP_USERNAME`: `your-email@yourdomain.com`
-- `SMTP_PASSWORD`: `your-email-password`
+3. Hostinger will instantly refresh your live site!
