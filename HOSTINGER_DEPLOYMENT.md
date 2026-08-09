@@ -63,3 +63,7 @@ Whenever you push new changes to the `main` branch, the GitHub Action workflow (
 1. Build your Vite React application (`npm run build`)
 2. Push the updated built files directly to the `deploy` branch.
 3. Hostinger will instantly refresh your live site!
+
+---
+✅ **Status**: Repository linked to Hostinger and GitHub Actions active.
+
