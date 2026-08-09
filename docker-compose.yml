@@ -1,0 +1,32 @@
+
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    container_name: monorepo-web
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - monorepo-network
+
+  pocketbase:
+    build:
+      context: .
+      dockerfile: Dockerfile.pocketbase
+    container_name: monorepo-pocketbase
+    ports:
+      - "8090:8090"
+    environment:
+      - PB_ENCRYPTION_KEY=${PB_ENCRYPTION_KEY:-demoencryptionkeyfor32charslongg}
+    restart: unless-stopped
+    networks:
+      - monorepo-network
+
+networks:
+  monorepo-network:
+    driver: bridge

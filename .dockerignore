@@ -1,0 +1,13 @@
+node_modules
+dist
+dist.zip
+.git
+.gitignore
+.DS_Store
+.vscode
+test-results
+tests
+vault
+.env
+.env.local
+*.log

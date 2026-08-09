@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+/.pnp
+.pnp.js
+
+# OS & Temp files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+dist.zip
+
+# Testing & Coverage
+/coverage
+/test-results
+
+# Environment & Secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.pem
+
+# Pocketbase Data
+apps/pocketbase/pb_data/*
+!apps/pocketbase/pb_data/.gitkeep
+
+# Build output (ignored in main branch, handled via deploy branch / GitHub Action)
+dist/
+apps/web/dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

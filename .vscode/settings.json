@@ -1,0 +1,10 @@
+{
+    "chat.byokUtilityModelDefault": "copilot",
+    "chat.mcp.serverSampling": {
+        "horizons-export-6c654ff7-edf7-4a2d-81d0-280cb4e9d115/.vscode/mcp.json: io.github.hostinger/hostinger-api-mcp": {
+            "allowedModels": [
+                "copilotcli/auto"
+            ]
+        }
+    }
+}

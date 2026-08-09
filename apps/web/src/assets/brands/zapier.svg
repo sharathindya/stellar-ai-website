@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Zapier logo">
+  <rect x="10" y="10" width="108" height="108" rx="24" fill="#0f172a"/>
+  <path d="M38 34h30l20 28-20 28H38l20-28z" fill="#ff6b6b"/>
+  <path d="M62 34h26l-8 12H54z" fill="#f8fafc" fill-opacity="0.9"/>
+</svg>

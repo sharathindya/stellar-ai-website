@@ -1,0 +1,32 @@
+[
+  {
+    "id": "9d122524-d8a6-4cd2-8c9e-22d5749b95f1",
+    "createdAt": "2026-08-08T10:30:55.999Z",
+    "name": "Test User",
+    "email": "test@example.com",
+    "company": "",
+    "phone": "",
+    "interest": "AI Certification Courses",
+    "message": "Visual and endpoint test"
+  },
+  {
+    "id": "dcd1fccb-9268-436b-b785-c42c28fc2ad5",
+    "createdAt": "2026-08-08T10:15:18.113Z",
+    "name": "Smoke Tester",
+    "email": "smoke@example.com",
+    "company": "",
+    "phone": "",
+    "interest": "Agentic AI Solutions",
+    "message": "Automated smoke test submission"
+  },
+  {
+    "id": "d0e426ee-9935-4996-a8e9-ac8c2beb64f9",
+    "createdAt": "2026-08-08T10:13:51.331Z",
+    "name": "Test User",
+    "email": "test@example.com",
+    "company": "",
+    "phone": "",
+    "interest": "AI Certification Courses",
+    "message": "This is a backend test submission."
+  }
+]

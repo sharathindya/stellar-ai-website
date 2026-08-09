@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Runway logo">
+  <rect x="10" y="10" width="108" height="108" rx="24" fill="#101d37"/>
+  <path d="M36 34h22l16 32 16-32h22l-32 60z" fill="#22d3ee"/>
+  <path d="M58 90h24" stroke="#f8fafc" stroke-width="8" stroke-linecap="round"/>
+</svg>

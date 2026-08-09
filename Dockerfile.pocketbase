@@ -1,0 +1,27 @@
+# Pocketbase binary service
+FROM node:22-alpine
+
+WORKDIR /app
+
+# Copy pocketbase app directory
+COPY apps/pocketbase ./apps/pocketbase
+
+# Set working directory to pocketbase
+WORKDIR /app/apps/pocketbase
+
+# Ensure pocketbase binary is executable
+RUN chmod +x ./pocketbase
+
+# Use local pb_data as the default data directory (volumes can override)
+WORKDIR /app/apps/pocketbase
+
+# Expose port
+EXPOSE 8090
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost:8090/api/health || exit 1
+
+# Start pocketbase - use 32 alphanumeric key via environment variable
+ENV PB_ENCRYPTION_KEY=demoencryptionkeyfor32charslongg
+CMD ["./pocketbase", "serve", "--http=0.0.0.0:8090", "--encryptionEnv=PB_ENCRYPTION_KEY", "--dir=./pb_data", "--migrationsDir=./pb_migrations", "--hooksDir=./pb_hooks", "--hooksWatch=false"]

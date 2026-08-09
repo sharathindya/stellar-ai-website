@@ -1,0 +1,38 @@
+# Multi-stage build: compile React app, serve with Node
+FROM node:22-alpine AS builder
+
+WORKDIR /app
+
+# Copy root and workspace configs
+COPY package*.json ./
+COPY apps/web ./apps/web
+COPY apps/pocketbase ./apps/pocketbase
+COPY .nvmrc ./
+
+# Install dependencies (root and workspaces)
+RUN npm ci
+
+# Build web app
+RUN npm run build --prefix apps/web
+
+# Runtime stage
+FROM node:22-alpine
+
+WORKDIR /app
+
+# Install serve globally for static preview
+RUN npm install -g serve
+
+# Copy root package.json (needed for workspace resolution if dev deps required at runtime)
+COPY package*.json ./
+COPY --from=builder /app/dist ./dist
+
+# Expose port
+EXPOSE 3000
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD wget --quiet --tries=1 --spider http://localhost:3000 || exit 1
+
+# Start the built app
+CMD ["serve", "-s", "dist/apps/web", "-l", "3000"]
