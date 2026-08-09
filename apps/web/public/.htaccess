@@ -1,3 +1,6 @@
+# Explicitly set index.html as the default index file
+DirectoryIndex index.html
+
 # Apache configuration for React SPA routing on Hostinger Web Hosting
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -9,7 +12,7 @@
   RewriteRule . /index.html [L]
 </IfModule>
 
-# Security Headers & Caching
+# Security Headers
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"
   Header set X-Frame-Options "SAMEORIGIN"
