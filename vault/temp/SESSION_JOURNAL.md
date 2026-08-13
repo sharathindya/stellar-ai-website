@@ -488,3 +488,418 @@
 - url: http://127.0.0.1:3000/
 - via: replaceState
 
+## 2026-08-13 22:12:44.193Z load
+- url: http://localhost:3000/
+
+## 2026-08-13 22:12:44.564Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-13 22:13:32.659Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Launch Agent Sandbox"}
+
+## 2026-08-13 22:13:32.664Z navigate
+- url: http://localhost:3000/#contact
+- via: popstate
+
+## 2026-08-13 22:13:35.449Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Live Demo"}
+
+## 2026-08-13 22:13:35.451Z navigate
+- url: http://localhost:3000/#demo
+- via: popstate
+
+## 2026-08-13 22:13:39.004Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Book Technical Audit"}
+
+## 2026-08-13 22:13:39.006Z navigate
+- url: http://localhost:3000/#contact
+- via: popstate
+
+## 2026-08-13 22:13:40.717Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"StellarAIAUTONOMOUS AGENTSLive DemoCapabilitiesArchitectureROI CalculatorOutcomesLaunch Agent Sandbox"}
+
+## 2026-08-13 22:13:41.526Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Live Demo"}
+
+## 2026-08-13 22:13:41.528Z navigate
+- url: http://localhost:3000/#demo
+- via: popstate
+
+## 2026-08-13 22:13:52.138Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Growth Co-Founder"}
+
+## 2026-08-13 22:13:57.467Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Doc Intelligence"}
+
+## 2026-08-13 22:13:58.539Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Doc Intelligence"}
+
+## 2026-08-13 22:14:00.473Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Type an agent instruction...","label":"Type an agent instruction...","value":"Extract line items, tax IDs, and total due from scanned invoice PDF.","valueLength":68,"text":""}
+
+## 2026-08-13 22:14:00.475Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Type an agent instruction...","label":"Type an agent instruction...","value":"Extract line items, tax IDs, and total due from scanned invoice PDF.","valueLength":68,"text":""}
+
+## 2026-08-13 22:14:05.450Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Type an agent instruction...","label":"Type an agent instruction...","value":"Extract line items, tax IDs, and total due from scanned invoice PDF.","valueLength":68,"text":""}
+
+## 2026-08-13 22:14:05.937Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Execute"}
+
+## 2026-08-13 22:14:14.838Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Capabilities"}
+
+## 2026-08-13 22:14:14.840Z navigate
+- url: http://localhost:3000/#capabilities
+- via: popstate
+
+## 2026-08-13 22:14:15.822Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Architecture"}
+
+## 2026-08-13 22:14:15.826Z navigate
+- url: http://localhost:3000/#architecture
+- via: popstate
+
+## 2026-08-13 22:14:16.736Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"ROI Calculator"}
+
+## 2026-08-13 22:14:16.739Z navigate
+- url: http://localhost:3000/#calculator
+- via: popstate
+
+## 2026-08-13 22:14:18.249Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Outcomes"}
+
+## 2026-08-13 22:14:18.251Z navigate
+- url: http://localhost:3000/#outcomes
+- via: popstate
+
+## 2026-08-13 22:14:36.701Z click
+- element: {"tag":"pre","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"const rcmAgent = new StellarAgent({\n  domain: \"healthcare.rcm\",\n  compliance: [\"HIPAA\", \"ABDM_DPDP\"],\n  model: \"claude-3-5-sonnet\",\n  tools: [EHRConnector, ClaimsEngine, AppealGenerator]\n});\nawait rcmAgent.execute({ claimId: \"CLM-90824\" });"}
+
+## 2026-08-13 22:14:54.158Z click
+- element: {"tag":"h3","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Enterprise AI Training & Certification"}
+
+## 2026-08-13 22:14:55.383Z click
+- element: {"tag":"h3","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Enterprise AI Training & Certification"}
+
+## 2026-08-13 22:14:56.251Z click
+- element: {"tag":"h3","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Enterprise AI Training & Certification"}
+
+## 2026-08-13 22:15:13.813Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Capabilities"}
+
+## 2026-08-13 22:15:13.815Z navigate
+- url: http://localhost:3000/#capabilities
+- via: popstate
+
+## 2026-08-13 22:15:14.763Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Live Demo"}
+
+## 2026-08-13 22:15:14.765Z navigate
+- url: http://localhost:3000/#demo
+- via: popstate
+
+## 2026-08-13 22:15:24.763Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Growth Co-Founder"}
+
+## 2026-08-13 22:15:38.905Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":" Node Trace & Reasoning"}
+
+## 2026-08-13 22:15:49.358Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Doc Intelligence"}
+
+## 2026-08-13 22:15:50.659Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Healthcare RCM"}
+
+## 2026-08-13 22:16:09.264Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Try Interactive Sandbox"}
+
+## 2026-08-13 22:16:09.267Z navigate
+- url: http://localhost:3000/#demo
+- via: popstate
+
+## 2026-08-13 22:16:13.180Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Try Interactive Sandbox"}
+
+## 2026-08-13 22:16:13.182Z navigate
+- url: http://localhost:3000/#demo
+- via: popstate
+
+## 2026-08-13 22:16:15.846Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"> [0.12s] Context retrieved: Policy #HC-882, Patient ABHA #91-8821-4921..."}
+
+## 2026-08-13 22:16:16.630Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"> [0.34s] Agent Rule Evaluation: Procedure Code 99214 meets emergency criteria under Section 4-B."}
+
+## 2026-08-13 22:16:16.813Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"> [0.34s] Agent Rule Evaluation: Procedure Code 99214 meets emergency criteria under Section 4-B."}
+
+## 2026-08-13 22:16:17.936Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Type an agent instruction...","label":"Type an agent instruction...","value":"Audit claim #CLM-94021 rejected under code CO-50 (non-covered service) and draft formal appeal.","valueLength":95,"text":""}
+
+## 2026-08-13 22:16:17.953Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Type an agent instruction...","label":"Type an agent instruction...","value":"Audit claim #CLM-94021 rejected under code CO-50 (non-covered service) and draft formal appeal.","valueLength":95,"text":""}
+
+## 2026-08-13 22:16:22.032Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Type an agent instruction...","label":"Type an agent instruction...","value":"Audit claim #CLM-94021 rejected under code CO-50 (non-covered service) and draft formal appeal.","valueLength":95,"text":""}
+
+## 2026-08-13 22:16:37.923Z focus
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Type an agent instruction...","label":"Type an agent instruction...","value":"Audit claim #CLM-94021 rejected under code CO-50 (non-covered service) and draft formal appeal.","valueLength":95,"text":""}
+
+## 2026-08-13 22:16:52.745Z blur
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"text","id":null,"placeholder":"Type an agent instruction...","label":"Type an agent instruction...","value":"Audit claim #CLM-94021 rejected under code CO-50 (non-covered service) and draft formal appeal.","valueLength":95,"text":""}
+
+## 2026-08-13 22:16:52.833Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Lock In Your Automation Plan"}
+
+## 2026-08-13 22:16:52.835Z navigate
+- url: http://localhost:3000/#contact
+- via: popstate
+
+## 2026-08-13 22:20:32.734Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Outcomes"}
+
+## 2026-08-13 22:20:32.736Z navigate
+- url: http://localhost:3000/#outcomes
+- via: popstate
+
+## 2026-08-13 22:22:05.903Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"StellarAIAUTONOMOUS AGENTSLive DemoCapabilitiesArchitectureROI CalculatorOutcomesLaunch Agent Sandbox"}
+
+## 2026-08-13 22:22:06.938Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Architecture"}
+
+## 2026-08-13 22:22:06.939Z navigate
+- url: http://localhost:3000/#architecture
+- via: popstate
+
+## 2026-08-13 22:22:07.824Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"StellarAIAUTONOMOUS AGENTSLive DemoCapabilitiesArchitectureROI CalculatorOutcomesLaunch Agent Sandbox"}
+
+## 2026-08-13 22:22:08.622Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Capabilities"}
+
+## 2026-08-13 22:22:08.624Z navigate
+- url: http://localhost:3000/#capabilities
+- via: popstate
+
+## 2026-08-13 22:22:15.250Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"STELLAR AGENTIC OS 2.0 IS LIVEAutonomous AI Agents built for Next-Gen IntelligenceDeploy enterprise-grade straight-through agentic workflows, Healthcare RCM automation, autonomous growth engines, and HIPAA/ABDM compliant data pipelines in weeks.Try Interactive SandboxBook Technical Auditstellar-agent-control-room.v2Healthcare RCMGrowth Co-FounderDoc IntelligenceExecute Node Trace & ReasoningLatency: 28ms> [0.01s] Ingesting claim payload CLM-94021...> [0.12s] Context retrieved: Policy #HC-882, Patient ABHA #91-8821-4921...> [0.34s] Agent Rule Evaluation: Procedure Code 99214 meets emergency criteria under Section 4-B.> [0.68s] Generating CMS-compliant formal appeal letter with medical necessity citations...> [0.95s] Verification complete. Appeal package dispatched to insurer portal API. Output PayloadSTP Verified✅ APPEAL GENERATED & SENT\nClaim ID: CLM-94021 | Status: Auto-Submitted\nReason: Medical necessity established via clinical EHR attachment.\nEstimated Recovery: $4,850.00"}
+
+## 2026-08-13 22:22:15.799Z click
+- element: {"tag":"svg","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-13 22:25:40.853Z load
+- url: http://localhost:3000/
+
+## 2026-08-13 22:25:41.090Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-13 22:25:45.761Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Self-Healing Code Agent"}
+
+## 2026-08-13 22:25:59.751Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Contract Compliance Agent"}
+
+## 2026-08-13 22:26:01.333Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Omnichannel Customer Swarm"}
+
+## 2026-08-13 22:26:10.878Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"range","id":null,"placeholder":null,"label":"[range]","value":"400","valueLength":3,"text":""}
+
+## 2026-08-13 22:26:10.878Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"range","id":null,"placeholder":null,"label":"[range]","value":"400","valueLength":3,"text":""}
+
+## 2026-08-13 22:26:13.465Z change
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"range","id":null,"placeholder":null,"label":"[range]","value":"75","valueLength":2,"text":""}
+
+## 2026-08-13 22:26:13.465Z click
+- element: {"tag":"input","role":null,"ariaLabel":null,"name":null,"type":"range","id":null,"placeholder":null,"label":"[range]","value":"75","valueLength":2,"text":""}
+
+## 2026-08-13 22:26:27.133Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Paid Certifications"}
+
+## 2026-08-13 22:26:27.135Z navigate
+- url: http://localhost:3000/#certifications
+- via: popstate
+
+## 2026-08-13 22:26:46.479Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Explore Careers & Courses"}
+
+## 2026-08-13 22:26:46.635Z load
+- url: http://localhost:3000/careers
+
+## 2026-08-13 22:26:46.760Z navigate
+- url: http://localhost:3000/careers
+- via: replaceState
+
+## 2026-08-13 22:27:18.178Z load
+- url: http://localhost:3000/careers
+
+## 2026-08-13 22:27:24.619Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Apply For Position"}
+
+## 2026-08-13 22:27:27.421Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-13 22:28:37.333Z navigate
+- url: http://localhost:3000/#capabilities
+- via: replaceState
+
+## 2026-08-13 22:28:50.859Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Engineering"}
+
+## 2026-08-13 22:28:51.585Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"AllEngineeringHealthcare AIGrowth & Product"}
+
+## 2026-08-13 22:28:52.529Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Healthcare AI"}
+
+## 2026-08-13 22:28:53.519Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Growth & Product"}
+
+## 2026-08-13 22:29:01.179Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"All"}
+
+## 2026-08-13 22:29:05.249Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"USD","valueLength":3,"text":"🇺🇸 USD ($)🇮🇳 INR (₹)🇪🇺 EUR (€)🇬🇧 GBP (£)🇦🇪 AED"}
+
+## 2026-08-13 22:29:07.954Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":"[select]","value":"USD","valueLength":3,"text":"🇺🇸 USD ($)🇮🇳 INR (₹)🇪🇺 EUR (€)🇬🇧 GBP (£)🇦🇪 AED"}
+
+## 2026-08-13 22:29:07.976Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Home Platform"}
+
+## 2026-08-13 22:29:08.164Z load
+- url: http://localhost:3000/
+
+## 2026-08-13 22:29:08.292Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-13 22:29:33.611Z load
+- url: http://localhost:3000/
+
+## 2026-08-13 22:29:39.122Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"2026 Capabilities"}
+
+## 2026-08-13 22:29:39.124Z navigate
+- url: http://localhost:3000/#capabilities
+- via: popstate
+
+## 2026-08-13 22:29:48.490Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Automated AST analysis & OWASP Top 10 for LLMs vulnerability scans"}
+
+## 2026-08-13 22:29:49.756Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Autonomous agents that scan repositories, detect syntax/security vulnerabilities, generate fixes, run test suites, and open PRs."}
+
+## 2026-08-13 22:29:50.689Z click
+- element: {"tag":"h3","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Self-Healing Code & Security Auditor"}
+
+## 2026-08-13 22:29:51.824Z click
+- element: {"tag":"path","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":""}
+
+## 2026-08-13 22:29:52.456Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"OWASP LLM Guardrails"}
+
+## 2026-08-13 22:30:10.957Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"STELLAR AGENTIC OS 2.0 LIVEAutonomous AI Agents built for Next-Gen IntelligenceDeploy enterprise multi-agent swarms, GraphRAG memory pipelines, self-healing code auditors, and HIPAA/ABDM compliant healthcare automation in weeks.Try 6 Live Agent DemosExplore Careers & Coursesstellar-agent-sandbox-control.v26 Live Agent Presets AvailableHealthcare RCM AgentGrowth Co-FounderDoc IntelligenceSelf-Healing Code AgentContract Compliance AgentOmnichannel Customer SwarmExecute Reasoning Node TraceLatency: 24ms> [0.01s] Ingesting claim payload CLM-94021...> [0.12s] Context retrieved: Policy #HC-882, Patient ABHA #91-8821-4921...> [0.34s] Agent Rule Evaluation: Procedure Code 99214 meets emergency criteria under Section 4-B.> [0.68s] Generating CMS-compliant formal appeal letter with medical necessity citations...> [0.95s] Verification complete. Appeal package dispatched to insurer portal API. Output PayloadSTP Verified✅ APPEAL GENERATED & SENT\nClaim ID: CLM-94021 | Status: Auto-Submitted\nReason: Medical necessity established via clinical EHR attachment.\nEstimated Recovery: $4,850.00"}
+
+## 2026-08-13 22:31:19.494Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":"cf-interest","placeholder":null,"label":"Area of interest","value":"Agentic AI Solutions","valueLength":20,"text":"Agentic AI SolutionsAI Applications & ToolsAgent Migration & OptimisationAI Based ProductsWorkflow AutomationsAI Certification Courses"}
+
+## 2026-08-13 22:31:19.522Z click
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":"cf-interest","placeholder":null,"label":"Area of interest","value":"Agentic AI Solutions","valueLength":20,"text":"Agentic AI SolutionsAI Applications & ToolsAgent Migration & OptimisationAI Based ProductsWorkflow AutomationsAI Certification Courses"}
+
+## 2026-08-13 22:31:41.968Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":"cf-interest","placeholder":null,"label":"Area of interest","value":"Agentic AI Solutions","valueLength":20,"text":"Agentic AI SolutionsAI Applications & ToolsAgent Migration & OptimisationAI Based ProductsWorkflow AutomationsAI Certification Courses"}
+
+## 2026-08-13 22:32:31.333Z focus
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":"cf-interest","placeholder":null,"label":"Area of interest","value":"Agentic AI Solutions","valueLength":20,"text":"Agentic AI SolutionsAI Applications & ToolsAgent Migration & OptimisationAI Based ProductsWorkflow AutomationsAI Certification Courses"}
+
+## 2026-08-13 22:32:35.070Z blur
+- element: {"tag":"select","role":null,"ariaLabel":null,"name":null,"type":null,"id":"cf-interest","placeholder":null,"label":"Area of interest","value":"Agentic AI Solutions","valueLength":20,"text":"Agentic AI SolutionsAI Applications & ToolsAgent Migration & OptimisationAI Based ProductsWorkflow AutomationsAI Certification Courses"}
+
+## 2026-08-13 22:32:35.086Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Live Playground"}
+
+## 2026-08-13 22:32:35.088Z navigate
+- url: http://localhost:3000/#demo
+- via: popstate
+
+## 2026-08-13 22:38:15.380Z load
+- url: http://localhost:3000/
+
+## 2026-08-13 22:38:15.565Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-13 22:38:19.717Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Try 6 Live Agent Demos"}
+
+## 2026-08-13 22:38:19.719Z navigate
+- url: http://localhost:3000/#demo
+- via: popstate
+
+## 2026-08-13 22:38:26.588Z click
+- element: {"tag":"p","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Claude 3.5 / GPT-4o Router"}
+
+## 2026-08-13 22:39:09.376Z click
+- element: {"tag":"span","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"STELLAR AGENTIC OS 2.0 LIVE"}
+
+## 2026-08-13 22:39:10.261Z click
+- element: {"tag":"div","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"STELLAR AGENTIC OS 2.0 LIVE"}
+
+## 2026-08-13 22:39:32.665Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Platform & Demos"}
+
+## 2026-08-13 22:39:32.668Z navigate
+- url: http://localhost:3000/#demo
+- via: popstate
+
+## 2026-08-13 22:39:33.598Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"2026 Capabilities"}
+
+## 2026-08-13 22:39:33.601Z navigate
+- url: http://localhost:3000/#capabilities
+- via: popstate
+
+## 2026-08-13 22:39:34.815Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"StellarAIAUTONOMOUS AGENTS"}
+
+## 2026-08-13 22:39:34.818Z navigate
+- url: http://localhost:3000/#top
+- via: popstate
+
+## 2026-08-13 22:39:58.464Z load
+- url: http://localhost:3000/
+
+## 2026-08-13 22:39:58.724Z navigate
+- url: http://localhost:3000/
+- via: replaceState
+
+## 2026-08-13 22:40:04.682Z click
+- element: {"tag":"a","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Industry Specs"}
+
+## 2026-08-13 22:40:04.686Z navigate
+- url: http://localhost:3000/#industries
+- via: popstate
+
+## 2026-08-13 22:40:09.042Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"FinTech & BFSI"}
+
+## 2026-08-13 22:40:10.386Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"E-Commerce & Retail"}
+
+## 2026-08-13 22:40:11.503Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Legal & Real Estate"}
+
+## 2026-08-13 22:40:12.486Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"Logistics & Supply Chain"}
+
+## 2026-08-13 22:40:13.554Z click
+- element: {"tag":"button","role":null,"ariaLabel":null,"name":null,"type":null,"id":null,"placeholder":null,"label":null,"value":null,"valueLength":0,"text":"EdTech & Research"}
+
