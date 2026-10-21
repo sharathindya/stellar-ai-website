@@ -13,7 +13,7 @@ const INTERESTS = [
 const empty = { name: '', email: '', company: '', phone: '', interest: INTERESTS[0], message: '' };
 
 const field =
-    'w-full rounded-sm border border-border bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20';
+    'w-full rounded-sm border border-border bg-[#111111] px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20';
 
 const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_API_URL || (import.meta.env.DEV ? '/api/contact' : '/contact-handler.php');
 

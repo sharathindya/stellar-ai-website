@@ -7,15 +7,15 @@ const CurrencySelector = () => {
 
     return (
         <div className="relative flex items-center">
-            <div className="flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs text-slate-900 shadow-sm">
-                <Globe className="h-3.5 w-3.5 text-teal-700" />
+            <div className="flex items-center gap-1.5 rounded-full border border-[#262626] bg-[#111111] px-3 py-1.5 text-xs text-[#e5e5e5]">
+                <Globe className="h-3.5 w-3.5 text-teal-400" />
                 <select
                     value={currency}
                     onChange={(e) => setCurrency(e.target.value)}
-                    className="bg-transparent font-mono text-xs text-teal-700 font-semibold focus:outline-none cursor-pointer"
+                    className="bg-transparent font-mono text-xs text-teal-400 font-semibold focus:outline-none cursor-pointer"
                 >
                     {Object.values(CURRENCIES).map((c) => (
-                        <option key={c.code} value={c.code} className="bg-white text-slate-900">
+                        <option key={c.code} value={c.code} className="bg-[#111111] text-[#e5e5e5]">
                             {c.flag} {c.label}
                         </option>
                     ))}
