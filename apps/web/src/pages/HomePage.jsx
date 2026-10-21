@@ -673,9 +673,6 @@ const HomePage = () => {
                 <Reveal>
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="eyebrow">WHAT WE BUILD</span>
-                        <h2 className="mt-3 section-title">
-                            AI agents for real work
-                        </h2>
                         <p className="mt-4 text-[#a3a3a3] text-base sm:text-lg">
                             Agent teams, RAG over your own data, code-review agents and healthcare workflows, each with guardrails and human review built in.
                         </p>
@@ -751,9 +748,6 @@ const HomePage = () => {
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="eyebrow">INDUSTRIES</span>
-                        <h2 className="mt-3 section-title">
-                            Built for your industry
-                        </h2>
                         <p className="mt-4 text-[#a3a3a3] text-base sm:text-lg">
                             See how AI agents take on everyday workflow problems in Healthcare, FinTech, E-Commerce, Legal, Logistics, and EdTech.
                         </p>
@@ -848,9 +842,6 @@ const HomePage = () => {
                     <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
                         <div>
                             <span className="eyebrow">LEARN WITH US</span>
-                            <h2 className="mt-2 section-title">
-                                Paid AI Certification Cohorts
-                            </h2>
                         </div>
                         <a
                             href="/careers#certifications"
@@ -895,9 +886,6 @@ const HomePage = () => {
                     <div className="grid gap-12 lg:grid-cols-2 items-center">
                         <div>
                             <span className="eyebrow">ROI CALCULATOR</span>
-                            <h2 className="mt-3 section-title">
-                                Estimate what AI agents could save you
-                            </h2>
                             <p className="mt-4 text-sm text-[#a3a3a3] leading-relaxed">
                                 See how much operational cost and time your team reclaims by switching manual claims, lead generation, and document processing to AI agents with human review.
                             </p>
@@ -973,9 +961,6 @@ const HomePage = () => {
                 <div className="grid gap-12 lg:grid-cols-2 items-center">
                     <div>
                         <span className="eyebrow">GET STARTED</span>
-                        <h2 className="mt-3 section-title">
-                            Book a free 30-minute discovery call
-                        </h2>
                         <p className="mt-4 text-[#a3a3a3] text-base leading-relaxed">
                             Tell us which tasks eat your team's time. We'll map where AI agents fit and propose a small, scoped pilot.
                         </p>

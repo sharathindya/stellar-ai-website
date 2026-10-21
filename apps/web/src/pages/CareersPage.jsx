@@ -154,6 +154,7 @@ const COMPLIANCE_CREDENTIALS = [
 ];
 
 const CareersPage = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
     const { format, current } = useCurrency();
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [applyModalOpen, setApplyModalOpen] = useState(false);
@@ -217,7 +218,7 @@ const CareersPage = () => {
                         </div>
                     </a>
 
-                    <nav className="hidden items-center gap-8 md:flex">
+                    <nav className="ml-10 mr-6 hidden items-center gap-6 xl:flex">
                         <a href="/" className="nav-link">Home Platform</a>
                         <a href="#positions" className="nav-link">Startup Roles</a>
                         <a href="#internships" className="nav-link">Paid Internships</a>
@@ -225,18 +226,37 @@ const CareersPage = () => {
                         <a href="#credentials" className="nav-link">Industry Standards</a>
                     </nav>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 sm:gap-4">
                         {/* Currency Selector */}
                         <CurrencySelector />
 
                         <a
                             href="#positions"
-                            className="inline-flex items-center gap-2 whitespace-nowrap rounded-none border-2 border-white px-5 py-2 text-xs font-semibold uppercase tracking-widest text-white transition hover:bg-white hover:text-black"
+                            className="hidden sm:inline-flex items-center gap-2 whitespace-nowrap rounded-none border-2 border-white px-5 py-2 text-xs font-semibold uppercase tracking-widest text-white transition hover:bg-white hover:text-black"
                         >
                             <span>View Open Roles</span>
                         </a>
+                        <button type="button" className="xl:hidden inline-flex h-11 w-11 items-center justify-center text-white" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="mobile-menu" onClick={() => setMenuOpen((o) => !o)}>
+                            <span className="relative block h-3.5 w-6" aria-hidden="true">
+                                <span className={`absolute left-0 top-0 h-0.5 w-6 bg-white transition ${menuOpen ? 'translate-y-[6px] rotate-45' : ''}`} />
+                                <span className={`absolute left-0 top-[6px] h-0.5 w-6 bg-white transition ${menuOpen ? 'opacity-0' : ''}`} />
+                                <span className={`absolute left-0 top-3 h-0.5 w-6 bg-white transition ${menuOpen ? '-translate-y-[6px] -rotate-45' : ''}`} />
+                            </span>
+                        </button>
                     </div>
                 </div>
+                {menuOpen && (
+                    <nav id="mobile-menu" className="xl:hidden border-t border-white/10 bg-black px-6 py-6" onClick={() => setMenuOpen(false)}>
+                        <ul className="flex flex-col gap-5">
+                            <li><a href="/" className="nav-link">Home Platform</a></li>
+                            <li><a href="#positions" className="nav-link">Startup Roles</a></li>
+                            <li><a href="#internships" className="nav-link">Paid Internships</a></li>
+                            <li><a href="#certifications" className="nav-link">Paid Certifications</a></li>
+                            <li><a href="#credentials" className="nav-link">Industry Standards</a></li>
+                            <li><a href="#positions" className="nav-link">View Open Roles</a></li>
+                        </ul>
+                    </nav>
+                )}
             </header>
 
             {/* Hero Scene */}
