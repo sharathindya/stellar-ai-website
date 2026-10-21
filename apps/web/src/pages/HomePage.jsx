@@ -13,6 +13,7 @@ import { toast } from 'sonner';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
+import { ContactCard, FooterCompany } from '@/components/CompanyContact';
 import ContactForm from '@/components/ContactForm';
 import CurrencySelector from '@/components/CurrencySelector';
 import { useCurrency } from '@/contexts/CurrencyContext';
@@ -1005,6 +1006,8 @@ const HomePage = () => {
                                 <span>Flexible deployment: Multi-Tenant Cloud or Private VPC</span>
                             </div>
                         </div>
+
+                        <ContactCard />
                     </div>
 
                     <div className="rounded-2xl cyber-glass border border-[#262626] p-8">
@@ -1019,8 +1022,7 @@ const HomePage = () => {
                     <div className="flex items-center gap-3">
                         <Sparkles className="h-5 w-5 text-teal-400" />
                         <span className="font-display font-bold text-[#e5e5e5]">Stellar AI Agents</span>
-                        <span className="text-xs font-mono text-[#a3a3a3]">© 2026 Stellar AI. All rights reserved.</span>
-                    </div>
+                                            </div>
 
                     <div className="flex items-center gap-6 text-xs text-[#a3a3a3]">
                         <a href="/careers" className="hover:text-teal-400 transition">Careers & Internships</a>
@@ -1028,6 +1030,7 @@ const HomePage = () => {
                         <a href="#top" className="hover:text-teal-400 transition">HIPAA Compliance</a>
                     </div>
                 </div>
+                <FooterCompany />
             </footer>
         </div>
     );

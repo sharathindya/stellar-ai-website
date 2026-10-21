@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { toast } from 'sonner';
 import Seo from '@/components/Seo';
+import { ContactCard, FooterCompany } from '@/components/CompanyContact';
 import CurrencySelector from '@/components/CurrencySelector';
 import { useCurrency } from '@/contexts/CurrencyContext';
 
@@ -589,6 +590,7 @@ const CareersPage = () => {
                         <a href="#certifications" className="hover:text-teal-400 transition">Paid Certifications</a>
                     </div>
                 </div>
+                <FooterCompany />
             </footer>
         </div>
     );
