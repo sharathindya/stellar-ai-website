@@ -6,20 +6,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   overflow-x: clip;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(34,211,238,0.25), transparent 70%),
-    radial-gradient(circle at 85% 30%, rgba(139,92,246,0.20), transparent 40%),
-    radial-gradient(circle at 15% 75%, rgba(56,189,248,0.18), transparent 45%),
-    linear-gradient(180deg, #020617 0%, #080d1a 50%, #030712 100%);
-  color: #f8fafc;
+  background: #ffffff;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
 }
 
-.font-display { font-family: "Space Grotesk", sans-serif; }
+.font-display { font-family: "Inter", system-ui, sans-serif; letter-spacing: -0.02em; }
 
 ::selection {
   background: rgba(34, 211, 238, 0.3);
@@ -216,3 +214,19 @@ body {
     --sidebar-ring: 196 100% 62%;
   }
 }
+
+
+/* ===== Light minimal redesign overrides ===== */
+::selection { background: #e0e7ff; color: #312e81; }
+.glow-gradient-text, .glow-subtle-text { background: none; -webkit-text-fill-color: currentColor; color: #4f46e5; }
+.glow-subtle-text { color: #0f172a; }
+.cyber-glass { background: #ffffff; backdrop-filter: none; -webkit-backdrop-filter: none; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(15,23,42,0.04); }
+.cyber-glass-hover:hover { border-color: #a5b4fc; box-shadow: 0 4px 16px rgba(15,23,42,0.06); transform: none; }
+.card-3d-tilt, .card-3d-tilt:hover { transform: none !important; }
+.perspective-1000 { perspective: none; }
+.animate-float, .animate-pulse-glow { animation: none !important; }
+.grid-lines { background-image: none !important; }
+.brand-glow-card::before, .brand-chip::before { display: none; }
+section { scroll-margin-top: 80px; }
+section + section { border-top: 1px solid #f1f5f9; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }

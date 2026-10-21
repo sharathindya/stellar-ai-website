@@ -406,7 +406,7 @@ const HomePage = () => {
     const hoursSavedYearly = Math.round(manualHours * 12 * 0.65);
 
     return (
-        <div className="min-h-screen bg-[#020617] text-slate-100 font-sans selection:bg-cyan-500/30 selection:text-cyan-300">
+        <div className="min-h-screen bg-white text-slate-900 font-sans">
             <Helmet>
                 <title>Stellar AI | Autonomous AI Agents, Multi-Agent Swarms & Industry Solutions</title>
                 <meta
@@ -423,30 +423,30 @@ const HomePage = () => {
             />
 
             {/* Glowing Reordered Navbar */}
-            <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
+            <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
                 <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
                     <a href="#top" className="flex items-center gap-3 group">
-                        <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 p-[1px] shadow-[0_0_20px_rgba(56,189,248,0.3)]">
-                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-slate-950">
-                                <Sparkles className="h-5 w-5 text-cyan-400" />
+                        <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 p-[1px]">
+                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-white">
+                                <Sparkles className="h-5 w-5 text-indigo-600" />
                             </div>
                         </div>
                         <div>
-                            <span className="font-display text-lg font-bold tracking-tight text-white flex items-center gap-1.5">
+                            <span className="font-display text-lg font-bold tracking-tight text-slate-900 flex items-center gap-1.5">
                                 Stellar<span className="glow-gradient-text">AI</span>
                             </span>
-                            <span className="block text-[10px] font-mono tracking-widest text-cyan-400/80 uppercase">AUTONOMOUS AGENTS</span>
+                            <span className="block text-[10px] font-mono tracking-widest text-indigo-600 uppercase">AUTONOMOUS AGENTS</span>
                         </div>
                     </a>
 
                     {/* Reasonably Reordered Header Tabs */}
                     <nav className="hidden items-center gap-6 lg:flex">
-                        <a href="#demo" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Platform & Demos</a>
-                        <a href="#capabilities" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">2026 Capabilities</a>
-                        <a href="#industries" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Industry Specs</a>
-                        <a href="#calculator" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">ROI Calculator</a>
-                        <a href="#certifications" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Paid Certifications</a>
-                        <a href="/careers" className="text-sm font-medium text-cyan-300 transition hover:text-cyan-400 flex items-center gap-1">
+                        <a href="#demo" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Platform & Demos</a>
+                        <a href="#capabilities" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">2026 Capabilities</a>
+                        <a href="#industries" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Industry Specs</a>
+                        <a href="#calculator" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">ROI Calculator</a>
+                        <a href="#certifications" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Paid Certifications</a>
+                        <a href="/careers" className="text-sm font-medium text-indigo-600 transition hover:text-indigo-600 flex items-center gap-1">
                             <Briefcase className="h-3.5 w-3.5" /> Careers & Internships
                         </a>
                     </nav>
@@ -455,7 +455,7 @@ const HomePage = () => {
                         <CurrencySelector />
                         <a
                             href="#contact"
-                            className="relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600 px-5 py-2.5 text-xs font-semibold text-white shadow-[0_0_25px_rgba(56,189,248,0.4)] transition-all hover:shadow-[0_0_35px_rgba(56,189,248,0.6)]"
+                            className="relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-indigo-600 px-5 py-2.5 text-xs font-semibold text-slate-900 transition-all"
                         >
                             <Zap className="h-3.5 w-3.5" />
                             <span>Launch Sandbox</span>
@@ -466,16 +466,16 @@ const HomePage = () => {
 
             {/* Hero Section */}
             <section id="top" className="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-32 grid-lines">
-                <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-gradient-to-tr from-cyan-500/20 via-indigo-500/20 to-purple-500/10 blur-[120px]" />
+                <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-indigo-50 opacity-60" />
 
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-mono text-cyan-300 mb-8 backdrop-blur-md shadow-[0_0_15px_rgba(56,189,248,0.15)]"
+                        className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-xs font-mono text-indigo-600 mb-8"
                     >
-                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
+                        <span className="h-2 w-2 rounded-full bg-indigo-600 animate-pulse" />
                         <span>STELLAR AGENTIC OS 2.0 LIVE</span>
                         <ChevronRight className="h-3.5 w-3.5 opacity-70" />
                     </motion.div>
@@ -484,7 +484,7 @@ const HomePage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.1 }}
-                        className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl lg:leading-[1.1]"
+                        className="font-display text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl md:text-7xl lg:leading-[1.1]"
                     >
                         Autonomous AI Agents built for <br className="hidden sm:inline" />
                         <span className="glow-gradient-text">Next-Gen Intelligence</span>
@@ -494,7 +494,7 @@ const HomePage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.2 }}
-                        className="mx-auto mt-6 max-w-3xl text-lg text-slate-300 sm:text-xl font-normal leading-relaxed"
+                        className="mx-auto mt-6 max-w-3xl text-lg text-slate-600 sm:text-xl font-normal leading-relaxed"
                     >
                         Deploy enterprise multi-agent swarms, GraphRAG memory pipelines, self-healing code auditors, and HIPAA/ABDM compliant healthcare automation in weeks.
                     </motion.p>
@@ -507,16 +507,16 @@ const HomePage = () => {
                     >
                         <a
                             href="#demo"
-                            className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-[0_0_30px_rgba(56,189,248,0.4)] transition hover:bg-cyan-400"
+                            className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-indigo-700"
                         >
                             <Play className="h-4 w-4 fill-current" />
                             <span>Try 6 Live Agent Demos</span>
                         </a>
                         <a
                             href="/careers"
-                            className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-3.5 text-sm font-semibold text-slate-200 backdrop-blur-md transition hover:border-cyan-500/40"
+                            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-slate-900 transition hover:border-indigo-500"
                         >
-                            <Briefcase className="h-4 w-4 text-cyan-400" />
+                            <Briefcase className="h-4 w-4 text-indigo-600" />
                             <span>Explore Careers & Courses</span>
                         </a>
                     </motion.div>
@@ -527,21 +527,21 @@ const HomePage = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="relative mx-auto max-w-5xl rounded-2xl cyber-glass border border-slate-700/60 p-4 sm:p-6 text-left shadow-[0_20px_80px_rgba(0,0,0,0.8)]"
+                            className="relative mx-auto max-w-5xl rounded-2xl cyber-glass border border-slate-200 p-4 sm:p-6 text-left"
                         >
                             {/* Window Header */}
-                            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4 mb-4">
+                            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4 mb-4">
                                 <div className="flex items-center gap-2">
-                                    <div className="h-3 w-3 rounded-full bg-red-500/80" />
-                                    <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
-                                    <div className="h-3 w-3 rounded-full bg-green-500/80" />
-                                    <span className="ml-2 font-mono text-xs text-slate-400 flex items-center gap-1.5">
-                                        <Terminal className="h-3.5 w-3.5 text-cyan-400" />
+                                    <div className="h-3 w-3 rounded-full bg-red-50" />
+                                    <div className="h-3 w-3 rounded-full bg-yellow-50" />
+                                    <div className="h-3 w-3 rounded-full bg-green-50" />
+                                    <span className="ml-2 font-mono text-xs text-slate-500 flex items-center gap-1.5">
+                                        <Terminal className="h-3.5 w-3.5 text-indigo-600" />
                                         stellar-agent-sandbox-control.v2
                                     </span>
                                 </div>
 
-                                <span className="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 px-2.5 py-1 rounded border border-cyan-500/30">
+                                <span className="text-[11px] font-mono text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded border border-indigo-200">
                                     6 Live Agent Presets Available
                                 </span>
                             </div>
@@ -552,7 +552,7 @@ const HomePage = () => {
                                     <button
                                         key={preset.id}
                                         onClick={() => handleSelectDemo(preset.id)}
-                                        className={`rounded-lg px-2.5 py-2 text-xs font-mono font-medium transition text-center truncate ${activeDemo === preset.id ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-[0_0_12px_rgba(56,189,248,0.2)]' : 'bg-slate-900/60 text-slate-400 hover:text-slate-200 border border-slate-800'}`}
+                                        className={`rounded-lg px-2.5 py-2 text-xs font-mono font-medium transition text-center truncate ${activeDemo === preset.id ? 'bg-indigo-50 text-indigo-600 border border-indigo-200' : 'bg-white text-slate-500 hover:text-slate-900 border border-slate-200'}`}
                                     >
                                         {preset.name}
                                     </button>
@@ -566,14 +566,14 @@ const HomePage = () => {
                                         type="text"
                                         value={demoInput}
                                         onChange={(e) => setDemoInput(e.target.value)}
-                                        className="w-full rounded-xl border border-slate-700/80 bg-slate-950/90 px-4 py-3 font-mono text-xs sm:text-sm text-cyan-200 placeholder-slate-500 focus:border-cyan-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 font-mono text-xs sm:text-sm text-indigo-600 placeholder-slate-400 focus:border-indigo-500 focus:outline-none"
                                         placeholder="Type an agent instruction..."
                                     />
                                 </div>
                                 <button
                                     onClick={handleRunDemo}
                                     disabled={isExecuting}
-                                    className="flex items-center gap-2 rounded-xl bg-cyan-500 px-5 py-3 text-xs font-bold text-slate-950 transition hover:bg-cyan-400 disabled:opacity-50"
+                                    className="flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 text-xs font-bold text-white transition hover:bg-indigo-700 disabled:opacity-50"
                                 >
                                     {isExecuting ? <RefreshCw className="h-4 w-4 animate-spin" /> : <Play className="h-4 w-4 fill-current" />}
                                     <span>Execute</span>
@@ -582,30 +582,30 @@ const HomePage = () => {
 
                             {/* Execution Grid: Logs & Output */}
                             <div className="grid gap-4 md:grid-cols-2">
-                                <div className="rounded-xl border border-slate-800 bg-slate-950/80 p-4 font-mono text-xs">
-                                    <div className="flex items-center justify-between text-slate-400 mb-2 border-b border-slate-800 pb-2">
-                                        <span className="flex items-center gap-1.5 text-cyan-400 font-semibold">
+                                <div className="rounded-xl border border-slate-200 bg-white p-4 font-mono text-xs">
+                                    <div className="flex items-center justify-between text-slate-500 mb-2 border-b border-slate-200 pb-2">
+                                        <span className="flex items-center gap-1.5 text-indigo-600 font-semibold">
                                             <Activity className="h-3.5 w-3.5" /> Reasoning Node Trace
                                         </span>
                                         <span className="text-[10px] text-slate-500">Latency: 24ms</span>
                                     </div>
-                                    <div className="space-y-1.5 text-slate-300 max-h-44 overflow-y-auto">
+                                    <div className="space-y-1.5 text-slate-600 max-h-44 overflow-y-auto">
                                         {activeLogs.map((log, idx) => (
                                             <p key={idx} className="leading-relaxed">
-                                                <span className="text-cyan-400/80">&gt;</span> {log}
+                                                <span className="text-indigo-600">&gt;</span> {log}
                                             </p>
                                         ))}
                                     </div>
                                 </div>
 
-                                <div className="rounded-xl border border-cyan-500/30 bg-cyan-950/20 p-4 font-mono text-xs">
-                                    <div className="flex items-center justify-between text-cyan-300 mb-2 border-b border-cyan-500/20 pb-2">
+                                <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-4 font-mono text-xs">
+                                    <div className="flex items-center justify-between text-indigo-600 mb-2 border-b border-indigo-200 pb-2">
                                         <span className="flex items-center gap-1.5 font-semibold">
-                                            <CheckCircle2 className="h-3.5 w-3.5 text-cyan-400" /> Output Payload
+                                            <CheckCircle2 className="h-3.5 w-3.5 text-indigo-600" /> Output Payload
                                         </span>
-                                        <span className="rounded bg-cyan-500/20 px-1.5 py-0.5 text-[10px] text-cyan-300">STP Verified</span>
+                                        <span className="rounded bg-indigo-50 px-1.5 py-0.5 text-[10px] text-indigo-600">STP Verified</span>
                                     </div>
-                                    <pre className="text-slate-200 whitespace-pre-wrap leading-relaxed">
+                                    <pre className="text-slate-900 whitespace-pre-wrap leading-relaxed">
                                         {activeOutput}
                                     </pre>
                                 </div>
@@ -616,49 +616,49 @@ const HomePage = () => {
             </section>
 
             {/* Animated SVG Workflow Node Particles Graph */}
-            <section className="py-16 border-y border-slate-800 bg-slate-950/40 relative overflow-hidden">
+            <section className="py-16 border-y border-slate-200 bg-white relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2 block">AGENTIC EXECUTION PIPELINE GRAPH</span>
-                    <h3 className="font-display text-2xl font-bold text-white mb-8">Real-Time Event Node Topology</h3>
+                    <span className="text-xs font-mono uppercase tracking-widest text-indigo-600 mb-2 block">AGENTIC EXECUTION PIPELINE GRAPH</span>
+                    <h3 className="font-display text-2xl font-bold text-slate-900 mb-8">Real-Time Event Node Topology</h3>
 
                     {/* SVG Flow Connections */}
-                    <div className="relative mx-auto max-w-4xl rounded-2xl cyber-glass border border-slate-800 p-8 shadow-2xl">
+                    <div className="relative mx-auto max-w-4xl rounded-2xl cyber-glass border border-slate-200 p-8 shadow-sm">
                         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 120 70 Q 250 20 400 70 T 700 70" stroke="rgba(56, 189, 248, 0.4)" strokeWidth="2" fill="none" className="animate-dash-flow" />
-                            <path d="M 120 70 Q 250 120 400 70 T 700 70" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="2" fill="none" className="animate-dash-flow" />
+                            <path d="M 120 70 Q 250 20 400 70 T 700 70" stroke="rgba(79, 70, 229, 0.35)" strokeWidth="2" fill="none" className="animate-dash-flow" />
+                            <path d="M 120 70 Q 250 120 400 70 T 700 70" stroke="rgba(79, 70, 229, 0.2)" strokeWidth="2" fill="none" className="animate-dash-flow" />
                         </svg>
 
                         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 relative z-10">
-                            <div className="rounded-xl border border-slate-800 bg-slate-950/90 p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-2">
+                            <div className="rounded-xl border border-slate-200 bg-white p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-200 mb-2">
                                     <Radio className="h-5 w-5 animate-pulse" />
                                 </div>
-                                <h4 className="font-mono text-xs font-bold text-white">1. Event Trigger</h4>
-                                <p className="text-[10px] text-slate-400 mt-1">Webhook / API / Vision OCR</p>
+                                <h4 className="font-mono text-xs font-bold text-slate-900">1. Event Trigger</h4>
+                                <p className="text-[10px] text-slate-500 mt-1">Webhook / API / Vision OCR</p>
                             </div>
 
-                            <div className="rounded-xl border border-slate-800 bg-slate-950/90 p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-2">
+                            <div className="rounded-xl border border-slate-200 bg-white p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-200 mb-2">
                                     <ShieldCheck className="h-5 w-5" />
                                 </div>
-                                <h4 className="font-mono text-xs font-bold text-white">2. Security Gate</h4>
-                                <p className="text-[10px] text-slate-400 mt-1">HIPAA / DPDP PII Masking</p>
+                                <h4 className="font-mono text-xs font-bold text-slate-900">2. Security Gate</h4>
+                                <p className="text-[10px] text-slate-500 mt-1">HIPAA / DPDP PII Masking</p>
                             </div>
 
-                            <div className="rounded-xl border border-slate-800 bg-slate-950/90 p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-2">
+                            <div className="rounded-xl border border-slate-200 bg-white p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-200 mb-2">
                                     <Bot className="h-5 w-5" />
                                 </div>
-                                <h4 className="font-mono text-xs font-bold text-white">3. Supervisor Swarm</h4>
-                                <p className="text-[10px] text-slate-400 mt-1">Claude 3.5 / GPT-4o Router</p>
+                                <h4 className="font-mono text-xs font-bold text-slate-900">3. Supervisor Swarm</h4>
+                                <p className="text-[10px] text-slate-500 mt-1">Claude 3.5 / GPT-4o Router</p>
                             </div>
 
-                            <div className="rounded-xl border border-slate-800 bg-slate-950/90 p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-green-500/10 text-green-400 border border-green-500/20 mb-2">
-                                    <CheckCircle2 className="h-5 w-5 text-green-400" />
+                            <div className="rounded-xl border border-slate-200 bg-white p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-green-50 text-green-600 border border-green-200 mb-2">
+                                    <CheckCircle2 className="h-5 w-5 text-green-600" />
                                 </div>
-                                <h4 className="font-mono text-xs font-bold text-white">4. Verified Writeback</h4>
-                                <p className="text-[10px] text-slate-400 mt-1">ERP / EHR / CRM Integration</p>
+                                <h4 className="font-mono text-xs font-bold text-slate-900">4. Verified Writeback</h4>
+                                <p className="text-[10px] text-slate-500 mt-1">ERP / EHR / CRM Integration</p>
                             </div>
                         </div>
                     </div>
@@ -666,21 +666,21 @@ const HomePage = () => {
             </section>
 
             {/* Model Marquee */}
-            <section className="border-y border-slate-800/80 bg-slate-950/60 py-8 overflow-hidden backdrop-blur-md">
+            <section className="border-y border-slate-200 bg-white py-8 overflow-hidden">
                 <div className="mx-auto max-w-7xl px-6 mb-4 text-center">
-                    <p className="text-xs font-mono tracking-widest text-slate-400 uppercase">POWERED BY LEADING FOUNDATION MODELS & AGENT FRAMEWORKS</p>
+                    <p className="text-xs font-mono tracking-widest text-slate-500 uppercase">POWERED BY LEADING FOUNDATION MODELS & AGENT FRAMEWORKS</p>
                 </div>
 
                 <div className="flex w-max animate-marquee gap-8">
                     {[...STACK_ITEMS, ...STACK_ITEMS].map((item, index) => (
                         <div
                             key={index}
-                            className="flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-5 py-3 shadow-lg hover:border-cyan-500/40 transition"
+                            className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-5 py-3 shadow-sm hover:border-indigo-500 transition"
                         >
                             <img src={item.logo} alt={item.name} className="h-6 w-6 object-contain" />
                             <div>
-                                <h4 className="text-xs font-semibold text-slate-200">{item.name}</h4>
-                                <p className="text-[10px] text-slate-400 font-mono">{item.tag}</p>
+                                <h4 className="text-xs font-semibold text-slate-900">{item.name}</h4>
+                                <p className="text-[10px] text-slate-500 font-mono">{item.tag}</p>
                             </div>
                         </div>
                     ))}
@@ -691,11 +691,11 @@ const HomePage = () => {
             <section id="capabilities" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <Reveal>
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">2026 AGENTIC AI SUITE</span>
-                        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
+                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">2026 AGENTIC AI SUITE</span>
+                        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl">
                             Up-To-Date Agentic AI Capabilities
                         </h2>
-                        <p className="mt-4 text-slate-400 text-base sm:text-lg">
+                        <p className="mt-4 text-slate-500 text-base sm:text-lg">
                             Deploy multi-agent swarms, GraphRAG hybrid retrieval, self-healing code auditors, and HIPAA compliant clinical pipelines.
                         </p>
                     </div>
@@ -709,28 +709,28 @@ const HomePage = () => {
                             <Reveal key={service.id} delay={idx * 0.1}>
                                 <div
                                     onClick={() => setActiveService(service)}
-                                    className={`group cursor-pointer rounded-2xl cyber-glass p-8 transition-all duration-300 relative card-3d-tilt ${isSelected ? 'border-cyan-500/80 shadow-[0_0_30px_rgba(56,189,248,0.25)]' : 'border-slate-800 hover:border-slate-700'}`}
+                                    className={`group cursor-pointer rounded-2xl cyber-glass p-8 transition-all duration-300 relative card-3d-tilt ${isSelected ? 'border-indigo-200' : 'border-slate-200 hover:border-slate-200'}`}
                                 >
                                     <div className="flex items-center justify-between mb-6">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-200">
                                             <Icon className="h-6 w-6" />
                                         </div>
-                                        <span className="rounded-full bg-slate-800/80 px-3 py-1 text-[11px] font-mono text-cyan-300 border border-slate-700">
+                                        <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-mono text-indigo-600 border border-slate-200">
                                             {service.badge}
                                         </span>
                                     </div>
 
-                                    <h3 className="font-display text-xl font-bold text-white group-hover:text-cyan-300 transition">
+                                    <h3 className="font-display text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition">
                                         {service.title}
                                     </h3>
-                                    <p className="mt-3 text-sm text-slate-400 leading-relaxed">
+                                    <p className="mt-3 text-sm text-slate-500 leading-relaxed">
                                         {service.summary}
                                     </p>
 
                                     <ul className="mt-6 space-y-2.5">
                                         {service.points.map((pt, pIdx) => (
-                                            <li key={pIdx} className="flex items-start gap-2 text-xs text-slate-300">
-                                                <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0 mt-0.5" />
+                                            <li key={pIdx} className="flex items-start gap-2 text-xs text-slate-600">
+                                                <CheckCircle2 className="h-4 w-4 text-indigo-600 shrink-0 mt-0.5" />
                                                 <span>{pt}</span>
                                             </li>
                                         ))}
@@ -742,36 +742,36 @@ const HomePage = () => {
                 </div>
 
                 {/* Selected Service Code Viewer */}
-                <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-2xl">
-                    <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4 mb-4">
+                <div className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4 mb-4">
                         <div className="flex items-center gap-3">
-                            <Code2 className="h-5 w-5 text-cyan-400" />
-                            <h4 className="font-mono text-sm font-semibold text-slate-200">
-                                Architecture Spec: <span className="text-cyan-400">{activeService.title}</span>
+                            <Code2 className="h-5 w-5 text-indigo-600" />
+                            <h4 className="font-mono text-sm font-semibold text-slate-900">
+                                Architecture Spec: <span className="text-indigo-600">{activeService.title}</span>
                             </h4>
                         </div>
                         <button
                             onClick={() => copyCode(activeService.codeSnippet)}
-                            className="flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-cyan-300 transition"
+                            className="flex items-center gap-1.5 text-xs font-mono text-slate-500 hover:text-indigo-600 transition"
                         >
                             <Copy className="h-3.5 w-3.5" /> Copy Snippet
                         </button>
                     </div>
-                    <pre className="overflow-x-auto rounded-xl bg-slate-900/90 p-4 font-mono text-xs text-cyan-300 leading-relaxed border border-slate-800">
+                    <pre className="overflow-x-auto rounded-xl bg-white p-4 font-mono text-xs text-indigo-600 leading-relaxed border border-slate-200">
                         {activeService.codeSnippet}
                     </pre>
                 </div>
             </section>
 
             {/* REAL-WORLD MULTI-INDUSTRY SHOWCASES SECTION */}
-            <section id="industries" className="py-24 border-t border-slate-800 bg-slate-950/80 grid-lines">
+            <section id="industries" className="py-24 border-t border-slate-200 bg-white grid-lines">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-400">DEPLOYED SECTOR ARCHITECTURES</span>
-                        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
+                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">DEPLOYED SECTOR ARCHITECTURES</span>
+                        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl">
                             Real-World Industry Showcases
                         </h2>
-                        <p className="mt-4 text-slate-400 text-base sm:text-lg">
+                        <p className="mt-4 text-slate-500 text-base sm:text-lg">
                             Explore how autonomous agents solve high-complexity workflow challenges in Healthcare, FinTech, E-Commerce, Legal, Logistics, and EdTech.
                         </p>
                     </div>
@@ -785,7 +785,7 @@ const HomePage = () => {
                                 <button
                                     key={item.id}
                                     onClick={() => setActiveIndustryKey(item.id)}
-                                    className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition ${isSelected ? 'bg-cyan-500 text-slate-950 shadow-[0_0_20px_rgba(56,189,248,0.4)]' : 'bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-slate-700'}`}
+                                    className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition ${isSelected ? 'bg-indigo-600 text-white' : 'bg-white text-slate-600 border border-slate-200 hover:border-slate-200'}`}
                                 >
                                     <Icon className="h-4 w-4" />
                                     <span>{item.sector}</span>
@@ -795,44 +795,44 @@ const HomePage = () => {
                     </div>
 
                     {/* Active Industry Deep-Dive Box */}
-                    <div className="rounded-3xl cyber-glass border border-slate-700/80 p-8 lg:p-12 shadow-2xl">
+                    <div className="rounded-3xl cyber-glass border border-slate-200 p-8 lg:p-12 shadow-sm">
                         <div className="grid gap-8 lg:grid-cols-2 items-start">
                             <div>
                                 <div className="flex items-center gap-3 mb-4">
-                                    <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-mono text-cyan-300 border border-cyan-500/30">
+                                    <span className="rounded-full bg-indigo-50 px-3 py-1 text-xs font-mono text-indigo-600 border border-indigo-200">
                                         {activeIndustry.badge}
                                     </span>
                                 </div>
 
-                                <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4">
+                                <h3 className="font-display text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
                                     {activeIndustry.headline}
                                 </h3>
 
                                 <div className="space-y-4 text-sm leading-relaxed mb-6">
-                                    <div className="rounded-xl border border-red-500/20 bg-red-950/20 p-4">
-                                        <p className="font-mono text-xs font-bold text-red-400 mb-1">🔴 REAL-WORLD CHALLENGE:</p>
-                                        <p className="text-slate-300">{activeIndustry.problem}</p>
+                                    <div className="rounded-xl border border-red-200 bg-red-50 p-4">
+                                        <p className="font-mono text-xs font-bold text-red-600 mb-1">🔴 REAL-WORLD CHALLENGE:</p>
+                                        <p className="text-slate-600">{activeIndustry.problem}</p>
                                     </div>
 
-                                    <div className="rounded-xl border border-cyan-500/20 bg-cyan-950/20 p-4">
-                                        <p className="font-mono text-xs font-bold text-cyan-300 mb-1">⚡ DEPLOYED AGENTIC SOLUTION:</p>
-                                        <p className="text-slate-300">{activeIndustry.solution}</p>
+                                    <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-4">
+                                        <p className="font-mono text-xs font-bold text-indigo-600 mb-1">⚡ DEPLOYED AGENTIC SOLUTION:</p>
+                                        <p className="text-slate-600">{activeIndustry.solution}</p>
                                     </div>
                                 </div>
 
-                                <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-4">
-                                    <p className="text-[11px] font-mono text-emerald-400 uppercase tracking-widest">VERIFIED IMPACT METRIC</p>
-                                    <h4 className="font-display text-2xl font-extrabold text-emerald-300 mt-1">
+                                <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+                                    <p className="text-[11px] font-mono text-emerald-600 uppercase tracking-widest">VERIFIED IMPACT METRIC</p>
+                                    <h4 className="font-display text-2xl font-extrabold text-emerald-600 mt-1">
                                         +{format(activeIndustry.impactUSD)}
                                     </h4>
-                                    <p className="text-xs text-slate-400 mt-0.5">{activeIndustry.impactMetric}</p>
+                                    <p className="text-xs text-slate-500 mt-0.5">{activeIndustry.impactMetric}</p>
                                 </div>
                             </div>
 
                             {/* Interactive Input/Output Payload Showcase */}
-                            <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 font-mono text-xs shadow-xl">
-                                <div className="border-b border-slate-800 pb-3 mb-4 flex items-center justify-between text-slate-400">
-                                    <span className="flex items-center gap-1.5 text-cyan-400 font-semibold">
+                            <div className="rounded-2xl border border-slate-200 bg-white p-6 font-mono text-xs shadow-sm">
+                                <div className="border-b border-slate-200 pb-3 mb-4 flex items-center justify-between text-slate-500">
+                                    <span className="flex items-center gap-1.5 text-indigo-600 font-semibold">
                                         <Terminal className="h-4 w-4" /> Real Event Payload Trace
                                     </span>
                                     <span className="text-[10px] text-slate-500">STP Verified</span>
@@ -840,14 +840,14 @@ const HomePage = () => {
 
                                 <div className="mb-4">
                                     <p className="text-[10px] text-slate-500 uppercase mb-1">INCOMING EVENT / API TRIGGER:</p>
-                                    <pre className="rounded-xl bg-slate-900/90 p-3 text-slate-300 leading-relaxed overflow-x-auto border border-slate-800">
+                                    <pre className="rounded-xl bg-white p-3 text-slate-600 leading-relaxed overflow-x-auto border border-slate-200">
                                         {activeIndustry.inputSample}
                                     </pre>
                                 </div>
 
                                 <div>
-                                    <p className="text-[10px] text-cyan-400 uppercase mb-1">OUTGOING AGENT RESPONSE:</p>
-                                    <pre className="rounded-xl bg-cyan-950/30 p-3 text-cyan-300 leading-relaxed overflow-x-auto border border-cyan-500/30">
+                                    <p className="text-[10px] text-indigo-600 uppercase mb-1">OUTGOING AGENT RESPONSE:</p>
+                                    <pre className="rounded-xl bg-indigo-50 p-3 text-indigo-600 leading-relaxed overflow-x-auto border border-indigo-200">
                                         {activeIndustry.outputSample}
                                     </pre>
                                 </div>
@@ -858,18 +858,18 @@ const HomePage = () => {
             </section>
 
             {/* Paid Project Certification Cohorts Section */}
-            <section id="certifications" className="py-24 border-t border-slate-800 bg-slate-950/80">
+            <section id="certifications" className="py-24 border-t border-slate-200 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
                         <div>
-                            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">PAID PROJECT CERTIFICATIONS</span>
-                            <h2 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl">
+                            <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">PAID PROJECT CERTIFICATIONS</span>
+                            <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 sm:text-4xl">
                                 Accredited AI Certification Cohorts
                             </h2>
                         </div>
                         <a
                             href="/careers#certifications"
-                            className="inline-flex items-center gap-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 px-5 py-2.5 text-xs font-bold text-cyan-300 hover:bg-cyan-500/20 transition"
+                            className="inline-flex items-center gap-2 rounded-xl bg-indigo-50 border border-indigo-200 px-5 py-2.5 text-xs font-bold text-indigo-600 hover:bg-indigo-50 transition"
                         >
                             <span>Explore Full Syllabus & Cohorts</span>
                             <ArrowRight className="h-4 w-4" />
@@ -878,21 +878,21 @@ const HomePage = () => {
 
                     <div className="grid gap-6 md:grid-cols-3">
                         {CERTIFICATION_COHORTS_PREVIEW.map((c, idx) => (
-                            <div key={idx} className="rounded-2xl cyber-glass p-6 border border-slate-800 flex flex-col justify-between">
+                            <div key={idx} className="rounded-2xl cyber-glass p-6 border border-slate-200 flex flex-col justify-between">
                                 <div>
-                                    <span className="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 px-2.5 py-1 rounded border border-cyan-500/30">
+                                    <span className="text-[11px] font-mono text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded border border-indigo-200">
                                         {c.duration}
                                     </span>
-                                    <h3 className="font-display text-lg font-bold text-white mt-3 mb-1">{c.title}</h3>
-                                    <p className="text-xs font-mono text-cyan-300 font-bold mb-3">{format(c.priceUSD)} / cohort</p>
-                                    <p className="text-xs text-slate-400 leading-relaxed mb-4">{c.desc}</p>
-                                    <p className="text-[11px] font-mono text-cyan-300 bg-slate-900 p-2 rounded border border-slate-800 mb-6">
+                                    <h3 className="font-display text-lg font-bold text-slate-900 mt-3 mb-1">{c.title}</h3>
+                                    <p className="text-xs font-mono text-indigo-600 font-bold mb-3">{format(c.priceUSD)} / cohort</p>
+                                    <p className="text-xs text-slate-500 leading-relaxed mb-4">{c.desc}</p>
+                                    <p className="text-[11px] font-mono text-indigo-600 bg-white p-2 rounded border border-slate-200 mb-6">
                                         💰 Includes {format(c.stipendUSD)} Real Client Stipend
                                     </p>
                                 </div>
                                 <a
                                     href="/careers#certifications"
-                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 border border-slate-700 py-2.5 text-xs font-bold text-slate-200 hover:bg-cyan-500 hover:text-slate-950 transition"
+                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white border border-slate-200 py-2.5 text-xs font-bold text-slate-900 hover:bg-indigo-700 hover:text-white transition"
                                 >
                                     <span>Apply For Cohort</span>
                                 </a>
@@ -904,22 +904,22 @@ const HomePage = () => {
 
             {/* Dynamic Multi-Currency ROI Calculator */}
             <section id="calculator" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="rounded-3xl border border-cyan-500/30 bg-gradient-to-b from-slate-900 to-slate-950 p-8 lg:p-12 shadow-[0_0_50px_rgba(56,189,248,0.1)]">
+                <div className="rounded-3xl border border-indigo-200 bg-slate-50 p-8 lg:p-12">
                     <div className="grid gap-12 lg:grid-cols-2 items-center">
                         <div>
-                            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">ESTIMATE YOUR AUTOMATION SAVINGS</span>
-                            <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
+                            <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">ESTIMATE YOUR AUTOMATION SAVINGS</span>
+                            <h2 className="mt-3 font-display text-3xl font-bold text-slate-900 sm:text-4xl">
                                 Calculate Your ROI with Autonomous Agents
                             </h2>
-                            <p className="mt-4 text-sm text-slate-400 leading-relaxed">
+                            <p className="mt-4 text-sm text-slate-500 leading-relaxed">
                                 See how much operational cost and time your team reclaims by switching manual claims, lead generation, and document processing to straight-through AI agents.
                             </p>
 
                             <div className="mt-8 space-y-6">
                                 <div>
-                                    <div className="flex justify-between text-xs font-mono text-slate-300 mb-2">
+                                    <div className="flex justify-between text-xs font-mono text-slate-600 mb-2">
                                         <span>Monthly Manual Process Hours:</span>
-                                        <span className="text-cyan-400 font-bold">{manualHours} hrs</span>
+                                        <span className="text-indigo-600 font-bold">{manualHours} hrs</span>
                                     </div>
                                     <input
                                         type="range"
@@ -928,14 +928,14 @@ const HomePage = () => {
                                         step="10"
                                         value={manualHours}
                                         onChange={(e) => setManualHours(Number(e.target.value))}
-                                        className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                                        className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                                     />
                                 </div>
 
                                 <div>
-                                    <div className="flex justify-between text-xs font-mono text-slate-300 mb-2">
+                                    <div className="flex justify-between text-xs font-mono text-slate-600 mb-2">
                                         <span>Fully Loaded Hourly Cost ({current.code}):</span>
-                                        <span className="text-cyan-400 font-bold">{format(hourlyCostUSD)}/hr</span>
+                                        <span className="text-indigo-600 font-bold">{format(hourlyCostUSD)}/hr</span>
                                     </div>
                                     <input
                                         type="range"
@@ -944,32 +944,32 @@ const HomePage = () => {
                                         step="5"
                                         value={hourlyCostUSD}
                                         onChange={(e) => setHourlyCostUSD(Number(e.target.value))}
-                                        className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                                        className="w-full h-2 bg-slate-100 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                                     />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 sm:p-8 text-center">
-                            <p className="text-xs font-mono text-slate-400 uppercase tracking-widest">ESTIMATED MONTHLY SAVINGS ({current.code})</p>
+                        <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 text-center">
+                            <p className="text-xs font-mono text-slate-500 uppercase tracking-widest">ESTIMATED MONTHLY SAVINGS ({current.code})</p>
                             <h3 className="mt-2 font-display text-4xl sm:text-5xl font-extrabold glow-gradient-text">
                                 {format(monthlySavingsUSD)} / mo
                             </h3>
 
-                            <div className="mt-6 grid grid-cols-2 gap-4 border-t border-slate-800 pt-6 text-left">
+                            <div className="mt-6 grid grid-cols-2 gap-4 border-t border-slate-200 pt-6 text-left">
                                 <div>
                                     <p className="text-[10px] font-mono text-slate-500 uppercase">YEARLY HOURS RECLAIMED</p>
-                                    <p className="text-xl font-bold text-white font-mono">{hoursSavedYearly.toLocaleString()} hrs</p>
+                                    <p className="text-xl font-bold text-slate-900 font-mono">{hoursSavedYearly.toLocaleString()} hrs</p>
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-mono text-slate-500 uppercase">TARGET STP ACCURACY</p>
-                                    <p className="text-xl font-bold text-cyan-400 font-mono">99.4%</p>
+                                    <p className="text-xl font-bold text-indigo-600 font-mono">99.4%</p>
                                 </div>
                             </div>
 
                             <a
                                 href="#contact"
-                                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-500 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-950 transition hover:bg-cyan-400"
+                                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3.5 text-xs font-bold uppercase tracking-wider text-white transition hover:bg-indigo-700"
                             >
                                 <span>Lock In Your Automation Plan</span>
                                 <ArrowRight className="h-4 w-4" />
@@ -983,49 +983,49 @@ const HomePage = () => {
             <section id="contact" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid gap-12 lg:grid-cols-2 items-center">
                     <div>
-                        <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">READY TO AUTOMATE?</span>
-                        <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-5xl">
+                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">READY TO AUTOMATE?</span>
+                        <h2 className="mt-3 font-display text-3xl font-bold text-slate-900 sm:text-5xl">
                             Request Your Agent Architecture Audit
                         </h2>
-                        <p className="mt-4 text-slate-400 text-base leading-relaxed">
+                        <p className="mt-4 text-slate-500 text-base leading-relaxed">
                             Schedule a 30-minute discovery session with our AI solution architects to quantify your workflow bottlenecks and map out a scoped pilot.
                         </p>
 
                         <div className="mt-8 space-y-4">
-                            <div className="flex items-center gap-3 text-sm text-slate-300">
-                                <ShieldCheck className="h-5 w-5 text-cyan-400" />
+                            <div className="flex items-center gap-3 text-sm text-slate-600">
+                                <ShieldCheck className="h-5 w-5 text-indigo-600" />
                                 <span>HIPAA, ABDM & DPDP Data Security Standards</span>
                             </div>
-                            <div className="flex items-center gap-3 text-sm text-slate-300">
-                                <Lock className="h-5 w-5 text-indigo-400" />
+                            <div className="flex items-center gap-3 text-sm text-slate-600">
+                                <Lock className="h-5 w-5 text-indigo-600" />
                                 <span>Zero model retraining on customer proprietary data</span>
                             </div>
-                            <div className="flex items-center gap-3 text-sm text-slate-300">
-                                <Server className="h-5 w-5 text-purple-400" />
+                            <div className="flex items-center gap-3 text-sm text-slate-600">
+                                <Server className="h-5 w-5 text-indigo-600" />
                                 <span>Flexible deployment: Multi-Tenant Cloud or Private VPC</span>
                             </div>
                         </div>
                     </div>
 
-                    <div className="rounded-2xl cyber-glass border border-slate-800 p-8 shadow-2xl">
+                    <div className="rounded-2xl cyber-glass border border-slate-200 p-8 shadow-sm">
                         <ContactForm />
                     </div>
                 </div>
             </section>
 
             {/* Footer */}
-            <footer className="border-t border-slate-800 bg-slate-950 py-12">
+            <footer className="border-t border-slate-200 bg-white py-12">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6">
                     <div className="flex items-center gap-3">
-                        <Sparkles className="h-5 w-5 text-cyan-400" />
-                        <span className="font-display font-bold text-white">Stellar AI Agents</span>
+                        <Sparkles className="h-5 w-5 text-indigo-600" />
+                        <span className="font-display font-bold text-slate-900">Stellar AI Agents</span>
                         <span className="text-xs font-mono text-slate-500">© 2026 Stellar AI. All rights reserved.</span>
                     </div>
 
-                    <div className="flex items-center gap-6 text-xs text-slate-400">
-                        <a href="/careers" className="hover:text-cyan-400 transition">Careers & Internships</a>
-                        <a href="/careers#certifications" className="hover:text-cyan-400 transition">Paid Certifications</a>
-                        <a href="#top" className="hover:text-cyan-400 transition">HIPAA Compliance</a>
+                    <div className="flex items-center gap-6 text-xs text-slate-500">
+                        <a href="/careers" className="hover:text-indigo-600 transition">Careers & Internships</a>
+                        <a href="/careers#certifications" className="hover:text-indigo-600 transition">Paid Certifications</a>
+                        <a href="#top" className="hover:text-indigo-600 transition">HIPAA Compliance</a>
                     </div>
                 </div>
             </footer>

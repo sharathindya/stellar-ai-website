@@ -182,7 +182,7 @@ const CareersPage = () => {
         : OPEN_POSITIONS_RAW.filter(p => p.category === selectedCategory);
 
     return (
-        <div className="min-h-screen bg-[#020617] text-slate-100 font-sans selection:bg-cyan-500/30 selection:text-cyan-300">
+        <div className="min-h-screen bg-white text-slate-900 font-sans">
             <Helmet>
                 <title>Careers & Paid Certifications | Stellar AI Startup</title>
                 <meta
@@ -198,28 +198,28 @@ const CareersPage = () => {
             />
 
             {/* Glowing Navbar */}
-            <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
+            <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
                 <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
                     <a href="/" className="flex items-center gap-3 group">
-                        <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 p-[1px] shadow-[0_0_20px_rgba(56,189,248,0.3)]">
-                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-slate-950">
-                                <Sparkles className="h-5 w-5 text-cyan-400" />
+                        <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 p-[1px]">
+                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-white">
+                                <Sparkles className="h-5 w-5 text-indigo-600" />
                             </div>
                         </div>
                         <div>
-                            <span className="font-display text-lg font-bold tracking-tight text-white flex items-center gap-1.5">
+                            <span className="font-display text-lg font-bold tracking-tight text-slate-900 flex items-center gap-1.5">
                                 Stellar<span className="glow-gradient-text">AI</span>
                             </span>
-                            <span className="block text-[10px] font-mono tracking-widest text-cyan-400/80 uppercase">CAREERS & ACADEMY</span>
+                            <span className="block text-[10px] font-mono tracking-widest text-indigo-600 uppercase">CAREERS & ACADEMY</span>
                         </div>
                     </a>
 
                     <nav className="hidden items-center gap-8 md:flex">
-                        <a href="/" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Home Platform</a>
-                        <a href="#positions" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Startup Roles</a>
-                        <a href="#internships" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Paid Internships</a>
-                        <a href="#certifications" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Paid Certifications</a>
-                        <a href="#credentials" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Industry Standards</a>
+                        <a href="/" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Home Platform</a>
+                        <a href="#positions" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Startup Roles</a>
+                        <a href="#internships" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Paid Internships</a>
+                        <a href="#certifications" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Paid Certifications</a>
+                        <a href="#credentials" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Industry Standards</a>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -228,7 +228,7 @@ const CareersPage = () => {
 
                         <a
                             href="#positions"
-                            className="inline-flex items-center gap-2 rounded-full bg-cyan-500 px-5 py-2.5 text-xs font-bold text-slate-950 shadow-[0_0_20px_rgba(56,189,248,0.3)] transition hover:bg-cyan-400"
+                            className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-indigo-700"
                         >
                             <span>View Open Roles</span>
                         </a>
@@ -238,35 +238,35 @@ const CareersPage = () => {
 
             {/* Hero Section */}
             <section className="relative py-20 lg:py-28 overflow-hidden grid-lines">
-                <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[450px] w-[750px] rounded-full bg-gradient-to-tr from-cyan-500/20 via-indigo-500/20 to-purple-500/10 blur-[120px]" />
+                <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[450px] w-[750px] rounded-full bg-indigo-50 opacity-60" />
 
                 <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-mono text-cyan-300 mb-6 backdrop-blur-md">
-                        <Trophy className="h-4 w-4 text-cyan-400" />
+                    <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-xs font-mono text-indigo-600 mb-6">
+                        <Trophy className="h-4 w-4 text-indigo-600" />
                         <span>JOIN THE FRONTIER OF AGENTIC AI ENGINEERING</span>
                     </div>
 
-                    <h1 className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl max-w-4xl mx-auto">
+                    <h1 className="font-display text-4xl font-extrabold tracking-tight text-slate-900 sm:text-6xl max-w-4xl mx-auto">
                         Build the Future of <span className="glow-gradient-text">Autonomous Intelligence</span>
                     </h1>
 
-                    <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg text-slate-300 leading-relaxed">
+                    <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg text-slate-600 leading-relaxed">
                         Whether you are an experienced systems architect looking for full-time startup equity, a developer seeking a paid internship, or an engineer enrolling in our accredited project certification cohorts, Stellar AI is your launching pad.
                     </p>
 
                     <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                         <a
                             href="#positions"
-                            className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_0_30px_rgba(56,189,248,0.3)] transition hover:bg-cyan-400"
+                            className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-indigo-700"
                         >
                             <Briefcase className="h-4 w-4" />
                             <span>Explore 4 Open Roles</span>
                         </a>
                         <a
                             href="#certifications"
-                            className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-3.5 text-sm font-semibold text-slate-200 backdrop-blur-md transition hover:border-cyan-500/40"
+                            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-slate-900 transition hover:border-indigo-500"
                         >
-                            <GraduationCap className="h-4 w-4 text-cyan-400" />
+                            <GraduationCap className="h-4 w-4 text-indigo-600" />
                             <span>Paid Certification Cohorts</span>
                         </a>
                     </div>
@@ -277,19 +277,19 @@ const CareersPage = () => {
             <section id="positions" className="py-20 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
                     <div>
-                        <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">FULL-TIME & CONTRACT ROLES</span>
-                        <h2 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl">
+                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">FULL-TIME & CONTRACT ROLES</span>
+                        <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 sm:text-4xl">
                             Startup Career Opportunities
                         </h2>
                     </div>
 
                     {/* Filter Category */}
-                    <div className="flex items-center gap-2 rounded-xl bg-slate-950 p-1.5 border border-slate-800">
+                    <div className="flex items-center gap-2 rounded-xl bg-white p-1.5 border border-slate-200">
                         {['All', 'Engineering', 'Healthcare AI', 'Growth & Product'].map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
-                                className={`rounded-lg px-4 py-2 text-xs font-semibold transition ${selectedCategory === cat ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40' : 'text-slate-400 hover:text-slate-200'}`}
+                                className={`rounded-lg px-4 py-2 text-xs font-semibold transition ${selectedCategory === cat ? 'bg-indigo-50 text-indigo-600 border border-indigo-200' : 'text-slate-500 hover:text-slate-900'}`}
                             >
                                 {cat}
                             </button>
@@ -301,34 +301,34 @@ const CareersPage = () => {
                     {filteredPositions.map((pos) => (
                         <div
                             key={pos.id}
-                            className="rounded-2xl cyber-glass border border-slate-800 p-6 flex flex-col justify-between hover:border-cyan-500/40 transition group"
+                            className="rounded-2xl cyber-glass border border-slate-200 p-6 flex flex-col justify-between hover:border-indigo-500 transition group"
                         >
                             <div>
                                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                                    <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-[11px] font-mono text-cyan-300 border border-cyan-500/20">
+                                    <span className="rounded-full bg-indigo-50 px-3 py-1 text-[11px] font-mono text-indigo-600 border border-indigo-200">
                                         {pos.category}
                                     </span>
-                                    <span className="text-xs font-mono text-slate-400 flex items-center gap-1">
+                                    <span className="text-xs font-mono text-slate-500 flex items-center gap-1">
                                         <MapPin className="h-3.5 w-3.5 text-slate-500" /> {pos.location}
                                     </span>
                                 </div>
 
-                                <h3 className="font-display text-xl font-bold text-white group-hover:text-cyan-300 transition mb-2">
+                                <h3 className="font-display text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition mb-2">
                                     {pos.title}
                                 </h3>
-                                <p className="text-xs font-mono text-cyan-400/90 font-semibold mb-3">
+                                <p className="text-xs font-mono text-indigo-600 font-semibold mb-3">
                                     {format(pos.minSalaryUSD, { compact: true })} - {format(pos.maxSalaryUSD, { compact: true })} + {pos.equity}
                                 </p>
-                                <p className="text-sm text-slate-400 mb-6 leading-relaxed">
+                                <p className="text-sm text-slate-500 mb-6 leading-relaxed">
                                     {pos.desc}
                                 </p>
 
-                                <div className="border-t border-slate-800 pt-4 mb-6">
-                                    <p className="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-2">KEY REQUIREMENTS:</p>
+                                <div className="border-t border-slate-200 pt-4 mb-6">
+                                    <p className="text-[11px] font-mono text-slate-500 uppercase tracking-wider mb-2">KEY REQUIREMENTS:</p>
                                     <ul className="space-y-1.5">
                                         {pos.reqs.map((req, idx) => (
-                                            <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                                                <CheckCircle2 className="h-3.5 w-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                                            <li key={idx} className="flex items-start gap-2 text-xs text-slate-600">
+                                                <CheckCircle2 className="h-3.5 w-3.5 text-indigo-600 shrink-0 mt-0.5" />
                                                 <span>{req}</span>
                                             </li>
                                         ))}
@@ -338,7 +338,7 @@ const CareersPage = () => {
 
                             <button
                                 onClick={() => handleOpenApply(pos.title)}
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 border border-slate-700 py-3 text-xs font-bold uppercase tracking-wider text-slate-200 hover:bg-cyan-500 hover:text-slate-950 hover:border-cyan-400 transition"
+                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white border border-slate-200 py-3 text-xs font-bold uppercase tracking-wider text-slate-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-500 transition"
                             >
                                 <span>Apply For Position</span>
                                 <ArrowRight className="h-4 w-4" />
@@ -349,43 +349,43 @@ const CareersPage = () => {
             </section>
 
             {/* Paid Startup Internships */}
-            <section id="internships" className="py-20 border-t border-slate-800 bg-slate-950/60">
+            <section id="internships" className="py-20 border-t border-slate-200 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-400">EARN WHILE YOU LEARN</span>
-                        <h2 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl">
+                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">EARN WHILE YOU LEARN</span>
+                        <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 sm:text-4xl">
                             Paid Startup Internship Program
                         </h2>
-                        <p className="mt-4 text-slate-400 text-sm sm:text-base">
+                        <p className="mt-4 text-slate-500 text-sm sm:text-base">
                             Gain hands-on experience on live client agentic pipelines with dedicated 1-on-1 mentorship and monthly stipends.
                         </p>
                     </div>
 
                     <div className="grid gap-8 md:grid-cols-3">
                         {INTERNSHIPS_RAW.map((intern) => (
-                            <div key={intern.id} className="rounded-2xl cyber-glass p-6 border border-slate-800 flex flex-col justify-between">
+                            <div key={intern.id} className="rounded-2xl cyber-glass p-6 border border-slate-200 flex flex-col justify-between">
                                 <div>
                                     <div className="flex items-center justify-between mb-4">
-                                        <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-[11px] font-mono text-indigo-300 border border-indigo-500/20">
+                                        <span className="rounded-full bg-indigo-50 px-3 py-1 text-[11px] font-mono text-indigo-600 border border-indigo-200">
                                             {intern.type}
                                         </span>
-                                        <span className="text-xs font-mono text-slate-400 flex items-center gap-1">
+                                        <span className="text-xs font-mono text-slate-500 flex items-center gap-1">
                                             <Clock className="h-3.5 w-3.5 text-slate-500" /> {intern.duration}
                                         </span>
                                     </div>
 
-                                    <h3 className="font-display text-lg font-bold text-white mb-2">{intern.title}</h3>
-                                    <p className="text-xs font-mono text-cyan-400 font-bold mb-4">
+                                    <h3 className="font-display text-lg font-bold text-slate-900 mb-2">{intern.title}</h3>
+                                    <p className="text-xs font-mono text-indigo-600 font-bold mb-4">
                                         {format(intern.stipendUSD)} / Month + Mentorship
                                     </p>
-                                    <p className="text-xs text-slate-400 leading-relaxed mb-6">{intern.desc}</p>
+                                    <p className="text-xs text-slate-500 leading-relaxed mb-6">{intern.desc}</p>
 
-                                    <div className="border-t border-slate-800 pt-4 mb-6">
-                                        <p className="text-[10px] font-mono text-slate-400 uppercase tracking-wider mb-2">INTERNSHIP PERKS:</p>
+                                    <div className="border-t border-slate-200 pt-4 mb-6">
+                                        <p className="text-[10px] font-mono text-slate-500 uppercase tracking-wider mb-2">INTERNSHIP PERKS:</p>
                                         <ul className="space-y-1.5">
                                             {intern.perks.map((perk, idx) => (
-                                                <li key={idx} className="flex items-center gap-2 text-xs text-slate-300">
-                                                    <Sparkles className="h-3.5 w-3.5 text-indigo-400 shrink-0" />
+                                                <li key={idx} className="flex items-center gap-2 text-xs text-slate-600">
+                                                    <Sparkles className="h-3.5 w-3.5 text-indigo-600 shrink-0" />
                                                     <span>{perk}</span>
                                                 </li>
                                             ))}
@@ -395,7 +395,7 @@ const CareersPage = () => {
 
                                 <button
                                     onClick={() => handleOpenApply(intern.title)}
-                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-500/20 border border-indigo-500/40 py-3 text-xs font-bold uppercase tracking-wider text-indigo-200 hover:bg-indigo-500 hover:text-white transition"
+                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-50 border border-indigo-200 py-3 text-xs font-bold uppercase tracking-wider text-indigo-600 hover:bg-indigo-700 hover:text-slate-900 transition"
                                 >
                                     <span>Apply for Internship</span>
                                 </button>
@@ -408,42 +408,42 @@ const CareersPage = () => {
             {/* Paid Project Certification Courses */}
             <section id="certifications" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">ACCREDITED ACADEMY & CAPSTONE STIPENDS</span>
-                    <h2 className="mt-2 font-display text-3xl font-bold text-white sm:text-5xl">
+                    <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">ACCREDITED ACADEMY & CAPSTONE STIPENDS</span>
+                    <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 sm:text-5xl">
                         Paid Project Certification Cohorts
                     </h2>
-                    <p className="mt-4 text-slate-400 text-base leading-relaxed">
+                    <p className="mt-4 text-slate-500 text-base leading-relaxed">
                         Production-focused certifications taught by senior agent architects. Complete real client capstone projects and earn stipends.
                     </p>
                 </div>
 
                 <div className="grid gap-8 lg:grid-cols-3">
                     {CERTIFICATION_COHORTS_RAW.map((cohort) => (
-                        <div key={cohort.id} className="rounded-2xl cyber-glass p-8 border border-slate-800 hover:border-cyan-500/50 transition relative flex flex-col justify-between">
+                        <div key={cohort.id} className="rounded-2xl cyber-glass p-8 border border-slate-200 hover:border-indigo-500 transition relative flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center justify-between mb-4">
-                                    <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-[11px] font-mono text-cyan-300 border border-cyan-500/30">
+                                    <span className="rounded-full bg-indigo-50 px-3 py-1 text-[11px] font-mono text-indigo-600 border border-indigo-200">
                                         {cohort.badge}
                                     </span>
-                                    <span className="text-xs font-mono text-slate-400">{cohort.duration}</span>
+                                    <span className="text-xs font-mono text-slate-500">{cohort.duration}</span>
                                 </div>
 
-                                <h3 className="font-display text-xl font-bold text-white mb-2">{cohort.title}</h3>
+                                <h3 className="font-display text-xl font-bold text-slate-900 mb-2">{cohort.title}</h3>
                                 <div className="flex items-baseline gap-2 mb-2">
-                                    <span className="font-display text-3xl font-extrabold text-white">{format(cohort.priceUSD)}</span>
-                                    <span className="text-xs text-slate-400">/ cohort</span>
+                                    <span className="font-display text-3xl font-extrabold text-slate-900">{format(cohort.priceUSD)}</span>
+                                    <span className="text-xs text-slate-500">/ cohort</span>
                                 </div>
-                                <p className="text-xs font-mono text-cyan-400 bg-cyan-950/40 p-2.5 rounded-lg border border-cyan-500/20 mb-4">
+                                <p className="text-xs font-mono text-indigo-600 bg-indigo-50 p-2.5 rounded-lg border border-indigo-200 mb-4">
                                     💰 Includes {format(cohort.stipendUSD)} Real Client Project Stipend
                                 </p>
-                                <p className="text-xs text-slate-400 leading-relaxed mb-6">{cohort.summary}</p>
+                                <p className="text-xs text-slate-500 leading-relaxed mb-6">{cohort.summary}</p>
 
-                                <div className="border-t border-slate-800 pt-4 mb-6">
-                                    <p className="text-[10px] font-mono text-slate-400 uppercase tracking-wider mb-2">SYLLABUS HIGHLIGHTS:</p>
+                                <div className="border-t border-slate-200 pt-4 mb-6">
+                                    <p className="text-[10px] font-mono text-slate-500 uppercase tracking-wider mb-2">SYLLABUS HIGHLIGHTS:</p>
                                     <ul className="space-y-2">
                                         {cohort.modules.map((mod, mIdx) => (
-                                            <li key={mIdx} className="flex items-start gap-2 text-xs text-slate-300 leading-tight">
-                                                <Check className="h-3.5 w-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                                            <li key={mIdx} className="flex items-start gap-2 text-xs text-slate-600 leading-tight">
+                                                <Check className="h-3.5 w-3.5 text-indigo-600 shrink-0 mt-0.5" />
                                                 <span>{mod}</span>
                                             </li>
                                         ))}
@@ -453,7 +453,7 @@ const CareersPage = () => {
 
                             <button
                                 onClick={() => handleOpenApply(`Enroll: ${cohort.title}`)}
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-500 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-950 hover:bg-cyan-400 transition"
+                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-indigo-700 transition"
                             >
                                 <span>Apply for Cohort Enrollment</span>
                                 <ArrowRight className="h-4 w-4" />
@@ -464,28 +464,28 @@ const CareersPage = () => {
             </section>
 
             {/* Technical Specs & Industry Certifications Required */}
-            <section id="credentials" className="py-20 border-t border-slate-800 bg-slate-950/80">
+            <section id="credentials" className="py-20 border-t border-slate-200 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-400">SECURITY & INDUSTRY STANDARDS</span>
-                        <h2 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl">
+                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">SECURITY & INDUSTRY STANDARDS</span>
+                        <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 sm:text-4xl">
                             Required Industry & Tech Certifications
                         </h2>
-                        <p className="mt-4 text-slate-400 text-sm sm:text-base">
+                        <p className="mt-4 text-slate-500 text-sm sm:text-base">
                             Our platform architecture and engineering staff operate strictly under enterprise compliance frameworks.
                         </p>
                     </div>
 
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {COMPLIANCE_CREDENTIALS.map((cred, cIdx) => (
-                            <div key={cIdx} className="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 flex items-start gap-4">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 shrink-0">
+                            <div key={cIdx} className="rounded-2xl border border-slate-200 bg-white p-6 flex items-start gap-4">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-200 shrink-0">
                                     <ShieldCheck className="h-5 w-5" />
                                 </div>
                                 <div>
-                                    <span className="rounded bg-slate-800 px-2 py-0.5 text-[10px] font-mono text-cyan-300">{cred.tag}</span>
-                                    <h4 className="font-display text-base font-bold text-white mt-1">{cred.name}</h4>
-                                    <p className="text-xs text-slate-400 mt-1 leading-relaxed">{cred.desc}</p>
+                                    <span className="rounded bg-slate-100 px-2 py-0.5 text-[10px] font-mono text-indigo-600">{cred.tag}</span>
+                                    <h4 className="font-display text-base font-bold text-slate-900 mt-1">{cred.name}</h4>
+                                    <p className="text-xs text-slate-500 mt-1 leading-relaxed">{cred.desc}</p>
                                 </div>
                             </div>
                         ))}
@@ -496,76 +496,76 @@ const CareersPage = () => {
             {/* Candidate / Enrollment Application Modal */}
             <AnimatePresence>
                 {applyModalOpen && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+                    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-white">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.95 }}
-                            className="relative w-full max-w-lg rounded-2xl cyber-glass border border-slate-700 p-6 sm:p-8 shadow-2xl"
+                            className="relative w-full max-w-lg rounded-2xl cyber-glass border border-slate-200 p-6 sm:p-8 shadow-sm"
                         >
                             <button
                                 onClick={() => setApplyModalOpen(false)}
-                                className="absolute top-4 right-4 text-slate-400 hover:text-white"
+                                className="absolute top-4 right-4 text-slate-500 hover:text-slate-900"
                             >
                                 <X className="h-5 w-5" />
                             </button>
 
-                            <h3 className="font-display text-xl font-bold text-white mb-1">
+                            <h3 className="font-display text-xl font-bold text-slate-900 mb-1">
                                 Application Form
                             </h3>
-                            <p className="text-xs font-mono text-cyan-400 mb-6">{selectedRoleTitle}</p>
+                            <p className="text-xs font-mono text-indigo-600 mb-6">{selectedRoleTitle}</p>
 
                             <form onSubmit={handleSubmitApplication} className="space-y-4">
                                 <div>
-                                    <label className="block text-xs font-mono text-slate-300 mb-1">Full Name</label>
+                                    <label className="block text-xs font-mono text-slate-600 mb-1">Full Name</label>
                                     <input
                                         type="text"
                                         required
                                         value={candidateName}
                                         onChange={(e) => setCandidateName(e.target.value)}
                                         placeholder="Jane Doe"
-                                        className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-cyan-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:outline-none"
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="block text-xs font-mono text-slate-300 mb-1">Email Address</label>
+                                    <label className="block text-xs font-mono text-slate-600 mb-1">Email Address</label>
                                     <input
                                         type="email"
                                         required
                                         value={candidateEmail}
                                         onChange={(e) => setCandidateEmail(e.target.value)}
                                         placeholder="jane@example.com"
-                                        className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-cyan-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:outline-none"
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="block text-xs font-mono text-slate-300 mb-1">GitHub / LinkedIn / Portfolio URL</label>
+                                    <label className="block text-xs font-mono text-slate-600 mb-1">GitHub / LinkedIn / Portfolio URL</label>
                                     <input
                                         type="url"
                                         required
                                         value={candidatePortfolio}
                                         onChange={(e) => setCandidatePortfolio(e.target.value)}
                                         placeholder="https://github.com/janedoe"
-                                        className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-cyan-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:outline-none"
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="block text-xs font-mono text-slate-300 mb-1">Brief Note / Experience</label>
+                                    <label className="block text-xs font-mono text-slate-600 mb-1">Brief Note / Experience</label>
                                     <textarea
                                         rows={3}
                                         value={candidateNotes}
                                         onChange={(e) => setCandidateNotes(e.target.value)}
                                         placeholder="Tell us about your background or why you'd like to join..."
-                                        className="w-full rounded-xl border border-slate-700 bg-slate-900 px-4 py-2.5 text-sm text-slate-100 placeholder-slate-500 focus:border-cyan-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:outline-none"
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full rounded-xl bg-cyan-500 py-3 text-xs font-bold uppercase tracking-wider text-slate-950 hover:bg-cyan-400 transition mt-4"
+                                    className="w-full rounded-xl bg-indigo-600 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-indigo-700 transition mt-4"
                                 >
                                     Submit Candidate Application
                                 </button>
@@ -576,17 +576,17 @@ const CareersPage = () => {
             </AnimatePresence>
 
             {/* Footer */}
-            <footer className="border-t border-slate-800 bg-slate-950 py-12">
+            <footer className="border-t border-slate-200 bg-white py-12">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6">
                     <div className="flex items-center gap-3">
-                        <Sparkles className="h-5 w-5 text-cyan-400" />
-                        <span className="font-display font-bold text-white">Stellar AI Academy & Careers</span>
+                        <Sparkles className="h-5 w-5 text-indigo-600" />
+                        <span className="font-display font-bold text-slate-900">Stellar AI Academy & Careers</span>
                     </div>
 
-                    <div className="flex items-center gap-6 text-xs text-slate-400">
-                        <a href="/" className="hover:text-cyan-400 transition">Main Platform</a>
-                        <a href="#positions" className="hover:text-cyan-400 transition">Careers</a>
-                        <a href="#certifications" className="hover:text-cyan-400 transition">Paid Certifications</a>
+                    <div className="flex items-center gap-6 text-xs text-slate-500">
+                        <a href="/" className="hover:text-indigo-600 transition">Main Platform</a>
+                        <a href="#positions" className="hover:text-indigo-600 transition">Careers</a>
+                        <a href="#certifications" className="hover:text-indigo-600 transition">Paid Certifications</a>
                     </div>
                 </div>
             </footer>
