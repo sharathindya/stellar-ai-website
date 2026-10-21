@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { toast } from 'sonner';
 import Seo from '@/components/Seo';
+import { HowItWorks, CtaBand } from '@/components/V2Blocks';
 import { ContactCard, FooterCompany } from '@/components/CompanyContact';
 import CurrencySelector from '@/components/CurrencySelector';
 import { useCurrency } from '@/contexts/CurrencyContext';
@@ -19,7 +20,7 @@ const OPEN_POSITIONS_RAW = [
         title: 'Lead Agentic Systems Architect',
         category: 'Engineering',
         type: 'Full-Time',
-        location: 'San Francisco, CA / Remote',
+        location: 'Remote / Chennai, India',
         minSalaryUSD: 160000,
         maxSalaryUSD: 220000,
         equity: '0.5% Equity',
@@ -55,7 +56,7 @@ const OPEN_POSITIONS_RAW = [
         title: 'Enterprise AI Growth & Solutions Lead',
         category: 'Growth & Product',
         type: 'Full-Time',
-        location: 'San Francisco / New York',
+        location: 'Remote / Chennai, India',
         minSalaryUSD: 120000,
         maxSalaryUSD: 160000,
         equity: 'Uncapped Commission',
@@ -143,12 +144,12 @@ const CERTIFICATION_COHORTS_RAW = [
 ];
 
 const COMPLIANCE_CREDENTIALS = [
-    { name: 'HIPAA Compliant', tag: 'Healthcare Security', desc: 'Strict administrative, physical, and technical safeguards for PHI data.' },
+    { name: 'HIPAA-aligned Practices', tag: 'Healthcare Security', desc: 'We design to HIPAA administrative, physical, and technical safeguards for PHI data.' },
     { name: 'ABDM / ABHA Interoperable', tag: 'Health Registry API', desc: 'Unified health interface integration standards for patient data exchange.' },
     { name: 'DPDP Act 2023 Ready', tag: 'Data Protection', desc: 'Comprehensive data principal consent management and audit logging.' },
-    { name: 'SOC-2 Type II Certified', tag: 'Enterprise Trust', desc: 'Rigorous third-party audit for security, availability, and confidentiality.' },
+    { name: 'Built for SOC 2 Practices', tag: 'Enterprise Trust', desc: 'Security, availability, and confidentiality controls modelled on SOC 2 criteria.' },
     { name: 'OWASP LLM Top 10 Guardrails', tag: 'AI Safety', desc: 'Protection against prompt injection, data poisoning, and unauthorized tool calls.' },
-    { name: 'AWS & GCP ML Engineers', tag: 'Certified Staff', desc: '100% of core engineering staff hold professional cloud ML certifications.' }
+    { name: 'AWS & GCP ML Engineers', tag: 'Cloud Expertise', desc: 'Our engineers build and deploy on AWS and Google Cloud ML services.' }
 ];
 
 const CareersPage = () => {
@@ -188,7 +189,7 @@ const CareersPage = () => {
                 <title>Careers & Paid Certifications | Stellar AI Startup</title>
                 <meta
                     name="description"
-                    content="Join Stellar AI startup roles, paid internships, and industry-accredited project certification cohorts with live client stipends."
+                    content="Join Stellar AI startup roles, paid internships, and project-based certification cohorts with live client stipends."
                 />
             </Helmet>
 
@@ -199,7 +200,7 @@ const CareersPage = () => {
             />
 
             {/* Glowing Navbar */}
-            <header className="sticky top-0 z-50 border-b border-[#262626] bg-[#111111]">
+            <header className="sticky top-0 z-50 border-b border-[#1f1f1f] bg-[#0a0a0a]/85 backdrop-blur-md">
                 <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
                     <a href="/" className="flex items-center gap-3 group">
                         <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-teal-400 p-[1px]">
@@ -244,15 +245,15 @@ const CareersPage = () => {
                 <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
                     <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-xs font-mono text-teal-400 mb-6">
                         <Trophy className="h-4 w-4 text-teal-400" />
-                        <span>JOIN THE FRONTIER OF AGENTIC AI ENGINEERING</span>
+                        <span>CAREERS AT STELLAR AI</span>
                     </div>
 
                     <h1 className="font-display text-4xl font-extrabold tracking-tight text-[#e5e5e5] sm:text-6xl max-w-4xl mx-auto">
-                        Build the Future of <span className="glow-gradient-text">Autonomous Intelligence</span>
+                        Build the Future of <span className="glow-gradient-text">AI Agents</span>
                     </h1>
 
                     <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg text-[#a3a3a3] leading-relaxed">
-                        Whether you are an experienced systems architect looking for full-time startup equity, a developer seeking a paid internship, or an engineer enrolling in our accredited project certification cohorts, Stellar AI is your launching pad.
+                        Whether you are an experienced systems architect looking for full-time startup equity, a developer seeking a paid internship, or an engineer enrolling in our project-based certification cohorts, Stellar AI is your launching pad.
                     </p>
 
                     <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
@@ -278,8 +279,8 @@ const CareersPage = () => {
             <section id="positions" className="py-20 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
                     <div>
-                        <span className="text-xs font-mono uppercase tracking-widest text-teal-400">FULL-TIME & CONTRACT ROLES</span>
-                        <h2 className="mt-2 font-display text-3xl font-bold text-[#e5e5e5] sm:text-4xl">
+                        <span className="eyebrow">FULL-TIME & CONTRACT ROLES</span>
+                        <h2 className="mt-2 section-title">
                             Startup Career Opportunities
                         </h2>
                     </div>
@@ -353,8 +354,8 @@ const CareersPage = () => {
             <section id="internships" className="py-20 border-t border-[#262626] bg-[#111111]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-teal-400">EARN WHILE YOU LEARN</span>
-                        <h2 className="mt-2 font-display text-3xl font-bold text-[#e5e5e5] sm:text-4xl">
+                        <span className="eyebrow">EARN WHILE YOU LEARN</span>
+                        <h2 className="mt-2 section-title">
                             Paid Startup Internship Program
                         </h2>
                         <p className="mt-4 text-[#a3a3a3] text-sm sm:text-base">
@@ -409,8 +410,8 @@ const CareersPage = () => {
             {/* Paid Project Certification Courses */}
             <section id="certifications" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-xs font-mono uppercase tracking-widest text-teal-400">ACCREDITED ACADEMY & CAPSTONE STIPENDS</span>
-                    <h2 className="mt-2 font-display text-3xl font-bold text-[#e5e5e5] sm:text-5xl">
+                    <span className="eyebrow">ACADEMY & CAPSTONE STIPENDS</span>
+                    <h2 className="mt-2 section-title">
                         Paid Project Certification Cohorts
                     </h2>
                     <p className="mt-4 text-[#a3a3a3] text-base leading-relaxed">
@@ -468,9 +469,9 @@ const CareersPage = () => {
             <section id="credentials" className="py-20 border-t border-[#262626] bg-[#111111]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-teal-400">SECURITY & INDUSTRY STANDARDS</span>
-                        <h2 className="mt-2 font-display text-3xl font-bold text-[#e5e5e5] sm:text-4xl">
-                            Required Industry & Tech Certifications
+                        <span className="eyebrow">SECURITY & INDUSTRY STANDARDS</span>
+                        <h2 className="mt-2 section-title">
+                            Standards We Build Towards
                         </h2>
                         <p className="mt-4 text-[#a3a3a3] text-sm sm:text-base">
                             Our platform architecture and engineering staff operate strictly under enterprise compliance frameworks.
@@ -575,6 +576,8 @@ const CareersPage = () => {
                     </div>
                 )}
             </AnimatePresence>
+
+            <CtaBand primaryHref="#positions" primaryLabel="See open roles" title="Build AI agents with us" sub="Roles, paid internships and certification cohorts. Questions? Write to us." />
 
             {/* Footer */}
             <footer className="border-t border-[#262626] bg-[#111111] py-12">

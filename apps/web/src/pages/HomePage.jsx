@@ -13,6 +13,7 @@ import { toast } from 'sonner';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
+import { HowItWorks, CtaBand } from '@/components/V2Blocks';
 import { ContactCard, FooterCompany } from '@/components/CompanyContact';
 import ContactForm from '@/components/ContactForm';
 import CurrencySelector from '@/components/CurrencySelector';
@@ -38,12 +39,12 @@ const INDUSTRY_SHOWCASES = {
         id: 'healthcare',
         icon: Orbit,
         sector: 'Healthcare & Clinical',
-        badge: 'HIPAA & ABDM Compliant',
+        badge: 'HIPAA & ABDM-aligned',
         headline: 'Revenue Cycle Management (RCM) & Clinical Triage Agents',
         problem: 'Hospitals lose 12-15% of revenue due to claim denials, manual code audits, and slow E-Prescription data entry.',
         solution: 'Autonomous RCM agents audit rejected claims against CMS guidelines, generate formal medical necessity appeal packages, and map ABHA health IDs straight-through.',
         impactUSD: 450000,
-        impactMetric: 'Saved annually per 100-bed hospital in recovered claims',
+        impactMetric: 'Illustrative: potential yearly recovered claims for a 100-bed hospital',
         inputSample: `POST /api/rcm/audit
 Claim: CLM-90812 | Code: 99214 | Denial Reason: CO-50 (Non-covered)
 Patient ABHA: 91-8810-4910-1200`,
@@ -55,12 +56,12 @@ Recovery Amount: $4,850.00 | Medical Necessity Attached.`
         id: 'fintech',
         icon: Landmark,
         sector: 'FinTech & BFSI',
-        badge: 'SOC-2 & DPDP Certified',
+        badge: 'SOC 2 & DPDP-aligned',
         headline: 'Automated KYC/AML Underwriting & Fraud Triage',
         problem: 'Manual compliance review of loan documents, passport scans, and AML watchlist screening takes 48-72 hours per applicant.',
-        solution: 'Agentic document pipelines extract identity fields, cross-check OFAC/PEP watchlists in real-time, and flag suspicious transactions under sub-30ms execution.',
+        solution: 'Agentic document pipelines extract identity fields, cross-check OFAC/PEP watchlists in real-time, and flag suspicious transactions in real time.',
         impactUSD: 680000,
-        impactMetric: 'Reduced compliance review costs with 99.8% precision',
+        impactMetric: 'Illustrative: potential reduction in compliance review costs',
         inputSample: `EVENT: LoanApplicationSubmitted
 Applicant: Apex Capital LLC | Tax ID: 84-99182
 Document: Passport_Scan_v2.pdf`,
@@ -72,12 +73,12 @@ Income Verification: $240,000 Verified via Bank API.`
         id: 'ecommerce',
         icon: ShoppingBag,
         sector: 'E-Commerce & Retail',
-        badge: 'Omnichannel Swarm',
-        headline: 'WhatsApp & Email Customer Resolution Swarm',
+        badge: 'Omnichannel Agents',
+        headline: 'WhatsApp & Email Customer Support Agents',
         problem: 'Customer support teams are overwhelmed during peak sales events with repetitive order tracking and refund queries.',
-        solution: 'Multi-agent swarms triage incoming WhatsApp and email messages, verify Shopify order statuses, process automated refunds under threshold, and update Zendesk CRM.',
+        solution: 'AI agent teams triage incoming WhatsApp and email messages, verify Shopify order statuses, process automated refunds under threshold, and update Zendesk CRM.',
         impactUSD: 320000,
-        impactMetric: 'Saved in support labor while improving CSAT to 98%',
+        impactMetric: 'Illustrative: potential savings in support labour',
         inputSample: `WHATSAPP INCOMING: +1 (415) 882-9012
 "Where is my order #ST-9912? I need a refund if it hasn't shipped!"`,
         outputSample: `💬 AUTO-RESOLVED & NOTIFIED
@@ -92,7 +93,7 @@ Income Verification: $240,000 Verified via Bank API.`
         problem: 'Reviewing 50-page Master Services Agreements and lease deeds for DPDP Act 2023 and indemnity risks takes hours of legal counsel time.',
         solution: 'Legal agents extract clauses, highlight liability caps exceeding policy limits, redline non-compliant data retention terms, and export DOCX summaries.',
         impactUSD: 510000,
-        impactMetric: 'Reduction in outside legal review fees per year',
+        impactMetric: 'Illustrative: potential yearly reduction in outside legal review fees',
         inputSample: `DOCUMENT: Master_Services_Agreement_2026.docx
 Check: DPDP Act 2023 Section 8 & Indemnity Clause 12.1`,
         outputSample: `⚖️ REDLINE COMPLETE: 2 CLAUSES MODIFIED
@@ -108,7 +109,7 @@ Clause 12.1: Liability capped at 2x annual contract value.`
         problem: 'Mismatched line items between bills of lading, commercial invoices, and ERP purchase orders cause port delays and storage fines.',
         solution: 'Vision OCR agents parse multi-lingual shipping manifests, cross-reference line items against SAP / Oracle ERP, and auto-correct customs tariff codes.',
         impactUSD: 420000,
-        impactMetric: 'Saved in demurrage & port penalty fees annually',
+        impactMetric: 'Illustrative: potential yearly savings in demurrage & port penalties',
         inputSample: `MANIFEST PARSED: BOL_Shipment_9901.pdf
 Items: 400 Units Microcontrollers (HS Code 8542.31)`,
         outputSample: `📦 ERP MATCH CONFIRMED (PO #PO-8812)
@@ -124,7 +125,7 @@ Status: Cleared for automated warehouse intake.`
         problem: 'Researchers and students struggle to synthesize hundreds of academic papers into structured literature reviews and course briefs.',
         solution: 'Agentic paper summarizers query arXiv and PubMed, extract methodology parameters, synthesize comparative tables, and draft publication briefs.',
         impactUSD: 190000,
-        impactMetric: 'Hours saved per research department in document synthesis',
+        impactMetric: 'Illustrative: potential value of hours saved per research department',
         inputSample: `QUERY: "Synthesize 10 recent papers on LLM Quantization techniques for edge devices."`,
         outputSample: `📚 LITERATURE BRIEF GENERATED
 Top Method: AWQ vs. GPTQ 4-bit Quantization
@@ -136,7 +137,7 @@ const SERVICES_2026 = [
     {
         id: 'swarms',
         icon: Network,
-        title: 'Multi-Agent Swarms & Hierarchical Crews',
+        title: 'Multi-Agent Teams (Agentic Workflows)',
         badge: 'Supervisor-Worker Pattern',
         summary:
             'Deploy coordinated teams of specialized agents (Researcher, Writer, Reviewer, Security Gate) operating under a supervisor controller to solve complex tasks.',
@@ -155,10 +156,10 @@ await crew.kickoff({ task: "Audit smart contract security" });`
     {
         id: 'graphrag',
         icon: Layers,
-        title: 'GraphRAG & Hybrid Knowledge Memory',
-        badge: 'Zero-Hallucination Retrieval',
+        title: 'RAG Over Your Data (GraphRAG)',
+        badge: 'Grounded, Cited Answers',
         summary:
-            'Combine Knowledge Graphs (entity relationships) with Vector Search (semantic similarity) for enterprise-wide zero-hallucination memory.',
+            'Combine Knowledge Graphs (entity relationships) with Vector Search (semantic similarity) so answers stay grounded in your own documents.',
         points: ['Knowledge Graph entity extraction & relationship mapping', 'Hybrid dense + sparse vector index matching (Qdrant + Neo4j)', 'Dynamic context window pruning to reduce LLM token overhead'],
         codeSnippet: `const graphRAG = new HybridMemorySystem({
   graphDB: new Neo4jClient({ uri: process.env.NEO4J_URI }),
@@ -170,7 +171,7 @@ await crew.kickoff({ task: "Audit smart contract security" });`
         id: 'healthcare',
         icon: Orbit,
         title: 'Healthcare AI & Clinical RCM Automation',
-        badge: 'HIPAA & ABDM Compliant',
+        badge: 'HIPAA & ABDM-aligned',
         summary:
             'Agent suites for Revenue Cycle Management (RCM), claim denial resolution, clinical triage automation, and EHR integrations.',
         points: ['RCM claim denial analysis & automated appeal generation', 'E-Prescription & triage workflows with doctor review gates', 'ABHA / ABDM health ID data pipeline integration'],
@@ -183,7 +184,7 @@ await crew.kickoff({ task: "Audit smart contract security" });`
     {
         id: 'selfhealing',
         icon: Wrench,
-        title: 'Self-Healing Code & Security Auditor',
+        title: 'AI Code Review & Security Agent',
         badge: 'OWASP LLM Guardrails',
         summary:
             'Autonomous agents that scan repositories, detect syntax/security vulnerabilities, generate fixes, run test suites, and open PRs.',
@@ -198,9 +199,9 @@ if (audit.vulnerabilities.length > 0) {
         id: 'growth',
         icon: Rocket,
         title: 'Growth & Revenue Automation',
-        badge: 'Autonomous Co-Founders',
+        badge: 'Growth Copilots',
         summary:
-            'Autonomous co-founder agents for founders and growth teams — grant and pitch generation, lead enrichment, and sales pipeline execution.',
+            'AI copilots for founders and growth teams — grant and pitch generation, lead enrichment, and sales pipeline execution.',
         points: ['Pitch deck & grant proposal generation', 'Multi-channel lead enrichment & scoring', 'Automated personalized sales outreach'],
         codeSnippet: `const growthAgent = new GrowthEngine({
   role: "Chief Growth Officer",
@@ -210,11 +211,11 @@ if (audit.vulnerabilities.length > 0) {
     {
         id: 'onprem',
         icon: Lock,
-        title: 'On-Prem Quantized Model Distillation',
-        badge: '100% Data Sovereignty',
+        title: 'Private AI Models (On-Prem or Private Cloud)',
+        badge: 'Your Data Stays With You',
         summary:
-            'Deploy fine-tuned 7B and 14B quantized models (DeepSeek-R1, Llama 3) inside private VPCs or on-prem servers for zero external data leakage.',
-        points: ['Private vLLM & Ollama inference server deployment', 'Domain-specific dataset distillation & LoRA fine-tuning', 'DPDP & SOC-2 compliant isolated data boundaries'],
+            'Deploy fine-tuned 7B and 14B quantized models (DeepSeek-R1, Llama 3) inside private VPCs or on-prem servers so your data never leaves your environment.',
+        points: ['Private vLLM & Ollama inference server deployment', 'Domain-specific dataset distillation & LoRA fine-tuning', 'Isolated data boundaries aligned with DPDP and SOC 2 practices'],
         codeSnippet: `const localInference = new PrivateVLLMServer({
   model: "deepseek-r1-distill-llama-8b-q4",
   maxGPUVideoRAM: "16GB",
@@ -409,24 +410,24 @@ const HomePage = () => {
     return (
         <div className="min-h-screen bg-[#0a0a0a] text-[#e5e5e5] font-sans">
             <Helmet>
-                <title>Stellar AI | Autonomous AI Agents, Multi-Agent Swarms & Industry Solutions</title>
+                <title>Stellar AI | AI Agents & Copilots for Business</title>
                 <meta
                     name="description"
-                    content="Enterprise platform for autonomous AI agents, multi-agent swarms, GraphRAG, Healthcare RCM, FinTech compliance, and multi-industry real-world automation."
+                    content="LLM-powered AI agents and copilots for healthcare, finance, retail, legal, logistics and education. RAG over your data, human-in-the-loop, live in days."
                 />
             </Helmet>
 
             <Seo
-                title="Stellar AI — Autonomous AI Agents Platform"
-                description="Enterprise platform for autonomous AI agents, multi-agent swarms, GraphRAG, and clinical automation."
+                title="Stellar AI — AI Agents & Copilots for Business"
+                description="LLM-powered AI agents and copilots with guardrails and human review."
                 image={HERO_IMG}
                 siteName="Stellar AI"
             />
 
             {/* Glowing Reordered Navbar */}
-            <header className="sticky top-0 z-50 border-b border-[#262626] bg-[#111111]">
-                <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
-                    <a href="#top" className="flex items-center gap-3 group">
+            <header className="sticky top-0 z-50 border-b border-[#1f1f1f] bg-[#0a0a0a]/85 backdrop-blur-md">
+                <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-2 px-4 sm:px-6 lg:px-8">
+                    <a href="#top" className="flex shrink-0 items-center gap-2 sm:gap-3 group">
                         <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-teal-400 p-[1px]">
                             <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-[#111111]">
                                 <Sparkles className="h-5 w-5 text-teal-400" />
@@ -436,37 +437,37 @@ const HomePage = () => {
                             <span className="font-display text-lg font-bold tracking-tight text-[#e5e5e5] flex items-center gap-1.5">
                                 Stellar<span className="glow-gradient-text">AI</span>
                             </span>
-                            <span className="block text-[10px] font-mono tracking-widest text-teal-400 uppercase">AUTONOMOUS AGENTS</span>
+                            <span className="block text-[10px] font-mono tracking-widest text-teal-400 uppercase">AI AGENTS</span>
                         </div>
                     </a>
 
                     {/* Reasonably Reordered Header Tabs */}
                     <nav className="hidden items-center gap-6 lg:flex">
-                        <a href="#demo" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Platform & Demos</a>
-                        <a href="#capabilities" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">2026 Capabilities</a>
-                        <a href="#industries" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Industry Specs</a>
-                        <a href="#calculator" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">ROI Calculator</a>
-                        <a href="#certifications" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Paid Certifications</a>
+                        <a href="#demo" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Demos</a>
+                        <a href="#capabilities" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">What we build</a>
+                        <a href="#industries" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Industries</a>
+                        <a href="#calculator" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">ROI calculator</a>
+                        <a href="#certifications" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Certifications</a>
                         <a href="/careers" className="text-sm font-medium text-teal-400 transition hover:text-teal-400 flex items-center gap-1">
                             <Briefcase className="h-3.5 w-3.5" /> Careers & Internships
                         </a>
                     </nav>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 sm:gap-4">
                         <CurrencySelector />
                         <a
                             href="#contact"
-                            className="relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-teal-400 px-5 py-2.5 text-xs font-semibold text-black transition-all"
+                            className="relative inline-flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-full bg-teal-400 px-3 py-2.5 text-xs sm:px-4 font-semibold text-black transition-all"
                         >
-                            <Zap className="h-3.5 w-3.5" />
-                            <span>Launch Sandbox</span>
+                            <Zap className="hidden h-3.5 w-3.5 sm:block" />
+                            <span className="sm:hidden">Free call</span><span className="hidden sm:inline">Book a free call</span>
                         </a>
                     </div>
                 </div>
             </header>
 
             {/* Hero Section */}
-            <section id="top" className="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-32 grid-lines">
+            <section id="top" className="relative overflow-hidden pt-16 pb-24 lg:pt-28 lg:pb-32 hero-accent">
                 <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-teal-500/10 opacity-60 hidden" />
 
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
@@ -477,7 +478,7 @@ const HomePage = () => {
                         className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-xs font-mono text-teal-400 mb-8"
                     >
                         <span className="h-2 w-2 rounded-full bg-teal-400 animate-pulse" />
-                        <span>STELLAR AGENTIC OS 2.0 LIVE</span>
+                        <span>AGENTIC AI FOR GROWING BUSINESSES</span>
                         <ChevronRight className="h-3.5 w-3.5 opacity-70" />
                     </motion.div>
 
@@ -485,10 +486,10 @@ const HomePage = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7, delay: 0.1 }}
-                        className="font-display text-4xl font-extrabold tracking-tight text-[#e5e5e5] sm:text-6xl md:text-7xl lg:leading-[1.1]"
+                        className="hero-title font-display text-[2.6rem] leading-[1.02] font-extrabold tracking-tighter text-[#f5f5f5] sm:text-6xl md:text-7xl lg:text-8xl"
                     >
-                        Autonomous AI Agents built for <br className="hidden sm:inline" />
-                        <span className="glow-gradient-text">Next-Gen Intelligence</span>
+                        AI agents that do the busywork. <br className="hidden sm:inline" />
+                        <span className="glow-gradient-text">You keep control.</span>
                     </motion.h1>
 
                     <motion.p
@@ -497,7 +498,7 @@ const HomePage = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                         className="mx-auto mt-6 max-w-3xl text-lg text-[#a3a3a3] sm:text-xl font-normal leading-relaxed"
                     >
-                        Deploy enterprise multi-agent swarms, GraphRAG memory pipelines, self-healing code auditors, and HIPAA/ABDM compliant healthcare automation in weeks.
+                        We build LLM-powered agents and copilots that answer customers, process documents and run your workflows inside the tools you already use, with human-in-the-loop approvals and guardrails. Go live in days, not months.
                     </motion.p>
 
                     <motion.div
@@ -511,7 +512,7 @@ const HomePage = () => {
                             className="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-7 py-3.5 text-sm font-semibold text-black transition hover:bg-teal-300"
                         >
                             <Play className="h-4 w-4 fill-current" />
-                            <span>Try 6 Live Agent Demos</span>
+                            <span>Try 6 live agent demos</span>
                         </a>
                         <a
                             href="/careers"
@@ -617,13 +618,15 @@ const HomePage = () => {
             </section>
 
             {/* Animated SVG Workflow Node Particles Graph */}
+            <HowItWorks />
+
             <section className="py-16 border-y border-[#262626] bg-[#111111] relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <span className="text-xs font-mono uppercase tracking-widest text-teal-400 mb-2 block">AGENTIC EXECUTION PIPELINE GRAPH</span>
-                    <h3 className="font-display text-2xl font-bold text-[#e5e5e5] mb-8">Real-Time Event Node Topology</h3>
+                    <span className="eyebrow mb-2 block">HOW AN AGENT HANDLES A TASK</span>
+                    <h3 className="font-display text-2xl font-bold text-[#e5e5e5] mb-8">From trigger to verified result</h3>
 
                     {/* SVG Flow Connections */}
-                    <div className="relative mx-auto max-w-4xl rounded-2xl cyber-glass border border-[#262626] p-8">
+                    <div className="relative mx-auto max-w-4xl rounded-2xl cyber-glass border border-[#262626] p-8 overflow-hidden">
                         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M 120 70 Q 250 20 400 70 T 700 70" stroke="rgba(45, 212, 191, 0.35)" strokeWidth="2" fill="none" className="animate-dash-flow" />
                             <path d="M 120 70 Q 250 120 400 70 T 700 70" stroke="rgba(45, 212, 191, 0.2)" strokeWidth="2" fill="none" className="animate-dash-flow" />
@@ -635,7 +638,7 @@ const HomePage = () => {
                                     <Radio className="h-5 w-5 animate-pulse" />
                                 </div>
                                 <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">1. Event Trigger</h4>
-                                <p className="text-[10px] text-[#a3a3a3] mt-1">Webhook / API / Vision OCR</p>
+                                <p className="text-[10px] text-[#a3a3a3] mt-1">Email, form, API or document</p>
                             </div>
 
                             <div className="rounded-xl border border-[#262626] bg-[#111111] p-4 text-center">
@@ -643,15 +646,15 @@ const HomePage = () => {
                                     <ShieldCheck className="h-5 w-5" />
                                 </div>
                                 <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">2. Security Gate</h4>
-                                <p className="text-[10px] text-[#a3a3a3] mt-1">HIPAA / DPDP PII Masking</p>
+                                <p className="text-[10px] text-[#a3a3a3] mt-1">Personal data masked, guardrails on</p>
                             </div>
 
                             <div className="rounded-xl border border-[#262626] bg-[#111111] p-4 text-center">
                                 <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/30 mb-2">
                                     <Bot className="h-5 w-5" />
                                 </div>
-                                <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">3. Supervisor Swarm</h4>
-                                <p className="text-[10px] text-[#a3a3a3] mt-1">Claude 3.5 / GPT-4o Router</p>
+                                <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">3. Agent Team</h4>
+                                <p className="text-[10px] text-[#a3a3a3] mt-1">Best-fit LLM for each step</p>
                             </div>
 
                             <div className="rounded-xl border border-[#262626] bg-[#111111] p-4 text-center">
@@ -659,7 +662,7 @@ const HomePage = () => {
                                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                                 </div>
                                 <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">4. Verified Writeback</h4>
-                                <p className="text-[10px] text-[#a3a3a3] mt-1">ERP / EHR / CRM Integration</p>
+                                <p className="text-[10px] text-[#a3a3a3] mt-1">Written back to your CRM, ERP or EHR</p>
                             </div>
                         </div>
                     </div>
@@ -669,7 +672,7 @@ const HomePage = () => {
             {/* Model Marquee */}
             <section className="border-y border-[#262626] bg-[#111111] py-8 overflow-hidden">
                 <div className="mx-auto max-w-7xl px-6 mb-4 text-center">
-                    <p className="text-xs font-mono tracking-widest text-[#a3a3a3] uppercase">POWERED BY LEADING FOUNDATION MODELS & AGENT FRAMEWORKS</p>
+                    <p className="text-xs font-mono tracking-widest text-[#a3a3a3] uppercase">WORKS WITH LEADING AI MODELS & TOOLS</p>
                 </div>
 
                 <div className="flex w-max animate-marquee gap-8">
@@ -692,12 +695,12 @@ const HomePage = () => {
             <section id="capabilities" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <Reveal>
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-teal-400">2026 AGENTIC AI SUITE</span>
-                        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#e5e5e5] sm:text-5xl">
-                            Up-To-Date Agentic AI Capabilities
+                        <span className="eyebrow">WHAT WE BUILD</span>
+                        <h2 className="mt-3 section-title">
+                            AI agents for real work
                         </h2>
                         <p className="mt-4 text-[#a3a3a3] text-base sm:text-lg">
-                            Deploy multi-agent swarms, GraphRAG hybrid retrieval, self-healing code auditors, and HIPAA compliant clinical pipelines.
+                            Agent teams, RAG over your own data, code-review agents and healthcare workflows, each with guardrails and human review built in.
                         </p>
                     </div>
                 </Reveal>
@@ -768,12 +771,12 @@ const HomePage = () => {
             <section id="industries" className="py-24 border-t border-[#262626] bg-[#111111] grid-lines">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-teal-400">DEPLOYED SECTOR ARCHITECTURES</span>
-                        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-[#e5e5e5] sm:text-5xl">
-                            Real-World Industry Showcases
+                        <span className="eyebrow">INDUSTRIES</span>
+                        <h2 className="mt-3 section-title">
+                            Built for your industry
                         </h2>
                         <p className="mt-4 text-[#a3a3a3] text-base sm:text-lg">
-                            Explore how autonomous agents solve high-complexity workflow challenges in Healthcare, FinTech, E-Commerce, Legal, Logistics, and EdTech.
+                            See how AI agents take on everyday workflow problems in Healthcare, FinTech, E-Commerce, Legal, Logistics, and EdTech.
                         </p>
                     </div>
 
@@ -811,18 +814,18 @@ const HomePage = () => {
 
                                 <div className="space-y-4 text-sm leading-relaxed mb-6">
                                     <div className="rounded-xl border border-red-500/30 bg-red-500/10 p-4">
-                                        <p className="font-mono text-xs font-bold text-red-400 mb-1">🔴 REAL-WORLD CHALLENGE:</p>
+                                        <p className="font-mono text-xs font-bold text-red-400 mb-1">🔴 THE PROBLEM:</p>
                                         <p className="text-[#a3a3a3]">{activeIndustry.problem}</p>
                                     </div>
 
                                     <div className="rounded-xl border border-teal-500/30 bg-teal-500/10 p-4">
-                                        <p className="font-mono text-xs font-bold text-teal-400 mb-1">⚡ DEPLOYED AGENTIC SOLUTION:</p>
+                                        <p className="font-mono text-xs font-bold text-teal-400 mb-1">⚡ HOW AGENTS SOLVE IT:</p>
                                         <p className="text-[#a3a3a3]">{activeIndustry.solution}</p>
                                     </div>
                                 </div>
 
                                 <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4">
-                                    <p className="text-[11px] font-mono text-emerald-400 uppercase tracking-widest">VERIFIED IMPACT METRIC</p>
+                                    <p className="text-[11px] font-mono text-emerald-400 uppercase tracking-widest">ESTIMATED IMPACT (ILLUSTRATIVE)</p>
                                     <h4 className="font-display text-2xl font-extrabold text-emerald-400 mt-1">
                                         +{format(activeIndustry.impactUSD)}
                                     </h4>
@@ -863,9 +866,9 @@ const HomePage = () => {
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
                         <div>
-                            <span className="text-xs font-mono uppercase tracking-widest text-teal-400">PAID PROJECT CERTIFICATIONS</span>
-                            <h2 className="mt-2 font-display text-3xl font-bold text-[#e5e5e5] sm:text-4xl">
-                                Accredited AI Certification Cohorts
+                            <span className="eyebrow">LEARN WITH US</span>
+                            <h2 className="mt-2 section-title">
+                                Paid AI Certification Cohorts
                             </h2>
                         </div>
                         <a
@@ -908,12 +911,12 @@ const HomePage = () => {
                 <div className="rounded-3xl border border-teal-500/30 bg-[#171717] p-8 lg:p-12">
                     <div className="grid gap-12 lg:grid-cols-2 items-center">
                         <div>
-                            <span className="text-xs font-mono uppercase tracking-widest text-teal-400">ESTIMATE YOUR AUTOMATION SAVINGS</span>
-                            <h2 className="mt-3 font-display text-3xl font-bold text-[#e5e5e5] sm:text-4xl">
-                                Calculate Your ROI with Autonomous Agents
+                            <span className="eyebrow">ROI CALCULATOR</span>
+                            <h2 className="mt-3 section-title">
+                                Estimate what AI agents could save you
                             </h2>
                             <p className="mt-4 text-sm text-[#a3a3a3] leading-relaxed">
-                                See how much operational cost and time your team reclaims by switching manual claims, lead generation, and document processing to straight-through AI agents.
+                                See how much operational cost and time your team reclaims by switching manual claims, lead generation, and document processing to AI agents with human review.
                             </p>
 
                             <div className="mt-8 space-y-6">
@@ -984,26 +987,26 @@ const HomePage = () => {
             <section id="contact" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid gap-12 lg:grid-cols-2 items-center">
                     <div>
-                        <span className="text-xs font-mono uppercase tracking-widest text-teal-400">READY TO AUTOMATE?</span>
-                        <h2 className="mt-3 font-display text-3xl font-bold text-[#e5e5e5] sm:text-5xl">
-                            Request Your Agent Architecture Audit
+                        <span className="eyebrow">GET STARTED</span>
+                        <h2 className="mt-3 section-title">
+                            Book a free 30-minute discovery call
                         </h2>
                         <p className="mt-4 text-[#a3a3a3] text-base leading-relaxed">
-                            Schedule a 30-minute discovery session with our AI solution architects to quantify your workflow bottlenecks and map out a scoped pilot.
+                            Tell us which tasks eat your team's time. We'll map where AI agents fit and propose a small, scoped pilot.
                         </p>
 
                         <div className="mt-8 space-y-4">
                             <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
                                 <ShieldCheck className="h-5 w-5 text-teal-400" />
-                                <span>HIPAA, ABDM & DPDP Data Security Standards</span>
+                                <span>Built for HIPAA, ABDM & DPDP-aligned data practices</span>
                             </div>
                             <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
                                 <Lock className="h-5 w-5 text-teal-400" />
-                                <span>Zero model retraining on customer proprietary data</span>
+                                <span>Your data is never used to train models</span>
                             </div>
                             <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
                                 <Server className="h-5 w-5 text-teal-400" />
-                                <span>Flexible deployment: Multi-Tenant Cloud or Private VPC</span>
+                                <span>Run in our cloud or your own private cloud</span>
                             </div>
                         </div>
 
@@ -1016,6 +1019,8 @@ const HomePage = () => {
                 </div>
             </section>
 
+            <CtaBand />
+
             {/* Footer */}
             <footer className="border-t border-[#262626] bg-[#111111] py-12">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6">
@@ -1026,8 +1031,8 @@ const HomePage = () => {
 
                     <div className="flex items-center gap-6 text-xs text-[#a3a3a3]">
                         <a href="/careers" className="hover:text-teal-400 transition">Careers & Internships</a>
-                        <a href="/careers#certifications" className="hover:text-teal-400 transition">Paid Certifications</a>
-                        <a href="#top" className="hover:text-teal-400 transition">HIPAA Compliance</a>
+                        <a href="/careers#certifications" className="hover:text-teal-400 transition">Certifications</a>
+                        <a href="#top" className="hover:text-teal-400 transition">Data Security</a>
                     </div>
                 </div>
                 <FooterCompany />

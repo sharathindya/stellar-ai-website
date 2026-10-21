@@ -23,7 +23,6 @@ export const ContactCard = () => (
             </li>
         </ul>
         <dl className="mt-5 grid gap-3 border-t border-[#262626] pt-4 text-xs sm:grid-cols-2">
-            <div><dt className="uppercase tracking-widest text-[#8a8a8a]">CIN</dt><dd className="mt-1 font-mono text-[#e5e5e5]">U62099TN2025PTC180074</dd></div>
             <div><dt className="uppercase tracking-widest text-[#8a8a8a]">GSTIN</dt><dd className="mt-1 font-mono text-[#e5e5e5]">33ABQCS1066G1Z9</dd></div>
         </dl>
     </div>
@@ -36,7 +35,7 @@ export const FooterCompany = () => (
             <p>{ADDRESS}</p>
             <p>
                 <a href={`mailto:${EMAIL}`} className="text-teal-400 hover:text-teal-300">{EMAIL}</a>
-                <br />CIN: U62099TN2025PTC180074 · GSTIN: 33ABQCS1066G1Z9
+                <br />GSTIN: 33ABQCS1066G1Z9
             </p>
         </div>
         <p className="mt-4 text-[#8a8a8a]">© 2026 {LEGAL}. All rights reserved.</p>
