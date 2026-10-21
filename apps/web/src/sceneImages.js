@@ -3,7 +3,7 @@
 // `shift`/`zoom` (optional) slide and enlarge the image, e.g. to move a subject away from the text.
 // `align` = side the text sits on (choose the image's empty, dark side); `position` = CSS object-position.
 const sceneImages = {
-    hero:       { src: '/images/scenes/hero.webp',       srcSet: '/images/scenes/hero-1920.webp 1920w, /images/scenes/hero.webp 2560w, /images/scenes/hero-3840.webp 3840w', mobileSrc: '/images/scenes/hero-mobile.webp', align: 'left',  position: '100% 50%', mobilePosition: '50% 0%' },
+    hero:       { layered: true, align: 'left' },
     build:      { src: '/images/scenes/build.webp',      align: 'left',  position: '75% 50%' },
     how:        { src: null,                             align: 'left' },
     industries: { src: '/images/scenes/industries.webp', align: 'left',  position: '60% 60%' },

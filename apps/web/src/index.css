@@ -296,3 +296,18 @@ section + section { border-top: 1px solid rgba(255,255,255,0.05); }
 
 .scene-img { object-position: var(--pos, center); }
 @media (max-width: 767px) { .scene-img { object-position: var(--pos-m, var(--pos, center)); } }
+
+/* Layered hero: stage mimics object-cover of a 16:9 (desktop) / 9:16 (mobile) art board */
+.hero-stage-wrap { container-type: size; overflow: hidden; background: #000; }
+.hero-stage { position: absolute; right: 0; top: 50%; translate: 0 -50%; aspect-ratio: 16 / 9; width: max(100cqw, 177.78cqh); }
+.hero-stars { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-ring { position: absolute; left: 78.0%; top: 44.7%; width: 37.4%; height: auto; aspect-ratio: 1; translate: -50% -50%;
+  transform-origin: 50% 50%; will-change: transform; animation: hero-spin 120s linear infinite; backface-visibility: hidden; }
+.hero-wordmark { position: absolute; left: 78.17%; top: 75.86%; width: 26.05%; height: auto; translate: -50% -50%; }
+@keyframes hero-spin { to { transform: rotate(360deg); } }
+@media (max-width: 767px) {
+  .hero-stage { right: auto; left: 50%; top: 0; translate: -50% 0; aspect-ratio: 9 / 16; width: max(100cqw, 56.25cqh); }
+  .hero-ring { left: 49.76%; top: 23.57%; width: 84.5%; }
+  .hero-wordmark { left: 50.1%; top: 45.8%; width: 58.8%; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-ring { animation: none; } }
