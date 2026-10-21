@@ -293,3 +293,6 @@ section + section { border-top: 1px solid rgba(255,255,255,0.05); }
 @media (max-width: 767px) { .scene-overlay, .scene-overlay-r { background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 28%, rgba(0,0,0,0.82) 55%, rgba(0,0,0,0.95) 100%); } }
 .scene-label { display: inline-block; text-shadow: 0 1px 8px rgba(0,0,0,0.8); }
 .scene-title, .scene p { text-shadow: 0 2px 16px rgba(0,0,0,0.5); }
+
+.scene-img { object-position: var(--pos, center); }
+@media (max-width: 767px) { .scene-img { object-position: var(--pos-m, var(--pos, center)); } }

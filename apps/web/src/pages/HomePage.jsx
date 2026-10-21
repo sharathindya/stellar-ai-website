@@ -489,7 +489,7 @@ const HomePage = () => {
             </header>
 
             {/* Hero Section */}
-            <Scene id="top" slot="hero" as="h1" eager label="Agentic AI for growing businesses" title="AI agents that do the busywork. You keep control." sub="LLM-powered agents and copilots with human-in-the-loop approvals and guardrails. Go live in days, not months." cta="Try 6 live agent demos" href="#demo" secondary={{ label: "Explore Careers & Courses", href: "/careers" }} />
+            <Scene id="top" slot="hero" as="h1" eager title="AI agents that do the busywork. You keep control." sub="Human-in-the-loop agents and copilots. Live in days, not months." cta="Try 6 live agent demos" href="#demo" />
 
             <section id="sandbox" className="relative overflow-hidden py-20 lg:py-28 bg-black">
                 <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-teal-500/10 opacity-60 hidden" />

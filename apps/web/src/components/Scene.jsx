@@ -8,9 +8,12 @@ const Scene = ({ id, slot, label, title, sub, cta, href, as = 'h2', eager = fals
     return (
         <section id={id} className="scene relative isolate flex min-h-[100svh] items-end overflow-hidden bg-black" aria-labelledby={`${id}-title`}>
             {cfg.src ? (
-                <img src={cfg.src} alt="" aria-hidden="true" loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : 'auto'}
-                    style={{ objectPosition: cfg.position || 'center', ...(cfg.shift ? { translate: cfg.shift, scale: String(cfg.zoom || 1.2) } : {}) }}
-                    className="scene-img absolute inset-0 -z-20 h-full w-full object-cover" />
+                <picture>
+                    {cfg.mobileSrc && <source media="(max-width: 767px)" srcSet={cfg.mobileSrc} />}
+                    <img src={cfg.src} srcSet={cfg.srcSet} sizes={cfg.srcSet ? "100vw" : undefined} alt="" aria-hidden="true" loading={eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={eager ? 'high' : 'auto'}
+                        style={{ '--pos': cfg.position || 'center', '--pos-m': cfg.mobilePosition || cfg.position || 'center', ...(cfg.shift ? { translate: cfg.shift, scale: String(cfg.zoom || 1.2) } : {}) }}
+                        className="scene-img absolute inset-0 -z-20 h-full w-full object-cover" />
+                </picture>
             ) : (
                 <div className="absolute inset-0 -z-20 scene-plain" aria-hidden="true" />
             )}
