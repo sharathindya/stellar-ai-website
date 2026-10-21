@@ -201,25 +201,25 @@ const CareersPage = () => {
             <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
                 <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
                     <a href="/" className="flex items-center gap-3 group">
-                        <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-600 p-[1px]">
+                        <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-teal-700 p-[1px]">
                             <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-white">
-                                <Sparkles className="h-5 w-5 text-indigo-600" />
+                                <Sparkles className="h-5 w-5 text-teal-700" />
                             </div>
                         </div>
                         <div>
                             <span className="font-display text-lg font-bold tracking-tight text-slate-900 flex items-center gap-1.5">
                                 Stellar<span className="glow-gradient-text">AI</span>
                             </span>
-                            <span className="block text-[10px] font-mono tracking-widest text-indigo-600 uppercase">CAREERS & ACADEMY</span>
+                            <span className="block text-[10px] font-mono tracking-widest text-teal-700 uppercase">CAREERS & ACADEMY</span>
                         </div>
                     </a>
 
                     <nav className="hidden items-center gap-8 md:flex">
-                        <a href="/" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Home Platform</a>
-                        <a href="#positions" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Startup Roles</a>
-                        <a href="#internships" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Paid Internships</a>
-                        <a href="#certifications" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Paid Certifications</a>
-                        <a href="#credentials" className="text-sm font-medium text-slate-600 transition hover:text-indigo-600">Industry Standards</a>
+                        <a href="/" className="text-sm font-medium text-slate-600 transition hover:text-teal-700">Home Platform</a>
+                        <a href="#positions" className="text-sm font-medium text-slate-600 transition hover:text-teal-700">Startup Roles</a>
+                        <a href="#internships" className="text-sm font-medium text-slate-600 transition hover:text-teal-700">Paid Internships</a>
+                        <a href="#certifications" className="text-sm font-medium text-slate-600 transition hover:text-teal-700">Paid Certifications</a>
+                        <a href="#credentials" className="text-sm font-medium text-slate-600 transition hover:text-teal-700">Industry Standards</a>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -228,7 +228,7 @@ const CareersPage = () => {
 
                         <a
                             href="#positions"
-                            className="inline-flex items-center gap-2 rounded-full bg-indigo-600 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-indigo-700"
+                            className="inline-flex items-center gap-2 rounded-full bg-teal-700 px-5 py-2.5 text-xs font-bold text-white transition hover:bg-teal-800"
                         >
                             <span>View Open Roles</span>
                         </a>
@@ -238,11 +238,11 @@ const CareersPage = () => {
 
             {/* Hero Section */}
             <section className="relative py-20 lg:py-28 overflow-hidden grid-lines">
-                <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[450px] w-[750px] rounded-full bg-indigo-50 opacity-60" />
+                <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[450px] w-[750px] rounded-full bg-teal-50 opacity-60" />
 
                 <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-4 py-1.5 text-xs font-mono text-indigo-600 mb-6">
-                        <Trophy className="h-4 w-4 text-indigo-600" />
+                    <div className="inline-flex items-center gap-2 rounded-full border border-teal-200 bg-teal-50 px-4 py-1.5 text-xs font-mono text-teal-700 mb-6">
+                        <Trophy className="h-4 w-4 text-teal-700" />
                         <span>JOIN THE FRONTIER OF AGENTIC AI ENGINEERING</span>
                     </div>
 
@@ -257,16 +257,16 @@ const CareersPage = () => {
                     <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                         <a
                             href="#positions"
-                            className="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-indigo-700"
+                            className="inline-flex items-center gap-2 rounded-xl bg-teal-700 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-teal-800"
                         >
                             <Briefcase className="h-4 w-4" />
                             <span>Explore 4 Open Roles</span>
                         </a>
                         <a
                             href="#certifications"
-                            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-slate-900 transition hover:border-indigo-500"
+                            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-7 py-3.5 text-sm font-semibold text-slate-900 transition hover:border-teal-500"
                         >
-                            <GraduationCap className="h-4 w-4 text-indigo-600" />
+                            <GraduationCap className="h-4 w-4 text-teal-700" />
                             <span>Paid Certification Cohorts</span>
                         </a>
                     </div>
@@ -277,7 +277,7 @@ const CareersPage = () => {
             <section id="positions" className="py-20 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
                     <div>
-                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">FULL-TIME & CONTRACT ROLES</span>
+                        <span className="text-xs font-mono uppercase tracking-widest text-teal-700">FULL-TIME & CONTRACT ROLES</span>
                         <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 sm:text-4xl">
                             Startup Career Opportunities
                         </h2>
@@ -289,7 +289,7 @@ const CareersPage = () => {
                             <button
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
-                                className={`rounded-lg px-4 py-2 text-xs font-semibold transition ${selectedCategory === cat ? 'bg-indigo-50 text-indigo-600 border border-indigo-200' : 'text-slate-500 hover:text-slate-900'}`}
+                                className={`rounded-lg px-4 py-2 text-xs font-semibold transition ${selectedCategory === cat ? 'bg-teal-50 text-teal-700 border border-teal-200' : 'text-slate-500 hover:text-slate-900'}`}
                             >
                                 {cat}
                             </button>
@@ -301,11 +301,11 @@ const CareersPage = () => {
                     {filteredPositions.map((pos) => (
                         <div
                             key={pos.id}
-                            className="rounded-2xl cyber-glass border border-slate-200 p-6 flex flex-col justify-between hover:border-indigo-500 transition group"
+                            className="rounded-2xl cyber-glass border border-slate-200 p-6 flex flex-col justify-between hover:border-teal-500 transition group"
                         >
                             <div>
                                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                                    <span className="rounded-full bg-indigo-50 px-3 py-1 text-[11px] font-mono text-indigo-600 border border-indigo-200">
+                                    <span className="rounded-full bg-teal-50 px-3 py-1 text-[11px] font-mono text-teal-700 border border-teal-200">
                                         {pos.category}
                                     </span>
                                     <span className="text-xs font-mono text-slate-500 flex items-center gap-1">
@@ -313,10 +313,10 @@ const CareersPage = () => {
                                     </span>
                                 </div>
 
-                                <h3 className="font-display text-xl font-bold text-slate-900 group-hover:text-indigo-600 transition mb-2">
+                                <h3 className="font-display text-xl font-bold text-slate-900 group-hover:text-teal-700 transition mb-2">
                                     {pos.title}
                                 </h3>
-                                <p className="text-xs font-mono text-indigo-600 font-semibold mb-3">
+                                <p className="text-xs font-mono text-teal-700 font-semibold mb-3">
                                     {format(pos.minSalaryUSD, { compact: true })} - {format(pos.maxSalaryUSD, { compact: true })} + {pos.equity}
                                 </p>
                                 <p className="text-sm text-slate-500 mb-6 leading-relaxed">
@@ -328,7 +328,7 @@ const CareersPage = () => {
                                     <ul className="space-y-1.5">
                                         {pos.reqs.map((req, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-xs text-slate-600">
-                                                <CheckCircle2 className="h-3.5 w-3.5 text-indigo-600 shrink-0 mt-0.5" />
+                                                <CheckCircle2 className="h-3.5 w-3.5 text-teal-700 shrink-0 mt-0.5" />
                                                 <span>{req}</span>
                                             </li>
                                         ))}
@@ -338,7 +338,7 @@ const CareersPage = () => {
 
                             <button
                                 onClick={() => handleOpenApply(pos.title)}
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white border border-slate-200 py-3 text-xs font-bold uppercase tracking-wider text-slate-900 hover:bg-indigo-700 hover:text-white hover:border-indigo-500 transition"
+                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white border border-slate-200 py-3 text-xs font-bold uppercase tracking-wider text-slate-900 hover:bg-teal-800 hover:text-white hover:border-teal-500 transition"
                             >
                                 <span>Apply For Position</span>
                                 <ArrowRight className="h-4 w-4" />
@@ -352,7 +352,7 @@ const CareersPage = () => {
             <section id="internships" className="py-20 border-t border-slate-200 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">EARN WHILE YOU LEARN</span>
+                        <span className="text-xs font-mono uppercase tracking-widest text-teal-700">EARN WHILE YOU LEARN</span>
                         <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 sm:text-4xl">
                             Paid Startup Internship Program
                         </h2>
@@ -366,7 +366,7 @@ const CareersPage = () => {
                             <div key={intern.id} className="rounded-2xl cyber-glass p-6 border border-slate-200 flex flex-col justify-between">
                                 <div>
                                     <div className="flex items-center justify-between mb-4">
-                                        <span className="rounded-full bg-indigo-50 px-3 py-1 text-[11px] font-mono text-indigo-600 border border-indigo-200">
+                                        <span className="rounded-full bg-teal-50 px-3 py-1 text-[11px] font-mono text-teal-700 border border-teal-200">
                                             {intern.type}
                                         </span>
                                         <span className="text-xs font-mono text-slate-500 flex items-center gap-1">
@@ -375,7 +375,7 @@ const CareersPage = () => {
                                     </div>
 
                                     <h3 className="font-display text-lg font-bold text-slate-900 mb-2">{intern.title}</h3>
-                                    <p className="text-xs font-mono text-indigo-600 font-bold mb-4">
+                                    <p className="text-xs font-mono text-teal-700 font-bold mb-4">
                                         {format(intern.stipendUSD)} / Month + Mentorship
                                     </p>
                                     <p className="text-xs text-slate-500 leading-relaxed mb-6">{intern.desc}</p>
@@ -385,7 +385,7 @@ const CareersPage = () => {
                                         <ul className="space-y-1.5">
                                             {intern.perks.map((perk, idx) => (
                                                 <li key={idx} className="flex items-center gap-2 text-xs text-slate-600">
-                                                    <Sparkles className="h-3.5 w-3.5 text-indigo-600 shrink-0" />
+                                                    <Sparkles className="h-3.5 w-3.5 text-teal-700 shrink-0" />
                                                     <span>{perk}</span>
                                                 </li>
                                             ))}
@@ -395,7 +395,7 @@ const CareersPage = () => {
 
                                 <button
                                     onClick={() => handleOpenApply(intern.title)}
-                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-50 border border-indigo-200 py-3 text-xs font-bold uppercase tracking-wider text-indigo-600 hover:bg-indigo-700 hover:text-slate-900 transition"
+                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-teal-50 border border-teal-200 py-3 text-xs font-bold uppercase tracking-wider text-teal-700 hover:bg-teal-800 hover:text-slate-900 transition"
                                 >
                                     <span>Apply for Internship</span>
                                 </button>
@@ -408,7 +408,7 @@ const CareersPage = () => {
             {/* Paid Project Certification Courses */}
             <section id="certifications" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">ACCREDITED ACADEMY & CAPSTONE STIPENDS</span>
+                    <span className="text-xs font-mono uppercase tracking-widest text-teal-700">ACCREDITED ACADEMY & CAPSTONE STIPENDS</span>
                     <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 sm:text-5xl">
                         Paid Project Certification Cohorts
                     </h2>
@@ -419,10 +419,10 @@ const CareersPage = () => {
 
                 <div className="grid gap-8 lg:grid-cols-3">
                     {CERTIFICATION_COHORTS_RAW.map((cohort) => (
-                        <div key={cohort.id} className="rounded-2xl cyber-glass p-8 border border-slate-200 hover:border-indigo-500 transition relative flex flex-col justify-between">
+                        <div key={cohort.id} className="rounded-2xl cyber-glass p-8 border border-slate-200 hover:border-teal-500 transition relative flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center justify-between mb-4">
-                                    <span className="rounded-full bg-indigo-50 px-3 py-1 text-[11px] font-mono text-indigo-600 border border-indigo-200">
+                                    <span className="rounded-full bg-teal-50 px-3 py-1 text-[11px] font-mono text-teal-700 border border-teal-200">
                                         {cohort.badge}
                                     </span>
                                     <span className="text-xs font-mono text-slate-500">{cohort.duration}</span>
@@ -433,7 +433,7 @@ const CareersPage = () => {
                                     <span className="font-display text-3xl font-extrabold text-slate-900">{format(cohort.priceUSD)}</span>
                                     <span className="text-xs text-slate-500">/ cohort</span>
                                 </div>
-                                <p className="text-xs font-mono text-indigo-600 bg-indigo-50 p-2.5 rounded-lg border border-indigo-200 mb-4">
+                                <p className="text-xs font-mono text-teal-700 bg-teal-50 p-2.5 rounded-lg border border-teal-200 mb-4">
                                     💰 Includes {format(cohort.stipendUSD)} Real Client Project Stipend
                                 </p>
                                 <p className="text-xs text-slate-500 leading-relaxed mb-6">{cohort.summary}</p>
@@ -443,7 +443,7 @@ const CareersPage = () => {
                                     <ul className="space-y-2">
                                         {cohort.modules.map((mod, mIdx) => (
                                             <li key={mIdx} className="flex items-start gap-2 text-xs text-slate-600 leading-tight">
-                                                <Check className="h-3.5 w-3.5 text-indigo-600 shrink-0 mt-0.5" />
+                                                <Check className="h-3.5 w-3.5 text-teal-700 shrink-0 mt-0.5" />
                                                 <span>{mod}</span>
                                             </li>
                                         ))}
@@ -453,7 +453,7 @@ const CareersPage = () => {
 
                             <button
                                 onClick={() => handleOpenApply(`Enroll: ${cohort.title}`)}
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-indigo-700 transition"
+                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-teal-700 py-3.5 text-xs font-bold uppercase tracking-wider text-white hover:bg-teal-800 transition"
                             >
                                 <span>Apply for Cohort Enrollment</span>
                                 <ArrowRight className="h-4 w-4" />
@@ -467,7 +467,7 @@ const CareersPage = () => {
             <section id="credentials" className="py-20 border-t border-slate-200 bg-white">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-600">SECURITY & INDUSTRY STANDARDS</span>
+                        <span className="text-xs font-mono uppercase tracking-widest text-teal-700">SECURITY & INDUSTRY STANDARDS</span>
                         <h2 className="mt-2 font-display text-3xl font-bold text-slate-900 sm:text-4xl">
                             Required Industry & Tech Certifications
                         </h2>
@@ -479,11 +479,11 @@ const CareersPage = () => {
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {COMPLIANCE_CREDENTIALS.map((cred, cIdx) => (
                             <div key={cIdx} className="rounded-2xl border border-slate-200 bg-white p-6 flex items-start gap-4">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-200 shrink-0">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-50 text-teal-700 border border-teal-200 shrink-0">
                                     <ShieldCheck className="h-5 w-5" />
                                 </div>
                                 <div>
-                                    <span className="rounded bg-slate-100 px-2 py-0.5 text-[10px] font-mono text-indigo-600">{cred.tag}</span>
+                                    <span className="rounded bg-slate-100 px-2 py-0.5 text-[10px] font-mono text-teal-700">{cred.tag}</span>
                                     <h4 className="font-display text-base font-bold text-slate-900 mt-1">{cred.name}</h4>
                                     <p className="text-xs text-slate-500 mt-1 leading-relaxed">{cred.desc}</p>
                                 </div>
@@ -513,7 +513,7 @@ const CareersPage = () => {
                             <h3 className="font-display text-xl font-bold text-slate-900 mb-1">
                                 Application Form
                             </h3>
-                            <p className="text-xs font-mono text-indigo-600 mb-6">{selectedRoleTitle}</p>
+                            <p className="text-xs font-mono text-teal-700 mb-6">{selectedRoleTitle}</p>
 
                             <form onSubmit={handleSubmitApplication} className="space-y-4">
                                 <div>
@@ -524,7 +524,7 @@ const CareersPage = () => {
                                         value={candidateName}
                                         onChange={(e) => setCandidateName(e.target.value)}
                                         placeholder="Jane Doe"
-                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-teal-500 focus:outline-none"
                                     />
                                 </div>
 
@@ -536,7 +536,7 @@ const CareersPage = () => {
                                         value={candidateEmail}
                                         onChange={(e) => setCandidateEmail(e.target.value)}
                                         placeholder="jane@example.com"
-                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-teal-500 focus:outline-none"
                                     />
                                 </div>
 
@@ -548,7 +548,7 @@ const CareersPage = () => {
                                         value={candidatePortfolio}
                                         onChange={(e) => setCandidatePortfolio(e.target.value)}
                                         placeholder="https://github.com/janedoe"
-                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-teal-500 focus:outline-none"
                                     />
                                 </div>
 
@@ -559,13 +559,13 @@ const CareersPage = () => {
                                         value={candidateNotes}
                                         onChange={(e) => setCandidateNotes(e.target.value)}
                                         placeholder="Tell us about your background or why you'd like to join..."
-                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-indigo-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:border-teal-500 focus:outline-none"
                                     />
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full rounded-xl bg-indigo-600 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-indigo-700 transition mt-4"
+                                    className="w-full rounded-xl bg-teal-700 py-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-teal-800 transition mt-4"
                                 >
                                     Submit Candidate Application
                                 </button>
@@ -579,14 +579,14 @@ const CareersPage = () => {
             <footer className="border-t border-slate-200 bg-white py-12">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6">
                     <div className="flex items-center gap-3">
-                        <Sparkles className="h-5 w-5 text-indigo-600" />
+                        <Sparkles className="h-5 w-5 text-teal-700" />
                         <span className="font-display font-bold text-slate-900">Stellar AI Academy & Careers</span>
                     </div>
 
                     <div className="flex items-center gap-6 text-xs text-slate-500">
-                        <a href="/" className="hover:text-indigo-600 transition">Main Platform</a>
-                        <a href="#positions" className="hover:text-indigo-600 transition">Careers</a>
-                        <a href="#certifications" className="hover:text-indigo-600 transition">Paid Certifications</a>
+                        <a href="/" className="hover:text-teal-700 transition">Main Platform</a>
+                        <a href="#positions" className="hover:text-teal-700 transition">Careers</a>
+                        <a href="#certifications" className="hover:text-teal-700 transition">Paid Certifications</a>
                     </div>
                 </div>
             </footer>
