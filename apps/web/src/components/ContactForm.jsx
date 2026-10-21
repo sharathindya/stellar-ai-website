@@ -13,7 +13,7 @@ const INTERESTS = [
 const empty = { name: '', email: '', company: '', phone: '', interest: INTERESTS[0], message: '' };
 
 const field =
-    'w-full rounded-sm border border-border bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20';
+    'w-full rounded-sm border border-white/10 bg-black px-4 py-3 text-sm text-[#e5e5e5] placeholder:text-[#737373] outline-none transition focus:border-teal-400 focus:ring-2 focus:ring-teal-400/30';
 
 const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_API_URL || (import.meta.env.DEV ? '/api/contact' : '/contact-handler.php');
 
@@ -63,10 +63,10 @@ const ContactForm = () => {
 
     if (status === 'done') {
         return (
-            <div className="flex flex-col items-start gap-4 rounded-sm border border-accent/40 bg-accent/10 p-8">
-                <CheckCircle2 className="h-8 w-8 text-accent" strokeWidth={1.5} />
+            <div className="flex flex-col items-start gap-4 rounded-sm border border-teal-500/30 bg-teal-500/10 p-8">
+                <CheckCircle2 className="h-8 w-8 text-neutral-300" strokeWidth={1.5} />
                 <div>
-                    <h3 className="font-display text-xl font-semibold text-foreground">Enquiry received</h3>
+                    <h3 className="font-display text-xl font-semibold text-[#e5e5e5]">Enquiry received</h3>
                     <p className="mt-2 text-sm text-muted-foreground">
                         A solutions architect will respond within one business day with next steps and a proposed
                         discovery agenda.
@@ -75,7 +75,7 @@ const ContactForm = () => {
                 <button
                     type="button"
                     onClick={() => setStatus('idle')}
-                    className="text-sm font-medium text-primary underline underline-offset-4"
+                    className="text-sm font-medium text-neutral-300 underline underline-offset-4"
                 >
                     Submit another enquiry
                 </button>
@@ -126,7 +126,7 @@ const ContactForm = () => {
             <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-sm bg-primary px-8 text-sm font-semibold uppercase tracking-widest text-primary-foreground transition hover:bg-primary/90 active:scale-[0.98] disabled:opacity-60"
+                className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-white px-8 text-sm font-semibold uppercase tracking-widest text-black transition hover:bg-neutral-200 active:scale-[0.98] disabled:opacity-60"
             >
                 {status === 'loading' && <Loader2 className="h-4 w-4 animate-spin" />}
                 {status === 'loading' ? 'Sending' : 'Request a consultation'}

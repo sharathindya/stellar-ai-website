@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
+import FadeInSections from './components/FadeInSections';
 import HomePage from './pages/HomePage';
 import CareersPage from './pages/CareersPage';
 import { CurrencyProvider } from './contexts/CurrencyContext';
@@ -10,6 +11,7 @@ function App() {
         <CurrencyProvider>
             <Router>
                 <ScrollToTop />
+                <FadeInSections />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/careers" element={<CareersPage />} />

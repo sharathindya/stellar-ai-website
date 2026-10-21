@@ -13,6 +13,9 @@ import { toast } from 'sonner';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
+import Scene from '@/components/Scene';
+import { HowItWorks, CtaBand } from '@/components/V2Blocks';
+import { ContactCard, FooterCompany } from '@/components/CompanyContact';
 import ContactForm from '@/components/ContactForm';
 import CurrencySelector from '@/components/CurrencySelector';
 import { useCurrency } from '@/contexts/CurrencyContext';
@@ -37,12 +40,12 @@ const INDUSTRY_SHOWCASES = {
         id: 'healthcare',
         icon: Orbit,
         sector: 'Healthcare & Clinical',
-        badge: 'HIPAA & ABDM Compliant',
+        badge: 'HIPAA & ABDM-aligned',
         headline: 'Revenue Cycle Management (RCM) & Clinical Triage Agents',
         problem: 'Hospitals lose 12-15% of revenue due to claim denials, manual code audits, and slow E-Prescription data entry.',
         solution: 'Autonomous RCM agents audit rejected claims against CMS guidelines, generate formal medical necessity appeal packages, and map ABHA health IDs straight-through.',
         impactUSD: 450000,
-        impactMetric: 'Saved annually per 100-bed hospital in recovered claims',
+        impactMetric: 'Illustrative: potential yearly recovered claims for a 100-bed hospital',
         inputSample: `POST /api/rcm/audit
 Claim: CLM-90812 | Code: 99214 | Denial Reason: CO-50 (Non-covered)
 Patient ABHA: 91-8810-4910-1200`,
@@ -54,12 +57,12 @@ Recovery Amount: $4,850.00 | Medical Necessity Attached.`
         id: 'fintech',
         icon: Landmark,
         sector: 'FinTech & BFSI',
-        badge: 'SOC-2 & DPDP Certified',
+        badge: 'SOC 2 & DPDP-aligned',
         headline: 'Automated KYC/AML Underwriting & Fraud Triage',
         problem: 'Manual compliance review of loan documents, passport scans, and AML watchlist screening takes 48-72 hours per applicant.',
-        solution: 'Agentic document pipelines extract identity fields, cross-check OFAC/PEP watchlists in real-time, and flag suspicious transactions under sub-30ms execution.',
+        solution: 'Agentic document pipelines extract identity fields, cross-check OFAC/PEP watchlists in real-time, and flag suspicious transactions in real time.',
         impactUSD: 680000,
-        impactMetric: 'Reduced compliance review costs with 99.8% precision',
+        impactMetric: 'Illustrative: potential reduction in compliance review costs',
         inputSample: `EVENT: LoanApplicationSubmitted
 Applicant: Apex Capital LLC | Tax ID: 84-99182
 Document: Passport_Scan_v2.pdf`,
@@ -71,12 +74,12 @@ Income Verification: $240,000 Verified via Bank API.`
         id: 'ecommerce',
         icon: ShoppingBag,
         sector: 'E-Commerce & Retail',
-        badge: 'Omnichannel Swarm',
-        headline: 'WhatsApp & Email Customer Resolution Swarm',
+        badge: 'Omnichannel Agents',
+        headline: 'WhatsApp & Email Customer Support Agents',
         problem: 'Customer support teams are overwhelmed during peak sales events with repetitive order tracking and refund queries.',
-        solution: 'Multi-agent swarms triage incoming WhatsApp and email messages, verify Shopify order statuses, process automated refunds under threshold, and update Zendesk CRM.',
+        solution: 'AI agent teams triage incoming WhatsApp and email messages, verify Shopify order statuses, process automated refunds under threshold, and update Zendesk CRM.',
         impactUSD: 320000,
-        impactMetric: 'Saved in support labor while improving CSAT to 98%',
+        impactMetric: 'Illustrative: potential savings in support labour',
         inputSample: `WHATSAPP INCOMING: +1 (415) 882-9012
 "Where is my order #ST-9912? I need a refund if it hasn't shipped!"`,
         outputSample: `💬 AUTO-RESOLVED & NOTIFIED
@@ -91,7 +94,7 @@ Income Verification: $240,000 Verified via Bank API.`
         problem: 'Reviewing 50-page Master Services Agreements and lease deeds for DPDP Act 2023 and indemnity risks takes hours of legal counsel time.',
         solution: 'Legal agents extract clauses, highlight liability caps exceeding policy limits, redline non-compliant data retention terms, and export DOCX summaries.',
         impactUSD: 510000,
-        impactMetric: 'Reduction in outside legal review fees per year',
+        impactMetric: 'Illustrative: potential yearly reduction in outside legal review fees',
         inputSample: `DOCUMENT: Master_Services_Agreement_2026.docx
 Check: DPDP Act 2023 Section 8 & Indemnity Clause 12.1`,
         outputSample: `⚖️ REDLINE COMPLETE: 2 CLAUSES MODIFIED
@@ -107,7 +110,7 @@ Clause 12.1: Liability capped at 2x annual contract value.`
         problem: 'Mismatched line items between bills of lading, commercial invoices, and ERP purchase orders cause port delays and storage fines.',
         solution: 'Vision OCR agents parse multi-lingual shipping manifests, cross-reference line items against SAP / Oracle ERP, and auto-correct customs tariff codes.',
         impactUSD: 420000,
-        impactMetric: 'Saved in demurrage & port penalty fees annually',
+        impactMetric: 'Illustrative: potential yearly savings in demurrage & port penalties',
         inputSample: `MANIFEST PARSED: BOL_Shipment_9901.pdf
 Items: 400 Units Microcontrollers (HS Code 8542.31)`,
         outputSample: `📦 ERP MATCH CONFIRMED (PO #PO-8812)
@@ -123,7 +126,7 @@ Status: Cleared for automated warehouse intake.`
         problem: 'Researchers and students struggle to synthesize hundreds of academic papers into structured literature reviews and course briefs.',
         solution: 'Agentic paper summarizers query arXiv and PubMed, extract methodology parameters, synthesize comparative tables, and draft publication briefs.',
         impactUSD: 190000,
-        impactMetric: 'Hours saved per research department in document synthesis',
+        impactMetric: 'Illustrative: potential value of hours saved per research department',
         inputSample: `QUERY: "Synthesize 10 recent papers on LLM Quantization techniques for edge devices."`,
         outputSample: `📚 LITERATURE BRIEF GENERATED
 Top Method: AWQ vs. GPTQ 4-bit Quantization
@@ -135,7 +138,7 @@ const SERVICES_2026 = [
     {
         id: 'swarms',
         icon: Network,
-        title: 'Multi-Agent Swarms & Hierarchical Crews',
+        title: 'Multi-Agent Teams (Agentic Workflows)',
         badge: 'Supervisor-Worker Pattern',
         summary:
             'Deploy coordinated teams of specialized agents (Researcher, Writer, Reviewer, Security Gate) operating under a supervisor controller to solve complex tasks.',
@@ -154,10 +157,10 @@ await crew.kickoff({ task: "Audit smart contract security" });`
     {
         id: 'graphrag',
         icon: Layers,
-        title: 'GraphRAG & Hybrid Knowledge Memory',
-        badge: 'Zero-Hallucination Retrieval',
+        title: 'RAG Over Your Data (GraphRAG)',
+        badge: 'Grounded, Cited Answers',
         summary:
-            'Combine Knowledge Graphs (entity relationships) with Vector Search (semantic similarity) for enterprise-wide zero-hallucination memory.',
+            'Combine Knowledge Graphs (entity relationships) with Vector Search (semantic similarity) so answers stay grounded in your own documents.',
         points: ['Knowledge Graph entity extraction & relationship mapping', 'Hybrid dense + sparse vector index matching (Qdrant + Neo4j)', 'Dynamic context window pruning to reduce LLM token overhead'],
         codeSnippet: `const graphRAG = new HybridMemorySystem({
   graphDB: new Neo4jClient({ uri: process.env.NEO4J_URI }),
@@ -169,7 +172,7 @@ await crew.kickoff({ task: "Audit smart contract security" });`
         id: 'healthcare',
         icon: Orbit,
         title: 'Healthcare AI & Clinical RCM Automation',
-        badge: 'HIPAA & ABDM Compliant',
+        badge: 'HIPAA & ABDM-aligned',
         summary:
             'Agent suites for Revenue Cycle Management (RCM), claim denial resolution, clinical triage automation, and EHR integrations.',
         points: ['RCM claim denial analysis & automated appeal generation', 'E-Prescription & triage workflows with doctor review gates', 'ABHA / ABDM health ID data pipeline integration'],
@@ -182,7 +185,7 @@ await crew.kickoff({ task: "Audit smart contract security" });`
     {
         id: 'selfhealing',
         icon: Wrench,
-        title: 'Self-Healing Code & Security Auditor',
+        title: 'AI Code Review & Security Agent',
         badge: 'OWASP LLM Guardrails',
         summary:
             'Autonomous agents that scan repositories, detect syntax/security vulnerabilities, generate fixes, run test suites, and open PRs.',
@@ -197,9 +200,9 @@ if (audit.vulnerabilities.length > 0) {
         id: 'growth',
         icon: Rocket,
         title: 'Growth & Revenue Automation',
-        badge: 'Autonomous Co-Founders',
+        badge: 'Growth Copilots',
         summary:
-            'Autonomous co-founder agents for founders and growth teams — grant and pitch generation, lead enrichment, and sales pipeline execution.',
+            'AI copilots for founders and growth teams — grant and pitch generation, lead enrichment, and sales pipeline execution.',
         points: ['Pitch deck & grant proposal generation', 'Multi-channel lead enrichment & scoring', 'Automated personalized sales outreach'],
         codeSnippet: `const growthAgent = new GrowthEngine({
   role: "Chief Growth Officer",
@@ -209,11 +212,11 @@ if (audit.vulnerabilities.length > 0) {
     {
         id: 'onprem',
         icon: Lock,
-        title: 'On-Prem Quantized Model Distillation',
-        badge: '100% Data Sovereignty',
+        title: 'Private AI Models (On-Prem or Private Cloud)',
+        badge: 'Your Data Stays With You',
         summary:
-            'Deploy fine-tuned 7B and 14B quantized models (DeepSeek-R1, Llama 3) inside private VPCs or on-prem servers for zero external data leakage.',
-        points: ['Private vLLM & Ollama inference server deployment', 'Domain-specific dataset distillation & LoRA fine-tuning', 'DPDP & SOC-2 compliant isolated data boundaries'],
+            'Deploy fine-tuned 7B and 14B quantized models (DeepSeek-R1, Llama 3) inside private VPCs or on-prem servers so your data never leaves your environment.',
+        points: ['Private vLLM & Ollama inference server deployment', 'Domain-specific dataset distillation & LoRA fine-tuning', 'Isolated data boundaries aligned with DPDP and SOC 2 practices'],
         codeSnippet: `const localInference = new PrivateVLLMServer({
   model: "deepseek-r1-distill-llama-8b-q4",
   maxGPUVideoRAM: "16GB",
@@ -362,6 +365,7 @@ Zendesk Ticket #9912 updated -> Resolved.`
 };
 
 const HomePage = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
     const { format, current } = useCurrency();
     const [activeDemo, setActiveDemo] = useState('rcm');
     const [demoInput, setDemoInput] = useState(DEMO_PRESETS.rcm.prompt);
@@ -406,120 +410,78 @@ const HomePage = () => {
     const hoursSavedYearly = Math.round(manualHours * 12 * 0.65);
 
     return (
-        <div className="min-h-screen bg-[#020617] text-slate-100 font-sans selection:bg-cyan-500/30 selection:text-cyan-300">
+        <div className="min-h-screen bg-black text-[#e5e5e5] font-sans">
             <Helmet>
-                <title>Stellar AI | Autonomous AI Agents, Multi-Agent Swarms & Industry Solutions</title>
+                <title>Stellar AI | AI Agents & Copilots for Business</title>
                 <meta
                     name="description"
-                    content="Enterprise platform for autonomous AI agents, multi-agent swarms, GraphRAG, Healthcare RCM, FinTech compliance, and multi-industry real-world automation."
+                    content="LLM-powered AI agents and copilots for healthcare, finance, retail, legal, logistics and education. RAG over your data, human-in-the-loop, live in days."
                 />
             </Helmet>
 
             <Seo
-                title="Stellar AI — Autonomous AI Agents Platform"
-                description="Enterprise platform for autonomous AI agents, multi-agent swarms, GraphRAG, and clinical automation."
+                title="Stellar AI — AI Agents & Copilots for Business"
+                description="LLM-powered AI agents and copilots with guardrails and human review."
                 image={HERO_IMG}
                 siteName="Stellar AI"
             />
 
             {/* Glowing Reordered Navbar */}
-            <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
-                <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
-                    <a href="#top" className="flex items-center gap-3 group">
-                        <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-500 to-purple-600 p-[1px] shadow-[0_0_20px_rgba(56,189,248,0.3)]">
-                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-slate-950">
-                                <Sparkles className="h-5 w-5 text-cyan-400" />
-                            </div>
-                        </div>
-                        <div>
-                            <span className="font-display text-lg font-bold tracking-tight text-white flex items-center gap-1.5">
-                                Stellar<span className="glow-gradient-text">AI</span>
-                            </span>
-                            <span className="block text-[10px] font-mono tracking-widest text-cyan-400/80 uppercase">AUTONOMOUS AGENTS</span>
-                        </div>
-                    </a>
+            <header className="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent">
+                <div className="mx-auto flex h-18 max-w-7xl items-center justify-end gap-2 px-4 sm:px-6 lg:px-8">
 
                     {/* Reasonably Reordered Header Tabs */}
-                    <nav className="hidden items-center gap-6 lg:flex">
-                        <a href="#demo" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Platform & Demos</a>
-                        <a href="#capabilities" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">2026 Capabilities</a>
-                        <a href="#industries" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Industry Specs</a>
-                        <a href="#calculator" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">ROI Calculator</a>
-                        <a href="#certifications" className="text-sm font-medium text-slate-300 transition hover:text-cyan-400">Paid Certifications</a>
-                        <a href="/careers" className="text-sm font-medium text-cyan-300 transition hover:text-cyan-400 flex items-center gap-1">
+                    <nav className="ml-10 mr-6 hidden items-center gap-6 xl:flex">
+                        <a href="#demo" className="nav-link">Demos</a>
+                        <a href="#capabilities" className="nav-link">What we build</a>
+                        <a href="#industries" className="nav-link">Industries</a>
+                        <a href="#calculator" className="nav-link">ROI calculator</a>
+                        <a href="#certifications" className="nav-link">Certifications</a>
+                        <a href="/careers" className="nav-link flex items-center gap-1">
                             <Briefcase className="h-3.5 w-3.5" /> Careers & Internships
                         </a>
                     </nav>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 sm:gap-4">
                         <CurrencySelector />
+                        <button type="button" className="xl:hidden inline-flex h-11 w-11 items-center justify-center text-white" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="mobile-menu" onClick={() => setMenuOpen((o) => !o)}>
+                            <span className="relative block h-3.5 w-6" aria-hidden="true">
+                                <span className={`absolute left-0 top-0 h-0.5 w-6 bg-white transition ${menuOpen ? 'translate-y-[6px] rotate-45' : ''}`} />
+                                <span className={`absolute left-0 top-[6px] h-0.5 w-6 bg-white transition ${menuOpen ? 'opacity-0' : ''}`} />
+                                <span className={`absolute left-0 top-3 h-0.5 w-6 bg-white transition ${menuOpen ? '-translate-y-[6px] -rotate-45' : ''}`} />
+                            </span>
+                        </button>
                         <a
                             href="#contact"
-                            className="relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600 px-5 py-2.5 text-xs font-semibold text-white shadow-[0_0_25px_rgba(56,189,248,0.4)] transition-all hover:shadow-[0_0_35px_rgba(56,189,248,0.6)]"
+                            className="relative inline-flex items-center gap-2 hidden sm:inline-flex overflow-hidden whitespace-nowrap rounded-none border-2 border-white px-3 py-2 uppercase tracking-widest text-xs sm:px-4 font-medium text-white transition-all hover:bg-white hover:text-black"
                         >
-                            <Zap className="h-3.5 w-3.5" />
-                            <span>Launch Sandbox</span>
+                            <Zap className="hidden h-3.5 w-3.5 sm:block" />
+                            <span>Book a free call</span>
                         </a>
                     </div>
                 </div>
+                {menuOpen && (
+                    <nav id="mobile-menu" className="xl:hidden border-t border-white/10 bg-black px-6 py-6" onClick={() => setMenuOpen(false)}>
+                        <ul className="flex flex-col gap-5">
+                            <li><a href="#demo" className="nav-link">Demos</a></li>
+                            <li><a href="#capabilities" className="nav-link">What we build</a></li>
+                            <li><a href="#industries" className="nav-link">Industries</a></li>
+                            <li><a href="#calculator" className="nav-link">ROI calculator</a></li>
+                            <li><a href="#certifications" className="nav-link">Certifications</a></li>
+                            <li><a href="/careers" className="nav-link">Careers & Internships</a></li>
+                            <li><a href="#contact" className="nav-link">Book a free call</a></li>
+                        </ul>
+                    </nav>
+                )}
             </header>
 
             {/* Hero Section */}
-            <section id="top" className="relative overflow-hidden pt-12 pb-24 lg:pt-20 lg:pb-32 grid-lines">
-                <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-gradient-to-tr from-cyan-500/20 via-indigo-500/20 to-purple-500/10 blur-[120px]" />
+            <Scene id="top" slot="hero" as="h1" eager title="AI agents that do the busywork. You keep control." sub="Human-in-the-loop agents and copilots. Live in days, not months." cta="Try 6 live agent demos" href="#demo" />
+
+            <section id="sandbox" className="relative overflow-hidden py-20 lg:py-28 bg-black">
+                <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-teal-500/10 opacity-60 hidden" />
 
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 16 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-mono text-cyan-300 mb-8 backdrop-blur-md shadow-[0_0_15px_rgba(56,189,248,0.15)]"
-                    >
-                        <span className="h-2 w-2 rounded-full bg-cyan-400 animate-pulse" />
-                        <span>STELLAR AGENTIC OS 2.0 LIVE</span>
-                        <ChevronRight className="h-3.5 w-3.5 opacity-70" />
-                    </motion.div>
-
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.1 }}
-                        className="font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl lg:leading-[1.1]"
-                    >
-                        Autonomous AI Agents built for <br className="hidden sm:inline" />
-                        <span className="glow-gradient-text">Next-Gen Intelligence</span>
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                        className="mx-auto mt-6 max-w-3xl text-lg text-slate-300 sm:text-xl font-normal leading-relaxed"
-                    >
-                        Deploy enterprise multi-agent swarms, GraphRAG memory pipelines, self-healing code auditors, and HIPAA/ABDM compliant healthcare automation in weeks.
-                    </motion.p>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.3 }}
-                        className="mt-10 flex flex-wrap items-center justify-center gap-4"
-                    >
-                        <a
-                            href="#demo"
-                            className="inline-flex items-center gap-2 rounded-xl bg-cyan-500 px-7 py-3.5 text-sm font-semibold text-slate-950 shadow-[0_0_30px_rgba(56,189,248,0.4)] transition hover:bg-cyan-400"
-                        >
-                            <Play className="h-4 w-4 fill-current" />
-                            <span>Try 6 Live Agent Demos</span>
-                        </a>
-                        <a
-                            href="/careers"
-                            className="inline-flex items-center gap-2 rounded-xl border border-slate-700 bg-slate-900/80 px-7 py-3.5 text-sm font-semibold text-slate-200 backdrop-blur-md transition hover:border-cyan-500/40"
-                        >
-                            <Briefcase className="h-4 w-4 text-cyan-400" />
-                            <span>Explore Careers & Courses</span>
-                        </a>
-                    </motion.div>
 
                     {/* Interactive Hero Agent Playground Window (6 Scenarios) */}
                     <section id="demo" className="mt-16 sm:mt-20">
@@ -527,21 +489,21 @@ const HomePage = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="relative mx-auto max-w-5xl rounded-2xl cyber-glass border border-slate-700/60 p-4 sm:p-6 text-left shadow-[0_20px_80px_rgba(0,0,0,0.8)]"
+                            className="relative mx-auto max-w-5xl rounded-2xl cyber-glass border border-white/10 p-4 sm:p-6 text-left"
                         >
                             {/* Window Header */}
-                            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4 mb-4">
+                            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4 mb-4">
                                 <div className="flex items-center gap-2">
-                                    <div className="h-3 w-3 rounded-full bg-red-500/80" />
-                                    <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
-                                    <div className="h-3 w-3 rounded-full bg-green-500/80" />
-                                    <span className="ml-2 font-mono text-xs text-slate-400 flex items-center gap-1.5">
-                                        <Terminal className="h-3.5 w-3.5 text-cyan-400" />
+                                    <div className="h-3 w-3 rounded-full bg-red-500/10" />
+                                    <div className="h-3 w-3 rounded-full bg-yellow-50" />
+                                    <div className="h-3 w-3 rounded-full bg-green-50" />
+                                    <span className="ml-2 font-mono text-xs text-[#a3a3a3] flex items-center gap-1.5">
+                                        <Terminal className="h-3.5 w-3.5 text-neutral-300" />
                                         stellar-agent-sandbox-control.v2
                                     </span>
                                 </div>
 
-                                <span className="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 px-2.5 py-1 rounded border border-cyan-500/30">
+                                <span className="text-[11px] font-mono text-neutral-300 bg-teal-500/10 px-2.5 py-1 rounded border border-teal-500/30">
                                     6 Live Agent Presets Available
                                 </span>
                             </div>
@@ -552,7 +514,7 @@ const HomePage = () => {
                                     <button
                                         key={preset.id}
                                         onClick={() => handleSelectDemo(preset.id)}
-                                        className={`rounded-lg px-2.5 py-2 text-xs font-mono font-medium transition text-center truncate ${activeDemo === preset.id ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50 shadow-[0_0_12px_rgba(56,189,248,0.2)]' : 'bg-slate-900/60 text-slate-400 hover:text-slate-200 border border-slate-800'}`}
+                                        className={`rounded-lg px-2.5 py-2 text-xs font-mono font-medium transition text-center truncate ${activeDemo === preset.id ? 'bg-teal-500/10 text-neutral-300 border border-teal-400/30' : 'bg-[#050505] text-[#a3a3a3] hover:text-[#e5e5e5] border border-white/10'}`}
                                     >
                                         {preset.name}
                                     </button>
@@ -566,14 +528,14 @@ const HomePage = () => {
                                         type="text"
                                         value={demoInput}
                                         onChange={(e) => setDemoInput(e.target.value)}
-                                        className="w-full rounded-xl border border-slate-700/80 bg-slate-950/90 px-4 py-3 font-mono text-xs sm:text-sm text-cyan-200 placeholder-slate-500 focus:border-cyan-500 focus:outline-none"
+                                        className="w-full rounded-xl border border-white/10 bg-[#050505] px-4 py-3 font-mono text-xs sm:text-sm text-neutral-300 placeholder-[#737373] focus:border-teal-400 focus:outline-none"
                                         placeholder="Type an agent instruction..."
                                     />
                                 </div>
                                 <button
                                     onClick={handleRunDemo}
                                     disabled={isExecuting}
-                                    className="flex items-center gap-2 rounded-xl bg-cyan-500 px-5 py-3 text-xs font-bold text-slate-950 transition hover:bg-cyan-400 disabled:opacity-50"
+                                    className="flex items-center gap-2 rounded-full bg-white px-5 py-3 text-xs font-bold text-black transition hover:bg-neutral-200 disabled:opacity-50"
                                 >
                                     {isExecuting ? <RefreshCw className="h-4 w-4 animate-spin" /> : <Play className="h-4 w-4 fill-current" />}
                                     <span>Execute</span>
@@ -582,30 +544,30 @@ const HomePage = () => {
 
                             {/* Execution Grid: Logs & Output */}
                             <div className="grid gap-4 md:grid-cols-2">
-                                <div className="rounded-xl border border-slate-800 bg-slate-950/80 p-4 font-mono text-xs">
-                                    <div className="flex items-center justify-between text-slate-400 mb-2 border-b border-slate-800 pb-2">
-                                        <span className="flex items-center gap-1.5 text-cyan-400 font-semibold">
+                                <div className="rounded-xl border border-white/10 bg-[#050505] p-4 font-mono text-xs">
+                                    <div className="flex items-center justify-between text-[#a3a3a3] mb-2 border-b border-white/10 pb-2">
+                                        <span className="flex items-center gap-1.5 text-neutral-300 font-semibold">
                                             <Activity className="h-3.5 w-3.5" /> Reasoning Node Trace
                                         </span>
-                                        <span className="text-[10px] text-slate-500">Latency: 24ms</span>
+                                        <span className="text-[10px] text-[#a3a3a3]">Latency: 24ms</span>
                                     </div>
-                                    <div className="space-y-1.5 text-slate-300 max-h-44 overflow-y-auto">
+                                    <div className="space-y-1.5 text-[#a3a3a3] max-h-44 overflow-y-auto">
                                         {activeLogs.map((log, idx) => (
                                             <p key={idx} className="leading-relaxed">
-                                                <span className="text-cyan-400/80">&gt;</span> {log}
+                                                <span className="text-neutral-300">&gt;</span> {log}
                                             </p>
                                         ))}
                                     </div>
                                 </div>
 
-                                <div className="rounded-xl border border-cyan-500/30 bg-cyan-950/20 p-4 font-mono text-xs">
-                                    <div className="flex items-center justify-between text-cyan-300 mb-2 border-b border-cyan-500/20 pb-2">
+                                <div className="rounded-xl border border-teal-500/30 bg-teal-500/10 p-4 font-mono text-xs">
+                                    <div className="flex items-center justify-between text-neutral-300 mb-2 border-b border-teal-500/30 pb-2">
                                         <span className="flex items-center gap-1.5 font-semibold">
-                                            <CheckCircle2 className="h-3.5 w-3.5 text-cyan-400" /> Output Payload
+                                            <CheckCircle2 className="h-3.5 w-3.5 text-neutral-300" /> Output Payload
                                         </span>
-                                        <span className="rounded bg-cyan-500/20 px-1.5 py-0.5 text-[10px] text-cyan-300">STP Verified</span>
+                                        <span className="rounded bg-teal-500/10 px-1.5 py-0.5 text-[10px] text-neutral-300">STP Verified</span>
                                     </div>
-                                    <pre className="text-slate-200 whitespace-pre-wrap leading-relaxed">
+                                    <pre className="text-[#e5e5e5] whitespace-pre-wrap leading-relaxed">
                                         {activeOutput}
                                     </pre>
                                 </div>
@@ -616,49 +578,53 @@ const HomePage = () => {
             </section>
 
             {/* Animated SVG Workflow Node Particles Graph */}
-            <section className="py-16 border-y border-slate-800 bg-slate-950/40 relative overflow-hidden">
+            <Scene id="scene-how" slot="how" label="How it works" title="Tell us the task. We build the agent." sub="You approve, it runs, inside the tools you already use." cta="See the 3 steps" href="#how-it-works" />
+
+            <HowItWorks />
+
+            <section className="py-16 border-y border-white/10 bg-[#050505] relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
-                    <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2 block">AGENTIC EXECUTION PIPELINE GRAPH</span>
-                    <h3 className="font-display text-2xl font-bold text-white mb-8">Real-Time Event Node Topology</h3>
+                    <span className="eyebrow mb-2 block">HOW AN AGENT HANDLES A TASK</span>
+                    <h3 className="font-display text-2xl font-bold text-[#e5e5e5] mb-8">From trigger to verified result</h3>
 
                     {/* SVG Flow Connections */}
-                    <div className="relative mx-auto max-w-4xl rounded-2xl cyber-glass border border-slate-800 p-8 shadow-2xl">
+                    <div className="relative mx-auto max-w-4xl rounded-2xl cyber-glass border border-white/10 p-8 overflow-hidden">
                         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M 120 70 Q 250 20 400 70 T 700 70" stroke="rgba(56, 189, 248, 0.4)" strokeWidth="2" fill="none" className="animate-dash-flow" />
-                            <path d="M 120 70 Q 250 120 400 70 T 700 70" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="2" fill="none" className="animate-dash-flow" />
+                            <path d="M 120 70 Q 250 20 400 70 T 700 70" stroke="rgba(45, 212, 191, 0.35)" strokeWidth="2" fill="none" className="animate-dash-flow" />
+                            <path d="M 120 70 Q 250 120 400 70 T 700 70" stroke="rgba(45, 212, 191, 0.2)" strokeWidth="2" fill="none" className="animate-dash-flow" />
                         </svg>
 
                         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 relative z-10">
-                            <div className="rounded-xl border border-slate-800 bg-slate-950/90 p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-2">
+                            <div className="rounded-xl border border-white/10 bg-[#050505] p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-neutral-300 border border-teal-500/30 mb-2">
                                     <Radio className="h-5 w-5 animate-pulse" />
                                 </div>
-                                <h4 className="font-mono text-xs font-bold text-white">1. Event Trigger</h4>
-                                <p className="text-[10px] text-slate-400 mt-1">Webhook / API / Vision OCR</p>
+                                <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">1. Event Trigger</h4>
+                                <p className="text-[10px] text-[#a3a3a3] mt-1">Email, form, API or document</p>
                             </div>
 
-                            <div className="rounded-xl border border-slate-800 bg-slate-950/90 p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 mb-2">
+                            <div className="rounded-xl border border-white/10 bg-[#050505] p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-neutral-300 border border-teal-500/30 mb-2">
                                     <ShieldCheck className="h-5 w-5" />
                                 </div>
-                                <h4 className="font-mono text-xs font-bold text-white">2. Security Gate</h4>
-                                <p className="text-[10px] text-slate-400 mt-1">HIPAA / DPDP PII Masking</p>
+                                <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">2. Security Gate</h4>
+                                <p className="text-[10px] text-[#a3a3a3] mt-1">Personal data masked, guardrails on</p>
                             </div>
 
-                            <div className="rounded-xl border border-slate-800 bg-slate-950/90 p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-2">
+                            <div className="rounded-xl border border-white/10 bg-[#050505] p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-neutral-300 border border-teal-500/30 mb-2">
                                     <Bot className="h-5 w-5" />
                                 </div>
-                                <h4 className="font-mono text-xs font-bold text-white">3. Supervisor Swarm</h4>
-                                <p className="text-[10px] text-slate-400 mt-1">Claude 3.5 / GPT-4o Router</p>
+                                <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">3. Agent Team</h4>
+                                <p className="text-[10px] text-[#a3a3a3] mt-1">Best-fit LLM for each step</p>
                             </div>
 
-                            <div className="rounded-xl border border-slate-800 bg-slate-950/90 p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-green-500/10 text-green-400 border border-green-500/20 mb-2">
-                                    <CheckCircle2 className="h-5 w-5 text-green-400" />
+                            <div className="rounded-xl border border-white/10 bg-[#050505] p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-green-50 text-green-600 border border-green-200 mb-2">
+                                    <CheckCircle2 className="h-5 w-5 text-green-600" />
                                 </div>
-                                <h4 className="font-mono text-xs font-bold text-white">4. Verified Writeback</h4>
-                                <p className="text-[10px] text-slate-400 mt-1">ERP / EHR / CRM Integration</p>
+                                <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">4. Verified Writeback</h4>
+                                <p className="text-[10px] text-[#a3a3a3] mt-1">Written back to your CRM, ERP or EHR</p>
                             </div>
                         </div>
                     </div>
@@ -666,21 +632,21 @@ const HomePage = () => {
             </section>
 
             {/* Model Marquee */}
-            <section className="border-y border-slate-800/80 bg-slate-950/60 py-8 overflow-hidden backdrop-blur-md">
+            <section className="border-y border-white/10 bg-[#050505] py-8 overflow-hidden">
                 <div className="mx-auto max-w-7xl px-6 mb-4 text-center">
-                    <p className="text-xs font-mono tracking-widest text-slate-400 uppercase">POWERED BY LEADING FOUNDATION MODELS & AGENT FRAMEWORKS</p>
+                    <p className="text-xs font-mono tracking-widest text-[#a3a3a3] uppercase">WORKS WITH LEADING AI MODELS & TOOLS</p>
                 </div>
 
                 <div className="flex w-max animate-marquee gap-8">
                     {[...STACK_ITEMS, ...STACK_ITEMS].map((item, index) => (
                         <div
                             key={index}
-                            className="flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/60 px-5 py-3 shadow-lg hover:border-cyan-500/40 transition"
+                            className="flex items-center gap-3 rounded-xl border border-white/10 bg-[#050505] px-5 py-3 hover:border-white/40 transition"
                         >
                             <img src={item.logo} alt={item.name} className="h-6 w-6 object-contain" />
                             <div>
-                                <h4 className="text-xs font-semibold text-slate-200">{item.name}</h4>
-                                <p className="text-[10px] text-slate-400 font-mono">{item.tag}</p>
+                                <h4 className="text-xs font-semibold text-[#e5e5e5]">{item.name}</h4>
+                                <p className="text-[10px] text-[#a3a3a3] font-mono">{item.tag}</p>
                             </div>
                         </div>
                     ))}
@@ -688,15 +654,14 @@ const HomePage = () => {
             </section>
 
             {/* 2026 Up-To-Date Capabilities Grid with 3D Tilt Hover */}
+            <Scene id="scene-build" slot="build" label="What we build" title="AI agents for real work" sub="Agent teams, RAG over your own data, code-review agents and healthcare workflows." cta="Explore what we build" href="#capabilities" />
+
             <section id="capabilities" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <Reveal>
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">2026 AGENTIC AI SUITE</span>
-                        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
-                            Up-To-Date Agentic AI Capabilities
-                        </h2>
-                        <p className="mt-4 text-slate-400 text-base sm:text-lg">
-                            Deploy multi-agent swarms, GraphRAG hybrid retrieval, self-healing code auditors, and HIPAA compliant clinical pipelines.
+                        <span className="eyebrow">WHAT WE BUILD</span>
+                        <p className="mt-4 text-[#a3a3a3] text-base sm:text-lg">
+                            Agent teams, RAG over your own data, code-review agents and healthcare workflows, each with guardrails and human review built in.
                         </p>
                     </div>
                 </Reveal>
@@ -709,28 +674,28 @@ const HomePage = () => {
                             <Reveal key={service.id} delay={idx * 0.1}>
                                 <div
                                     onClick={() => setActiveService(service)}
-                                    className={`group cursor-pointer rounded-2xl cyber-glass p-8 transition-all duration-300 relative card-3d-tilt ${isSelected ? 'border-cyan-500/80 shadow-[0_0_30px_rgba(56,189,248,0.25)]' : 'border-slate-800 hover:border-slate-700'}`}
+                                    className={`group cursor-pointer rounded-2xl cyber-glass p-8 transition-all duration-300 relative card-3d-tilt ${isSelected ? 'border-teal-500/30' : 'border-white/10 hover:border-white/10'}`}
                                 >
                                     <div className="flex items-center justify-between mb-6">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/30">
+                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-neutral-300 border border-teal-500/30">
                                             <Icon className="h-6 w-6" />
                                         </div>
-                                        <span className="rounded-full bg-slate-800/80 px-3 py-1 text-[11px] font-mono text-cyan-300 border border-slate-700">
+                                        <span className="rounded-full bg-[#0a0a0a] px-3 py-1 text-[11px] font-mono text-neutral-300 border border-white/10">
                                             {service.badge}
                                         </span>
                                     </div>
 
-                                    <h3 className="font-display text-xl font-bold text-white group-hover:text-cyan-300 transition">
+                                    <h3 className="font-display text-xl font-bold text-[#e5e5e5] group-hover:text-white transition">
                                         {service.title}
                                     </h3>
-                                    <p className="mt-3 text-sm text-slate-400 leading-relaxed">
+                                    <p className="mt-3 text-sm text-[#a3a3a3] leading-relaxed">
                                         {service.summary}
                                     </p>
 
                                     <ul className="mt-6 space-y-2.5">
                                         {service.points.map((pt, pIdx) => (
-                                            <li key={pIdx} className="flex items-start gap-2 text-xs text-slate-300">
-                                                <CheckCircle2 className="h-4 w-4 text-cyan-400 shrink-0 mt-0.5" />
+                                            <li key={pIdx} className="flex items-start gap-2 text-xs text-[#a3a3a3]">
+                                                <CheckCircle2 className="h-4 w-4 text-neutral-300 shrink-0 mt-0.5" />
                                                 <span>{pt}</span>
                                             </li>
                                         ))}
@@ -742,37 +707,36 @@ const HomePage = () => {
                 </div>
 
                 {/* Selected Service Code Viewer */}
-                <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-950 p-6 shadow-2xl">
-                    <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4 mb-4">
+                <div className="mt-12 rounded-2xl border border-white/10 bg-[#050505] p-6">
+                    <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4 mb-4">
                         <div className="flex items-center gap-3">
-                            <Code2 className="h-5 w-5 text-cyan-400" />
-                            <h4 className="font-mono text-sm font-semibold text-slate-200">
-                                Architecture Spec: <span className="text-cyan-400">{activeService.title}</span>
+                            <Code2 className="h-5 w-5 text-neutral-300" />
+                            <h4 className="font-mono text-sm font-semibold text-[#e5e5e5]">
+                                Architecture Spec: <span className="text-neutral-300">{activeService.title}</span>
                             </h4>
                         </div>
                         <button
                             onClick={() => copyCode(activeService.codeSnippet)}
-                            className="flex items-center gap-1.5 text-xs font-mono text-slate-400 hover:text-cyan-300 transition"
+                            className="flex items-center gap-1.5 text-xs font-mono text-[#a3a3a3] hover:text-white transition"
                         >
                             <Copy className="h-3.5 w-3.5" /> Copy Snippet
                         </button>
                     </div>
-                    <pre className="overflow-x-auto rounded-xl bg-slate-900/90 p-4 font-mono text-xs text-cyan-300 leading-relaxed border border-slate-800">
+                    <pre className="overflow-x-auto rounded-xl bg-[#050505] p-4 font-mono text-xs text-neutral-300 leading-relaxed border border-white/10">
                         {activeService.codeSnippet}
                     </pre>
                 </div>
             </section>
 
             {/* REAL-WORLD MULTI-INDUSTRY SHOWCASES SECTION */}
-            <section id="industries" className="py-24 border-t border-slate-800 bg-slate-950/80 grid-lines">
+            <Scene id="scene-industries" slot="industries" label="Industries" title="Built for your industry" sub="Healthcare, FinTech, E-Commerce, Legal, Logistics and EdTech." cta="See industries" href="#industries" />
+
+            <section id="industries" className="py-24 border-t border-white/10 bg-[#050505] grid-lines">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
-                        <span className="text-xs font-mono uppercase tracking-widest text-indigo-400">DEPLOYED SECTOR ARCHITECTURES</span>
-                        <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl">
-                            Real-World Industry Showcases
-                        </h2>
-                        <p className="mt-4 text-slate-400 text-base sm:text-lg">
-                            Explore how autonomous agents solve high-complexity workflow challenges in Healthcare, FinTech, E-Commerce, Legal, Logistics, and EdTech.
+                        <span className="eyebrow">INDUSTRIES</span>
+                        <p className="mt-4 text-[#a3a3a3] text-base sm:text-lg">
+                            See how AI agents take on everyday workflow problems in Healthcare, FinTech, E-Commerce, Legal, Logistics, and EdTech.
                         </p>
                     </div>
 
@@ -785,7 +749,7 @@ const HomePage = () => {
                                 <button
                                     key={item.id}
                                     onClick={() => setActiveIndustryKey(item.id)}
-                                    className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition ${isSelected ? 'bg-cyan-500 text-slate-950 shadow-[0_0_20px_rgba(56,189,248,0.4)]' : 'bg-slate-900/80 text-slate-300 border border-slate-800 hover:border-slate-700'}`}
+                                    className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition ${isSelected ? 'bg-teal-400 text-black' : 'bg-[#050505] text-[#a3a3a3] border border-white/10 hover:border-white/10'}`}
                                 >
                                     <Icon className="h-4 w-4" />
                                     <span>{item.sector}</span>
@@ -795,59 +759,59 @@ const HomePage = () => {
                     </div>
 
                     {/* Active Industry Deep-Dive Box */}
-                    <div className="rounded-3xl cyber-glass border border-slate-700/80 p-8 lg:p-12 shadow-2xl">
+                    <div className="rounded-3xl cyber-glass border border-white/10 p-8 lg:p-12">
                         <div className="grid gap-8 lg:grid-cols-2 items-start">
                             <div>
                                 <div className="flex items-center gap-3 mb-4">
-                                    <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-mono text-cyan-300 border border-cyan-500/30">
+                                    <span className="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-mono text-neutral-300 border border-teal-500/30">
                                         {activeIndustry.badge}
                                     </span>
                                 </div>
 
-                                <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4">
+                                <h3 className="font-display text-2xl sm:text-3xl font-bold text-[#e5e5e5] mb-4">
                                     {activeIndustry.headline}
                                 </h3>
 
                                 <div className="space-y-4 text-sm leading-relaxed mb-6">
-                                    <div className="rounded-xl border border-red-500/20 bg-red-950/20 p-4">
-                                        <p className="font-mono text-xs font-bold text-red-400 mb-1">🔴 REAL-WORLD CHALLENGE:</p>
-                                        <p className="text-slate-300">{activeIndustry.problem}</p>
+                                    <div className="rounded-xl border border-red-500/30 bg-red-500/10 p-4">
+                                        <p className="font-mono text-xs font-bold text-red-400 mb-1">🔴 THE PROBLEM:</p>
+                                        <p className="text-[#a3a3a3]">{activeIndustry.problem}</p>
                                     </div>
 
-                                    <div className="rounded-xl border border-cyan-500/20 bg-cyan-950/20 p-4">
-                                        <p className="font-mono text-xs font-bold text-cyan-300 mb-1">⚡ DEPLOYED AGENTIC SOLUTION:</p>
-                                        <p className="text-slate-300">{activeIndustry.solution}</p>
+                                    <div className="rounded-xl border border-teal-500/30 bg-teal-500/10 p-4">
+                                        <p className="font-mono text-xs font-bold text-neutral-300 mb-1">⚡ HOW AGENTS SOLVE IT:</p>
+                                        <p className="text-[#a3a3a3]">{activeIndustry.solution}</p>
                                     </div>
                                 </div>
 
-                                <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/20 p-4">
-                                    <p className="text-[11px] font-mono text-emerald-400 uppercase tracking-widest">VERIFIED IMPACT METRIC</p>
-                                    <h4 className="font-display text-2xl font-extrabold text-emerald-300 mt-1">
+                                <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-4">
+                                    <p className="text-[11px] font-mono text-emerald-400 uppercase tracking-widest">ESTIMATED IMPACT (ILLUSTRATIVE)</p>
+                                    <h4 className="font-display text-2xl font-extrabold text-emerald-400 mt-1">
                                         +{format(activeIndustry.impactUSD)}
                                     </h4>
-                                    <p className="text-xs text-slate-400 mt-0.5">{activeIndustry.impactMetric}</p>
+                                    <p className="text-xs text-[#a3a3a3] mt-0.5">{activeIndustry.impactMetric}</p>
                                 </div>
                             </div>
 
                             {/* Interactive Input/Output Payload Showcase */}
-                            <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 font-mono text-xs shadow-xl">
-                                <div className="border-b border-slate-800 pb-3 mb-4 flex items-center justify-between text-slate-400">
-                                    <span className="flex items-center gap-1.5 text-cyan-400 font-semibold">
+                            <div className="rounded-2xl border border-white/10 bg-[#050505] p-6 font-mono text-xs">
+                                <div className="border-b border-white/10 pb-3 mb-4 flex items-center justify-between text-[#a3a3a3]">
+                                    <span className="flex items-center gap-1.5 text-neutral-300 font-semibold">
                                         <Terminal className="h-4 w-4" /> Real Event Payload Trace
                                     </span>
-                                    <span className="text-[10px] text-slate-500">STP Verified</span>
+                                    <span className="text-[10px] text-[#a3a3a3]">STP Verified</span>
                                 </div>
 
                                 <div className="mb-4">
-                                    <p className="text-[10px] text-slate-500 uppercase mb-1">INCOMING EVENT / API TRIGGER:</p>
-                                    <pre className="rounded-xl bg-slate-900/90 p-3 text-slate-300 leading-relaxed overflow-x-auto border border-slate-800">
+                                    <p className="text-[10px] text-[#a3a3a3] uppercase mb-1">INCOMING EVENT / API TRIGGER:</p>
+                                    <pre className="rounded-xl bg-[#050505] p-3 text-[#a3a3a3] leading-relaxed overflow-x-auto border border-white/10">
                                         {activeIndustry.inputSample}
                                     </pre>
                                 </div>
 
                                 <div>
-                                    <p className="text-[10px] text-cyan-400 uppercase mb-1">OUTGOING AGENT RESPONSE:</p>
-                                    <pre className="rounded-xl bg-cyan-950/30 p-3 text-cyan-300 leading-relaxed overflow-x-auto border border-cyan-500/30">
+                                    <p className="text-[10px] text-neutral-300 uppercase mb-1">OUTGOING AGENT RESPONSE:</p>
+                                    <pre className="rounded-xl bg-teal-500/10 p-3 text-neutral-300 leading-relaxed overflow-x-auto border border-teal-500/30">
                                         {activeIndustry.outputSample}
                                     </pre>
                                 </div>
@@ -858,18 +822,17 @@ const HomePage = () => {
             </section>
 
             {/* Paid Project Certification Cohorts Section */}
-            <section id="certifications" className="py-24 border-t border-slate-800 bg-slate-950/80">
+            <Scene id="scene-careers" slot="careers" label="Learn with us" title="Paid AI Certification Cohorts" sub="Live cohorts, paid internships and startup roles." cta="View cohorts" href="#certifications" secondary={{ label: "Careers", href: "/careers" }} />
+
+            <section id="certifications" className="py-24 border-t border-white/10 bg-[#050505]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
                         <div>
-                            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">PAID PROJECT CERTIFICATIONS</span>
-                            <h2 className="mt-2 font-display text-3xl font-bold text-white sm:text-4xl">
-                                Accredited AI Certification Cohorts
-                            </h2>
+                            <span className="eyebrow">LEARN WITH US</span>
                         </div>
                         <a
                             href="/careers#certifications"
-                            className="inline-flex items-center gap-2 rounded-xl bg-cyan-500/10 border border-cyan-500/30 px-5 py-2.5 text-xs font-bold text-cyan-300 hover:bg-cyan-500/20 transition"
+                            className="inline-flex items-center gap-2 rounded-xl bg-teal-500/10 border border-teal-500/30 px-5 py-2.5 text-xs font-bold text-neutral-300 hover:bg-teal-500/10 transition"
                         >
                             <span>Explore Full Syllabus & Cohorts</span>
                             <ArrowRight className="h-4 w-4" />
@@ -878,21 +841,21 @@ const HomePage = () => {
 
                     <div className="grid gap-6 md:grid-cols-3">
                         {CERTIFICATION_COHORTS_PREVIEW.map((c, idx) => (
-                            <div key={idx} className="rounded-2xl cyber-glass p-6 border border-slate-800 flex flex-col justify-between">
+                            <div key={idx} className="rounded-2xl cyber-glass p-6 border border-white/10 flex flex-col justify-between">
                                 <div>
-                                    <span className="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 px-2.5 py-1 rounded border border-cyan-500/30">
+                                    <span className="text-[11px] font-mono text-neutral-300 bg-teal-500/10 px-2.5 py-1 rounded border border-teal-500/30">
                                         {c.duration}
                                     </span>
-                                    <h3 className="font-display text-lg font-bold text-white mt-3 mb-1">{c.title}</h3>
-                                    <p className="text-xs font-mono text-cyan-300 font-bold mb-3">{format(c.priceUSD)} / cohort</p>
-                                    <p className="text-xs text-slate-400 leading-relaxed mb-4">{c.desc}</p>
-                                    <p className="text-[11px] font-mono text-cyan-300 bg-slate-900 p-2 rounded border border-slate-800 mb-6">
+                                    <h3 className="font-display text-lg font-bold text-[#e5e5e5] mt-3 mb-1">{c.title}</h3>
+                                    <p className="text-xs font-mono text-neutral-300 font-bold mb-3">{format(c.priceUSD)} / cohort</p>
+                                    <p className="text-xs text-[#a3a3a3] leading-relaxed mb-4">{c.desc}</p>
+                                    <p className="text-[11px] font-mono text-neutral-300 bg-[#050505] p-2 rounded border border-white/10 mb-6">
                                         💰 Includes {format(c.stipendUSD)} Real Client Stipend
                                     </p>
                                 </div>
                                 <a
                                     href="/careers#certifications"
-                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 border border-slate-700 py-2.5 text-xs font-bold text-slate-200 hover:bg-cyan-500 hover:text-slate-950 transition"
+                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#050505] border border-white/10 py-2.5 text-xs font-bold text-[#e5e5e5] hover:bg-teal-300 hover:text-white transition"
                                 >
                                     <span>Apply For Cohort</span>
                                 </a>
@@ -903,23 +866,22 @@ const HomePage = () => {
             </section>
 
             {/* Dynamic Multi-Currency ROI Calculator */}
+            <Scene id="scene-roi" slot="roi" label="ROI calculator" title="Estimate what AI agents could save you" sub="Prices in USD, INR, EUR, GBP or AED." cta="Open the calculator" href="#calculator" />
+
             <section id="calculator" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="rounded-3xl border border-cyan-500/30 bg-gradient-to-b from-slate-900 to-slate-950 p-8 lg:p-12 shadow-[0_0_50px_rgba(56,189,248,0.1)]">
+                <div className="rounded-3xl border border-teal-500/30 bg-[#0a0a0a] p-8 lg:p-12">
                     <div className="grid gap-12 lg:grid-cols-2 items-center">
                         <div>
-                            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">ESTIMATE YOUR AUTOMATION SAVINGS</span>
-                            <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
-                                Calculate Your ROI with Autonomous Agents
-                            </h2>
-                            <p className="mt-4 text-sm text-slate-400 leading-relaxed">
-                                See how much operational cost and time your team reclaims by switching manual claims, lead generation, and document processing to straight-through AI agents.
+                            <span className="eyebrow">ROI CALCULATOR</span>
+                            <p className="mt-4 text-sm text-[#a3a3a3] leading-relaxed">
+                                See how much operational cost and time your team reclaims by switching manual claims, lead generation, and document processing to AI agents with human review.
                             </p>
 
                             <div className="mt-8 space-y-6">
                                 <div>
-                                    <div className="flex justify-between text-xs font-mono text-slate-300 mb-2">
+                                    <div className="flex justify-between text-xs font-mono text-[#a3a3a3] mb-2">
                                         <span>Monthly Manual Process Hours:</span>
-                                        <span className="text-cyan-400 font-bold">{manualHours} hrs</span>
+                                        <span className="text-neutral-300 font-bold">{manualHours} hrs</span>
                                     </div>
                                     <input
                                         type="range"
@@ -928,14 +890,14 @@ const HomePage = () => {
                                         step="10"
                                         value={manualHours}
                                         onChange={(e) => setManualHours(Number(e.target.value))}
-                                        className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                                        className="w-full h-2 bg-[#0a0a0a] rounded-lg appearance-none cursor-pointer accent-teal-400"
                                     />
                                 </div>
 
                                 <div>
-                                    <div className="flex justify-between text-xs font-mono text-slate-300 mb-2">
+                                    <div className="flex justify-between text-xs font-mono text-[#a3a3a3] mb-2">
                                         <span>Fully Loaded Hourly Cost ({current.code}):</span>
-                                        <span className="text-cyan-400 font-bold">{format(hourlyCostUSD)}/hr</span>
+                                        <span className="text-neutral-300 font-bold">{format(hourlyCostUSD)}/hr</span>
                                     </div>
                                     <input
                                         type="range"
@@ -944,32 +906,32 @@ const HomePage = () => {
                                         step="5"
                                         value={hourlyCostUSD}
                                         onChange={(e) => setHourlyCostUSD(Number(e.target.value))}
-                                        className="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-cyan-400"
+                                        className="w-full h-2 bg-[#0a0a0a] rounded-lg appearance-none cursor-pointer accent-teal-400"
                                     />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 sm:p-8 text-center">
-                            <p className="text-xs font-mono text-slate-400 uppercase tracking-widest">ESTIMATED MONTHLY SAVINGS ({current.code})</p>
+                        <div className="rounded-2xl border border-white/10 bg-[#050505] p-6 sm:p-8 text-center">
+                            <p className="text-xs font-mono text-[#a3a3a3] uppercase tracking-widest">ESTIMATED MONTHLY SAVINGS ({current.code})</p>
                             <h3 className="mt-2 font-display text-4xl sm:text-5xl font-extrabold glow-gradient-text">
                                 {format(monthlySavingsUSD)} / mo
                             </h3>
 
-                            <div className="mt-6 grid grid-cols-2 gap-4 border-t border-slate-800 pt-6 text-left">
+                            <div className="mt-6 grid grid-cols-2 gap-4 border-t border-white/10 pt-6 text-left">
                                 <div>
-                                    <p className="text-[10px] font-mono text-slate-500 uppercase">YEARLY HOURS RECLAIMED</p>
-                                    <p className="text-xl font-bold text-white font-mono">{hoursSavedYearly.toLocaleString()} hrs</p>
+                                    <p className="text-[10px] font-mono text-[#a3a3a3] uppercase">YEARLY HOURS RECLAIMED</p>
+                                    <p className="text-xl font-bold text-[#e5e5e5] font-mono">{hoursSavedYearly.toLocaleString()} hrs</p>
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-mono text-slate-500 uppercase">TARGET STP ACCURACY</p>
-                                    <p className="text-xl font-bold text-cyan-400 font-mono">99.4%</p>
+                                    <p className="text-[10px] font-mono text-[#a3a3a3] uppercase">TARGET STP ACCURACY</p>
+                                    <p className="text-xl font-bold text-neutral-300 font-mono">99.4%</p>
                                 </div>
                             </div>
 
                             <a
                                 href="#contact"
-                                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-cyan-500 py-3.5 text-xs font-bold uppercase tracking-wider text-slate-950 transition hover:bg-cyan-400"
+                                className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-teal-400 py-3.5 text-xs font-bold uppercase tracking-wider text-black transition hover:bg-teal-300"
                             >
                                 <span>Lock In Your Automation Plan</span>
                                 <ArrowRight className="h-4 w-4" />
@@ -980,54 +942,57 @@ const HomePage = () => {
             </section>
 
             {/* Audit & Contact Section */}
+            <Scene id="scene-contact" slot="contact" label="Get started" title="Book a free 30-minute discovery call" sub="Write to support@stellaragents.in or use the form below." cta="Contact us" href="#contact" />
+
             <section id="contact" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid gap-12 lg:grid-cols-2 items-center">
                     <div>
-                        <span className="text-xs font-mono uppercase tracking-widest text-cyan-400">READY TO AUTOMATE?</span>
-                        <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-5xl">
-                            Request Your Agent Architecture Audit
-                        </h2>
-                        <p className="mt-4 text-slate-400 text-base leading-relaxed">
-                            Schedule a 30-minute discovery session with our AI solution architects to quantify your workflow bottlenecks and map out a scoped pilot.
+                        <span className="eyebrow">GET STARTED</span>
+                        <p className="mt-4 text-[#a3a3a3] text-base leading-relaxed">
+                            Tell us which tasks eat your team's time. We'll map where AI agents fit and propose a small, scoped pilot.
                         </p>
 
                         <div className="mt-8 space-y-4">
-                            <div className="flex items-center gap-3 text-sm text-slate-300">
-                                <ShieldCheck className="h-5 w-5 text-cyan-400" />
-                                <span>HIPAA, ABDM & DPDP Data Security Standards</span>
+                            <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
+                                <ShieldCheck className="h-5 w-5 text-neutral-300" />
+                                <span>Built for HIPAA, ABDM & DPDP-aligned data practices</span>
                             </div>
-                            <div className="flex items-center gap-3 text-sm text-slate-300">
-                                <Lock className="h-5 w-5 text-indigo-400" />
-                                <span>Zero model retraining on customer proprietary data</span>
+                            <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
+                                <Lock className="h-5 w-5 text-neutral-300" />
+                                <span>Your data is never used to train models</span>
                             </div>
-                            <div className="flex items-center gap-3 text-sm text-slate-300">
-                                <Server className="h-5 w-5 text-purple-400" />
-                                <span>Flexible deployment: Multi-Tenant Cloud or Private VPC</span>
+                            <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
+                                <Server className="h-5 w-5 text-neutral-300" />
+                                <span>Run in our cloud or your own private cloud</span>
                             </div>
                         </div>
+
+                        <ContactCard />
                     </div>
 
-                    <div className="rounded-2xl cyber-glass border border-slate-800 p-8 shadow-2xl">
+                    <div className="rounded-2xl cyber-glass border border-white/10 p-8">
                         <ContactForm />
                     </div>
                 </div>
             </section>
 
+            <CtaBand />
+
             {/* Footer */}
-            <footer className="border-t border-slate-800 bg-slate-950 py-12">
+            <footer className="border-t border-white/10 bg-[#050505] py-12">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6">
                     <div className="flex items-center gap-3">
-                        <Sparkles className="h-5 w-5 text-cyan-400" />
-                        <span className="font-display font-bold text-white">Stellar AI Agents</span>
-                        <span className="text-xs font-mono text-slate-500">© 2026 Stellar AI. All rights reserved.</span>
-                    </div>
+                        <Sparkles className="h-5 w-5 text-neutral-300" />
+                        <span className="font-display font-bold text-[#e5e5e5]">Stellar AI Agents</span>
+                                            </div>
 
-                    <div className="flex items-center gap-6 text-xs text-slate-400">
-                        <a href="/careers" className="hover:text-cyan-400 transition">Careers & Internships</a>
-                        <a href="/careers#certifications" className="hover:text-cyan-400 transition">Paid Certifications</a>
-                        <a href="#top" className="hover:text-cyan-400 transition">HIPAA Compliance</a>
+                    <div className="flex items-center gap-6 text-xs text-[#a3a3a3]">
+                        <a href="/careers" className="hover:text-white transition">Careers & Internships</a>
+                        <a href="/careers#certifications" className="hover:text-white transition">Certifications</a>
+                        <a href="#top" className="hover:text-white transition">Data Security</a>
                     </div>
                 </div>
+                <FooterCompany />
             </footer>
         </div>
     );
