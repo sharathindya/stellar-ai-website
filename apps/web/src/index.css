@@ -2,6 +2,7 @@
   TEMPLATE STYLES: These styles are used as a base template.
   AI is allowed to modify these styles as needed.
 */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -274,3 +275,19 @@ section + section { border-top: 1px solid rgba(255,255,255,0.05); }
 .fade-section { opacity: 0; transform: translateY(18px); transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1); }
 .fade-section.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .fade-section { opacity: 1; transform: none; } }
+
+/* ===== v3 SpaceX-style scenes ===== */
+.scene { border-top: 0 !important; }
+.scene-overlay { background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 35%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.88) 100%), linear-gradient(90deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 65%); }
+.scene-label { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: .75rem; letter-spacing: .22em; text-transform: uppercase; color: #d4d4d4; }
+.scene-title { font-family: "Barlow Condensed", "Inter Tight", sans-serif; font-weight: 700; text-transform: uppercase; line-height: .92; letter-spacing: -0.005em; color: #fff; font-size: clamp(2.75rem, 8vw, 6.5rem); text-wrap: balance; }
+.scene-btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 1.75rem; border: 2px solid #fff; color: #fff; font-family: "Inter Tight", sans-serif; font-weight: 600; font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; transition: background-color .25s, color .25s; }
+.scene-btn:hover, .scene-btn:focus-visible { background: #fff; color: #000; }
+.scene-img { transform: scale(1.04); transition: transform 1.6s cubic-bezier(.22,1,.36,1); }
+.scene.is-visible .scene-img { transform: scale(1); }
+.nav-link { font-family: "Inter Tight", sans-serif; font-size: .74rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #e5e5e5; white-space: nowrap; }
+.nav-link:hover { color: #fff; text-decoration: underline; text-underline-offset: 6px; }
+@media (prefers-reduced-motion: reduce) { .scene-img { transform: none !important; transition: none; } }
+.scene-overlay-r { background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.1) 35%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.88) 100%), linear-gradient(270deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%); }
+.scene-plain { background: radial-gradient(ellipse 70% 50% at 80% 30%, rgba(45,212,191,0.06), transparent 70%), #000; }
+@media (max-width: 767px) { .scene-overlay, .scene-overlay-r { background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.15) 30%, rgba(0,0,0,0.75) 62%, rgba(0,0,0,0.95) 100%); } }

@@ -13,6 +13,7 @@ import { toast } from 'sonner';
 import Reveal from '@/components/Reveal';
 import CountUp from '@/components/CountUp';
 import Seo from '@/components/Seo';
+import Scene from '@/components/Scene';
 import { HowItWorks, CtaBand } from '@/components/V2Blocks';
 import { ContactCard, FooterCompany } from '@/components/CompanyContact';
 import ContactForm from '@/components/ContactForm';
@@ -364,6 +365,7 @@ Zendesk Ticket #9912 updated -> Resolved.`
 };
 
 const HomePage = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
     const { format, current } = useCurrency();
     const [activeDemo, setActiveDemo] = useState('rcm');
     const [demoInput, setDemoInput] = useState(DEMO_PRESETS.rcm.prompt);
@@ -425,7 +427,7 @@ const HomePage = () => {
             />
 
             {/* Glowing Reordered Navbar */}
-            <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-black/70 backdrop-blur-md">
+            <header className="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent">
                 <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-2 px-4 sm:px-6 lg:px-8">
                     <a href="#top" className="flex shrink-0 items-center gap-2 sm:gap-3 group">
                         <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-teal-400 p-[1px]">
@@ -442,86 +444,57 @@ const HomePage = () => {
                     </a>
 
                     {/* Reasonably Reordered Header Tabs */}
-                    <nav className="hidden items-center gap-6 lg:flex">
-                        <a href="#demo" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Demos</a>
-                        <a href="#capabilities" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">What we build</a>
-                        <a href="#industries" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Industries</a>
-                        <a href="#calculator" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">ROI calculator</a>
-                        <a href="#certifications" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Certifications</a>
-                        <a href="/careers" className="text-sm font-medium text-neutral-300 transition hover:text-white flex items-center gap-1">
+                    <nav className="ml-10 mr-6 hidden items-center gap-6 xl:flex">
+                        <a href="#demo" className="nav-link">Demos</a>
+                        <a href="#capabilities" className="nav-link">What we build</a>
+                        <a href="#industries" className="nav-link">Industries</a>
+                        <a href="#calculator" className="nav-link">ROI calculator</a>
+                        <a href="#certifications" className="nav-link">Certifications</a>
+                        <a href="/careers" className="nav-link flex items-center gap-1">
                             <Briefcase className="h-3.5 w-3.5" /> Careers & Internships
                         </a>
                     </nav>
 
                     <div className="flex items-center gap-2 sm:gap-4">
                         <CurrencySelector />
+                        <button type="button" className="xl:hidden inline-flex h-11 w-11 items-center justify-center text-white" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} aria-controls="mobile-menu" onClick={() => setMenuOpen((o) => !o)}>
+                            <span className="relative block h-3.5 w-6" aria-hidden="true">
+                                <span className={`absolute left-0 top-0 h-0.5 w-6 bg-white transition ${menuOpen ? 'translate-y-[6px] rotate-45' : ''}`} />
+                                <span className={`absolute left-0 top-[6px] h-0.5 w-6 bg-white transition ${menuOpen ? 'opacity-0' : ''}`} />
+                                <span className={`absolute left-0 top-3 h-0.5 w-6 bg-white transition ${menuOpen ? '-translate-y-[6px] -rotate-45' : ''}`} />
+                            </span>
+                        </button>
                         <a
                             href="#contact"
-                            className="relative inline-flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border border-white/25 px-3 py-2 text-xs sm:px-4 font-medium text-white transition-all hover:bg-white hover:text-black"
+                            className="relative inline-flex items-center gap-2 hidden sm:inline-flex overflow-hidden whitespace-nowrap rounded-none border-2 border-white px-3 py-2 uppercase tracking-widest text-xs sm:px-4 font-medium text-white transition-all hover:bg-white hover:text-black"
                         >
                             <Zap className="hidden h-3.5 w-3.5 sm:block" />
-                            <span className="sm:hidden">Free call</span><span className="hidden sm:inline">Book a free call</span>
+                            <span>Book a free call</span>
                         </a>
                     </div>
                 </div>
+                {menuOpen && (
+                    <nav id="mobile-menu" className="xl:hidden border-t border-white/10 bg-black px-6 py-6" onClick={() => setMenuOpen(false)}>
+                        <ul className="flex flex-col gap-5">
+                            <li><a href="#demo" className="nav-link">Demos</a></li>
+                            <li><a href="#capabilities" className="nav-link">What we build</a></li>
+                            <li><a href="#industries" className="nav-link">Industries</a></li>
+                            <li><a href="#calculator" className="nav-link">ROI calculator</a></li>
+                            <li><a href="#certifications" className="nav-link">Certifications</a></li>
+                            <li><a href="/careers" className="nav-link">Careers & Internships</a></li>
+                            <li><a href="#contact" className="nav-link">Book a free call</a></li>
+                        </ul>
+                    </nav>
+                )}
             </header>
 
             {/* Hero Section */}
-            <section id="top" className="relative overflow-hidden pt-16 pb-24 lg:pt-28 lg:pb-32 hero-accent">
+            <Scene id="top" slot="hero" as="h1" eager label="Agentic AI for growing businesses" title="AI agents that do the busywork. You keep control." sub="LLM-powered agents and copilots with human-in-the-loop approvals and guardrails. Go live in days, not months." cta="Try 6 live agent demos" href="#demo" secondary={{ label: "Explore Careers & Courses", href: "/careers" }} />
+
+            <section id="sandbox" className="relative overflow-hidden py-20 lg:py-28 bg-black">
                 <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-teal-500/10 opacity-60 hidden" />
 
                 <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 16 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-xs font-mono text-neutral-300 mb-8"
-                    >
-                        <span className="h-2 w-2 rounded-full bg-teal-400 animate-pulse" />
-                        <span>AGENTIC AI FOR GROWING BUSINESSES</span>
-                        <ChevronRight className="h-3.5 w-3.5 opacity-70" />
-                    </motion.div>
-
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.1 }}
-                        className="hero-title font-display text-[2.6rem] leading-[1.02] font-extrabold tracking-tighter text-[#f5f5f5] sm:text-6xl md:text-7xl lg:text-8xl"
-                    >
-                        AI agents that do the busywork. <br className="hidden sm:inline" />
-                        <span className="glow-gradient-text">You keep control.</span>
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                        className="mx-auto mt-6 max-w-3xl text-lg text-[#a3a3a3] sm:text-xl font-normal leading-relaxed"
-                    >
-                        We build LLM-powered agents and copilots that answer customers, process documents and run your workflows inside the tools you already use, with human-in-the-loop approvals and guardrails. Go live in days, not months.
-                    </motion.p>
-
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, delay: 0.3 }}
-                        className="mt-10 flex flex-wrap items-center justify-center gap-4"
-                    >
-                        <a
-                            href="#demo"
-                            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition hover:bg-neutral-200"
-                        >
-                            <Play className="h-4 w-4 fill-current" />
-                            <span>Try 6 live agent demos</span>
-                        </a>
-                        <a
-                            href="/careers"
-                            className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[#050505] px-7 py-3.5 text-sm font-semibold text-[#e5e5e5] transition hover:border-white/40"
-                        >
-                            <Briefcase className="h-4 w-4 text-neutral-300" />
-                            <span>Explore Careers & Courses</span>
-                        </a>
-                    </motion.div>
 
                     {/* Interactive Hero Agent Playground Window (6 Scenarios) */}
                     <section id="demo" className="mt-16 sm:mt-20">
@@ -618,6 +591,8 @@ const HomePage = () => {
             </section>
 
             {/* Animated SVG Workflow Node Particles Graph */}
+            <Scene id="scene-how" slot="how" label="How it works" title="Tell us the task. We build the agent." sub="You approve, it runs, inside the tools you already use." cta="See the 3 steps" href="#how-it-works" />
+
             <HowItWorks />
 
             <section className="py-16 border-y border-white/10 bg-[#050505] relative overflow-hidden">
@@ -692,6 +667,8 @@ const HomePage = () => {
             </section>
 
             {/* 2026 Up-To-Date Capabilities Grid with 3D Tilt Hover */}
+            <Scene id="scene-build" slot="build" label="What we build" title="AI agents for real work" sub="Agent teams, RAG over your own data, code-review agents and healthcare workflows." cta="Explore what we build" href="#capabilities" />
+
             <section id="capabilities" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <Reveal>
                     <div className="text-center max-w-3xl mx-auto mb-16">
@@ -768,6 +745,8 @@ const HomePage = () => {
             </section>
 
             {/* REAL-WORLD MULTI-INDUSTRY SHOWCASES SECTION */}
+            <Scene id="scene-industries" slot="industries" label="Industries" title="Built for your industry" sub="Healthcare, FinTech, E-Commerce, Legal, Logistics and EdTech." cta="See industries" href="#industries" />
+
             <section id="industries" className="py-24 border-t border-white/10 bg-[#050505] grid-lines">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
@@ -862,6 +841,8 @@ const HomePage = () => {
             </section>
 
             {/* Paid Project Certification Cohorts Section */}
+            <Scene id="scene-careers" slot="careers" label="Learn with us" title="Paid AI Certification Cohorts" sub="Live cohorts, paid internships and startup roles." cta="View cohorts" href="#certifications" secondary={{ label: "Careers", href: "/careers" }} />
+
             <section id="certifications" className="py-24 border-t border-white/10 bg-[#050505]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
@@ -907,6 +888,8 @@ const HomePage = () => {
             </section>
 
             {/* Dynamic Multi-Currency ROI Calculator */}
+            <Scene id="scene-roi" slot="roi" label="ROI calculator" title="Estimate what AI agents could save you" sub="Prices in USD, INR, EUR, GBP or AED." cta="Open the calculator" href="#calculator" />
+
             <section id="calculator" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="rounded-3xl border border-teal-500/30 bg-[#0a0a0a] p-8 lg:p-12">
                     <div className="grid gap-12 lg:grid-cols-2 items-center">
@@ -984,6 +967,8 @@ const HomePage = () => {
             </section>
 
             {/* Audit & Contact Section */}
+            <Scene id="scene-contact" slot="contact" label="Get started" title="Book a free 30-minute discovery call" sub="Write to support@stellaragents.in or use the form below." cta="Contact us" href="#contact" />
+
             <section id="contact" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="grid gap-12 lg:grid-cols-2 items-center">
                     <div>

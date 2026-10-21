@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { toast } from 'sonner';
 import Seo from '@/components/Seo';
+import Scene from '@/components/Scene';
 import { HowItWorks, CtaBand } from '@/components/V2Blocks';
 import { ContactCard, FooterCompany } from '@/components/CompanyContact';
 import CurrencySelector from '@/components/CurrencySelector';
@@ -200,7 +201,7 @@ const CareersPage = () => {
             />
 
             {/* Glowing Navbar */}
-            <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-black/70 backdrop-blur-md">
+            <header className="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent">
                 <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
                     <a href="/" className="flex items-center gap-3 group">
                         <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-teal-400 p-[1px]">
@@ -217,11 +218,11 @@ const CareersPage = () => {
                     </a>
 
                     <nav className="hidden items-center gap-8 md:flex">
-                        <a href="/" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Home Platform</a>
-                        <a href="#positions" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Startup Roles</a>
-                        <a href="#internships" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Paid Internships</a>
-                        <a href="#certifications" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Paid Certifications</a>
-                        <a href="#credentials" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Industry Standards</a>
+                        <a href="/" className="nav-link">Home Platform</a>
+                        <a href="#positions" className="nav-link">Startup Roles</a>
+                        <a href="#internships" className="nav-link">Paid Internships</a>
+                        <a href="#certifications" className="nav-link">Paid Certifications</a>
+                        <a href="#credentials" className="nav-link">Industry Standards</a>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -230,7 +231,7 @@ const CareersPage = () => {
 
                         <a
                             href="#positions"
-                            className="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2 text-xs font-medium text-white transition hover:bg-white hover:text-black"
+                            className="inline-flex items-center gap-2 whitespace-nowrap rounded-none border-2 border-white px-5 py-2 text-xs font-semibold uppercase tracking-widest text-white transition hover:bg-white hover:text-black"
                         >
                             <span>View Open Roles</span>
                         </a>
@@ -238,44 +239,9 @@ const CareersPage = () => {
                 </div>
             </header>
 
-            {/* Hero Section */}
-            <section className="relative py-20 lg:py-28 overflow-hidden grid-lines">
-                <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[450px] w-[750px] rounded-full bg-teal-500/10 opacity-60 hidden" />
+            {/* Hero Scene */}
+            <Scene id="careers-top" slot="careers" as="h1" eager label="Careers at Stellar AI" title="Build the Future of AI Agents" sub="Whether you are an experienced systems architect looking for full-time startup equity, a developer seeking a paid internship, or an engineer enrolling in our project-based certification cohorts, Stellar AI is your launching pad." cta="Explore 4 Open Roles" href="#positions" secondary={{ label: "Paid Certification Cohorts", href: "#certifications" }} />
 
-                <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-xs font-mono text-neutral-300 mb-6">
-                        <Trophy className="h-4 w-4 text-neutral-300" />
-                        <span>CAREERS AT STELLAR AI</span>
-                    </div>
-
-                    <h1 className="font-display text-4xl font-extrabold tracking-tight text-[#e5e5e5] sm:text-6xl max-w-4xl mx-auto">
-                        Build the Future of <span className="glow-gradient-text">AI Agents</span>
-                    </h1>
-
-                    <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg text-[#a3a3a3] leading-relaxed">
-                        Whether you are an experienced systems architect looking for full-time startup equity, a developer seeking a paid internship, or an engineer enrolling in our project-based certification cohorts, Stellar AI is your launching pad.
-                    </p>
-
-                    <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                        <a
-                            href="#positions"
-                            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-black transition hover:bg-neutral-200"
-                        >
-                            <Briefcase className="h-4 w-4" />
-                            <span>Explore 4 Open Roles</span>
-                        </a>
-                        <a
-                            href="#certifications"
-                            className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[#050505] px-7 py-3.5 text-sm font-semibold text-[#e5e5e5] transition hover:border-white/40"
-                        >
-                            <GraduationCap className="h-4 w-4 text-neutral-300" />
-                            <span>Paid Certification Cohorts</span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            {/* Open Startup Positions */}
             <section id="positions" className="py-20 max-w-7xl mx-auto px-6 lg:px-8">
                 <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
                     <div>
