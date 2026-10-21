@@ -428,20 +428,7 @@ const HomePage = () => {
 
             {/* Glowing Reordered Navbar */}
             <header className="fixed inset-x-0 top-0 z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent">
-                <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-2 px-4 sm:px-6 lg:px-8">
-                    <a href="#top" className="flex shrink-0 items-center gap-2 sm:gap-3 group">
-                        <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-teal-400 p-[1px]">
-                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-[#050505]">
-                                <Sparkles className="h-5 w-5 text-neutral-300" />
-                            </div>
-                        </div>
-                        <div>
-                            <span className="font-display text-lg font-bold tracking-tight text-[#e5e5e5] flex items-center gap-1.5">
-                                Stellar<span className="glow-gradient-text">AI</span>
-                            </span>
-                            <span className="block text-[10px] font-mono tracking-widest text-neutral-300 uppercase">AI AGENTS</span>
-                        </div>
-                    </a>
+                <div className="mx-auto flex h-18 max-w-7xl items-center justify-end gap-2 px-4 sm:px-6 lg:px-8">
 
                     {/* Reasonably Reordered Header Tabs */}
                     <nav className="ml-10 mr-6 hidden items-center gap-6 xl:flex">
