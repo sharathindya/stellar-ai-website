@@ -408,7 +408,7 @@ const HomePage = () => {
     const hoursSavedYearly = Math.round(manualHours * 12 * 0.65);
 
     return (
-        <div className="min-h-screen bg-[#0a0a0a] text-[#e5e5e5] font-sans">
+        <div className="min-h-screen bg-black text-[#e5e5e5] font-sans">
             <Helmet>
                 <title>Stellar AI | AI Agents & Copilots for Business</title>
                 <meta
@@ -425,30 +425,30 @@ const HomePage = () => {
             />
 
             {/* Glowing Reordered Navbar */}
-            <header className="sticky top-0 z-50 border-b border-[#1f1f1f] bg-[#0a0a0a]/85 backdrop-blur-md">
+            <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-black/70 backdrop-blur-md">
                 <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-2 px-4 sm:px-6 lg:px-8">
                     <a href="#top" className="flex shrink-0 items-center gap-2 sm:gap-3 group">
                         <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-teal-400 p-[1px]">
-                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-[#111111]">
-                                <Sparkles className="h-5 w-5 text-teal-400" />
+                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-[#050505]">
+                                <Sparkles className="h-5 w-5 text-neutral-300" />
                             </div>
                         </div>
                         <div>
                             <span className="font-display text-lg font-bold tracking-tight text-[#e5e5e5] flex items-center gap-1.5">
                                 Stellar<span className="glow-gradient-text">AI</span>
                             </span>
-                            <span className="block text-[10px] font-mono tracking-widest text-teal-400 uppercase">AI AGENTS</span>
+                            <span className="block text-[10px] font-mono tracking-widest text-neutral-300 uppercase">AI AGENTS</span>
                         </div>
                     </a>
 
                     {/* Reasonably Reordered Header Tabs */}
                     <nav className="hidden items-center gap-6 lg:flex">
-                        <a href="#demo" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Demos</a>
-                        <a href="#capabilities" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">What we build</a>
-                        <a href="#industries" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Industries</a>
-                        <a href="#calculator" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">ROI calculator</a>
-                        <a href="#certifications" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Certifications</a>
-                        <a href="/careers" className="text-sm font-medium text-teal-400 transition hover:text-teal-400 flex items-center gap-1">
+                        <a href="#demo" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Demos</a>
+                        <a href="#capabilities" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">What we build</a>
+                        <a href="#industries" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Industries</a>
+                        <a href="#calculator" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">ROI calculator</a>
+                        <a href="#certifications" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Certifications</a>
+                        <a href="/careers" className="text-sm font-medium text-neutral-300 transition hover:text-white flex items-center gap-1">
                             <Briefcase className="h-3.5 w-3.5" /> Careers & Internships
                         </a>
                     </nav>
@@ -457,7 +457,7 @@ const HomePage = () => {
                         <CurrencySelector />
                         <a
                             href="#contact"
-                            className="relative inline-flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-full bg-teal-400 px-3 py-2.5 text-xs sm:px-4 font-semibold text-black transition-all"
+                            className="relative inline-flex items-center gap-2 overflow-hidden whitespace-nowrap rounded-full border border-white/25 px-3 py-2 text-xs sm:px-4 font-medium text-white transition-all hover:bg-white hover:text-black"
                         >
                             <Zap className="hidden h-3.5 w-3.5 sm:block" />
                             <span className="sm:hidden">Free call</span><span className="hidden sm:inline">Book a free call</span>
@@ -475,7 +475,7 @@ const HomePage = () => {
                         initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-xs font-mono text-teal-400 mb-8"
+                        className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-xs font-mono text-neutral-300 mb-8"
                     >
                         <span className="h-2 w-2 rounded-full bg-teal-400 animate-pulse" />
                         <span>AGENTIC AI FOR GROWING BUSINESSES</span>
@@ -509,16 +509,16 @@ const HomePage = () => {
                     >
                         <a
                             href="#demo"
-                            className="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-7 py-3.5 text-sm font-semibold text-black transition hover:bg-teal-300"
+                            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black transition hover:bg-neutral-200"
                         >
                             <Play className="h-4 w-4 fill-current" />
                             <span>Try 6 live agent demos</span>
                         </a>
                         <a
                             href="/careers"
-                            className="inline-flex items-center gap-2 rounded-xl border border-[#262626] bg-[#111111] px-7 py-3.5 text-sm font-semibold text-[#e5e5e5] transition hover:border-teal-400"
+                            className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[#050505] px-7 py-3.5 text-sm font-semibold text-[#e5e5e5] transition hover:border-white/40"
                         >
-                            <Briefcase className="h-4 w-4 text-teal-400" />
+                            <Briefcase className="h-4 w-4 text-neutral-300" />
                             <span>Explore Careers & Courses</span>
                         </a>
                     </motion.div>
@@ -529,21 +529,21 @@ const HomePage = () => {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="relative mx-auto max-w-5xl rounded-2xl cyber-glass border border-[#262626] p-4 sm:p-6 text-left"
+                            className="relative mx-auto max-w-5xl rounded-2xl cyber-glass border border-white/10 p-4 sm:p-6 text-left"
                         >
                             {/* Window Header */}
-                            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#262626] pb-4 mb-4">
+                            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4 mb-4">
                                 <div className="flex items-center gap-2">
                                     <div className="h-3 w-3 rounded-full bg-red-500/10" />
                                     <div className="h-3 w-3 rounded-full bg-yellow-50" />
                                     <div className="h-3 w-3 rounded-full bg-green-50" />
                                     <span className="ml-2 font-mono text-xs text-[#a3a3a3] flex items-center gap-1.5">
-                                        <Terminal className="h-3.5 w-3.5 text-teal-400" />
+                                        <Terminal className="h-3.5 w-3.5 text-neutral-300" />
                                         stellar-agent-sandbox-control.v2
                                     </span>
                                 </div>
 
-                                <span className="text-[11px] font-mono text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded border border-teal-500/30">
+                                <span className="text-[11px] font-mono text-neutral-300 bg-teal-500/10 px-2.5 py-1 rounded border border-teal-500/30">
                                     6 Live Agent Presets Available
                                 </span>
                             </div>
@@ -554,7 +554,7 @@ const HomePage = () => {
                                     <button
                                         key={preset.id}
                                         onClick={() => handleSelectDemo(preset.id)}
-                                        className={`rounded-lg px-2.5 py-2 text-xs font-mono font-medium transition text-center truncate ${activeDemo === preset.id ? 'bg-teal-500/10 text-teal-400 border border-teal-400/30' : 'bg-[#111111] text-[#a3a3a3] hover:text-[#e5e5e5] border border-[#262626]'}`}
+                                        className={`rounded-lg px-2.5 py-2 text-xs font-mono font-medium transition text-center truncate ${activeDemo === preset.id ? 'bg-teal-500/10 text-neutral-300 border border-teal-400/30' : 'bg-[#050505] text-[#a3a3a3] hover:text-[#e5e5e5] border border-white/10'}`}
                                     >
                                         {preset.name}
                                     </button>
@@ -568,14 +568,14 @@ const HomePage = () => {
                                         type="text"
                                         value={demoInput}
                                         onChange={(e) => setDemoInput(e.target.value)}
-                                        className="w-full rounded-xl border border-[#262626] bg-[#111111] px-4 py-3 font-mono text-xs sm:text-sm text-teal-400 placeholder-[#737373] focus:border-teal-400 focus:outline-none"
+                                        className="w-full rounded-xl border border-white/10 bg-[#050505] px-4 py-3 font-mono text-xs sm:text-sm text-neutral-300 placeholder-[#737373] focus:border-teal-400 focus:outline-none"
                                         placeholder="Type an agent instruction..."
                                     />
                                 </div>
                                 <button
                                     onClick={handleRunDemo}
                                     disabled={isExecuting}
-                                    className="flex items-center gap-2 rounded-xl bg-teal-400 px-5 py-3 text-xs font-bold text-black transition hover:bg-teal-300 disabled:opacity-50"
+                                    className="flex items-center gap-2 rounded-full bg-white px-5 py-3 text-xs font-bold text-black transition hover:bg-neutral-200 disabled:opacity-50"
                                 >
                                     {isExecuting ? <RefreshCw className="h-4 w-4 animate-spin" /> : <Play className="h-4 w-4 fill-current" />}
                                     <span>Execute</span>
@@ -584,9 +584,9 @@ const HomePage = () => {
 
                             {/* Execution Grid: Logs & Output */}
                             <div className="grid gap-4 md:grid-cols-2">
-                                <div className="rounded-xl border border-[#262626] bg-[#111111] p-4 font-mono text-xs">
-                                    <div className="flex items-center justify-between text-[#a3a3a3] mb-2 border-b border-[#262626] pb-2">
-                                        <span className="flex items-center gap-1.5 text-teal-400 font-semibold">
+                                <div className="rounded-xl border border-white/10 bg-[#050505] p-4 font-mono text-xs">
+                                    <div className="flex items-center justify-between text-[#a3a3a3] mb-2 border-b border-white/10 pb-2">
+                                        <span className="flex items-center gap-1.5 text-neutral-300 font-semibold">
                                             <Activity className="h-3.5 w-3.5" /> Reasoning Node Trace
                                         </span>
                                         <span className="text-[10px] text-[#a3a3a3]">Latency: 24ms</span>
@@ -594,18 +594,18 @@ const HomePage = () => {
                                     <div className="space-y-1.5 text-[#a3a3a3] max-h-44 overflow-y-auto">
                                         {activeLogs.map((log, idx) => (
                                             <p key={idx} className="leading-relaxed">
-                                                <span className="text-teal-400">&gt;</span> {log}
+                                                <span className="text-neutral-300">&gt;</span> {log}
                                             </p>
                                         ))}
                                     </div>
                                 </div>
 
                                 <div className="rounded-xl border border-teal-500/30 bg-teal-500/10 p-4 font-mono text-xs">
-                                    <div className="flex items-center justify-between text-teal-400 mb-2 border-b border-teal-500/30 pb-2">
+                                    <div className="flex items-center justify-between text-neutral-300 mb-2 border-b border-teal-500/30 pb-2">
                                         <span className="flex items-center gap-1.5 font-semibold">
-                                            <CheckCircle2 className="h-3.5 w-3.5 text-teal-400" /> Output Payload
+                                            <CheckCircle2 className="h-3.5 w-3.5 text-neutral-300" /> Output Payload
                                         </span>
-                                        <span className="rounded bg-teal-500/10 px-1.5 py-0.5 text-[10px] text-teal-400">STP Verified</span>
+                                        <span className="rounded bg-teal-500/10 px-1.5 py-0.5 text-[10px] text-neutral-300">STP Verified</span>
                                     </div>
                                     <pre className="text-[#e5e5e5] whitespace-pre-wrap leading-relaxed">
                                         {activeOutput}
@@ -620,44 +620,44 @@ const HomePage = () => {
             {/* Animated SVG Workflow Node Particles Graph */}
             <HowItWorks />
 
-            <section className="py-16 border-y border-[#262626] bg-[#111111] relative overflow-hidden">
+            <section className="py-16 border-y border-white/10 bg-[#050505] relative overflow-hidden">
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <span className="eyebrow mb-2 block">HOW AN AGENT HANDLES A TASK</span>
                     <h3 className="font-display text-2xl font-bold text-[#e5e5e5] mb-8">From trigger to verified result</h3>
 
                     {/* SVG Flow Connections */}
-                    <div className="relative mx-auto max-w-4xl rounded-2xl cyber-glass border border-[#262626] p-8 overflow-hidden">
+                    <div className="relative mx-auto max-w-4xl rounded-2xl cyber-glass border border-white/10 p-8 overflow-hidden">
                         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M 120 70 Q 250 20 400 70 T 700 70" stroke="rgba(45, 212, 191, 0.35)" strokeWidth="2" fill="none" className="animate-dash-flow" />
                             <path d="M 120 70 Q 250 120 400 70 T 700 70" stroke="rgba(45, 212, 191, 0.2)" strokeWidth="2" fill="none" className="animate-dash-flow" />
                         </svg>
 
                         <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 relative z-10">
-                            <div className="rounded-xl border border-[#262626] bg-[#111111] p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/30 mb-2">
+                            <div className="rounded-xl border border-white/10 bg-[#050505] p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-neutral-300 border border-teal-500/30 mb-2">
                                     <Radio className="h-5 w-5 animate-pulse" />
                                 </div>
                                 <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">1. Event Trigger</h4>
                                 <p className="text-[10px] text-[#a3a3a3] mt-1">Email, form, API or document</p>
                             </div>
 
-                            <div className="rounded-xl border border-[#262626] bg-[#111111] p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/30 mb-2">
+                            <div className="rounded-xl border border-white/10 bg-[#050505] p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-neutral-300 border border-teal-500/30 mb-2">
                                     <ShieldCheck className="h-5 w-5" />
                                 </div>
                                 <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">2. Security Gate</h4>
                                 <p className="text-[10px] text-[#a3a3a3] mt-1">Personal data masked, guardrails on</p>
                             </div>
 
-                            <div className="rounded-xl border border-[#262626] bg-[#111111] p-4 text-center">
-                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/30 mb-2">
+                            <div className="rounded-xl border border-white/10 bg-[#050505] p-4 text-center">
+                                <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-neutral-300 border border-teal-500/30 mb-2">
                                     <Bot className="h-5 w-5" />
                                 </div>
                                 <h4 className="font-mono text-xs font-bold text-[#e5e5e5]">3. Agent Team</h4>
                                 <p className="text-[10px] text-[#a3a3a3] mt-1">Best-fit LLM for each step</p>
                             </div>
 
-                            <div className="rounded-xl border border-[#262626] bg-[#111111] p-4 text-center">
+                            <div className="rounded-xl border border-white/10 bg-[#050505] p-4 text-center">
                                 <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-green-50 text-green-600 border border-green-200 mb-2">
                                     <CheckCircle2 className="h-5 w-5 text-green-600" />
                                 </div>
@@ -670,7 +670,7 @@ const HomePage = () => {
             </section>
 
             {/* Model Marquee */}
-            <section className="border-y border-[#262626] bg-[#111111] py-8 overflow-hidden">
+            <section className="border-y border-white/10 bg-[#050505] py-8 overflow-hidden">
                 <div className="mx-auto max-w-7xl px-6 mb-4 text-center">
                     <p className="text-xs font-mono tracking-widest text-[#a3a3a3] uppercase">WORKS WITH LEADING AI MODELS & TOOLS</p>
                 </div>
@@ -679,7 +679,7 @@ const HomePage = () => {
                     {[...STACK_ITEMS, ...STACK_ITEMS].map((item, index) => (
                         <div
                             key={index}
-                            className="flex items-center gap-3 rounded-xl border border-[#262626] bg-[#111111] px-5 py-3 hover:border-teal-400 transition"
+                            className="flex items-center gap-3 rounded-xl border border-white/10 bg-[#050505] px-5 py-3 hover:border-white/40 transition"
                         >
                             <img src={item.logo} alt={item.name} className="h-6 w-6 object-contain" />
                             <div>
@@ -713,18 +713,18 @@ const HomePage = () => {
                             <Reveal key={service.id} delay={idx * 0.1}>
                                 <div
                                     onClick={() => setActiveService(service)}
-                                    className={`group cursor-pointer rounded-2xl cyber-glass p-8 transition-all duration-300 relative card-3d-tilt ${isSelected ? 'border-teal-500/30' : 'border-[#262626] hover:border-[#262626]'}`}
+                                    className={`group cursor-pointer rounded-2xl cyber-glass p-8 transition-all duration-300 relative card-3d-tilt ${isSelected ? 'border-teal-500/30' : 'border-white/10 hover:border-white/10'}`}
                                 >
                                     <div className="flex items-center justify-between mb-6">
-                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/30">
+                                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-neutral-300 border border-teal-500/30">
                                             <Icon className="h-6 w-6" />
                                         </div>
-                                        <span className="rounded-full bg-[#171717] px-3 py-1 text-[11px] font-mono text-teal-400 border border-[#262626]">
+                                        <span className="rounded-full bg-[#0a0a0a] px-3 py-1 text-[11px] font-mono text-neutral-300 border border-white/10">
                                             {service.badge}
                                         </span>
                                     </div>
 
-                                    <h3 className="font-display text-xl font-bold text-[#e5e5e5] group-hover:text-teal-400 transition">
+                                    <h3 className="font-display text-xl font-bold text-[#e5e5e5] group-hover:text-white transition">
                                         {service.title}
                                     </h3>
                                     <p className="mt-3 text-sm text-[#a3a3a3] leading-relaxed">
@@ -734,7 +734,7 @@ const HomePage = () => {
                                     <ul className="mt-6 space-y-2.5">
                                         {service.points.map((pt, pIdx) => (
                                             <li key={pIdx} className="flex items-start gap-2 text-xs text-[#a3a3a3]">
-                                                <CheckCircle2 className="h-4 w-4 text-teal-400 shrink-0 mt-0.5" />
+                                                <CheckCircle2 className="h-4 w-4 text-neutral-300 shrink-0 mt-0.5" />
                                                 <span>{pt}</span>
                                             </li>
                                         ))}
@@ -746,29 +746,29 @@ const HomePage = () => {
                 </div>
 
                 {/* Selected Service Code Viewer */}
-                <div className="mt-12 rounded-2xl border border-[#262626] bg-[#111111] p-6">
-                    <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#262626] pb-4 mb-4">
+                <div className="mt-12 rounded-2xl border border-white/10 bg-[#050505] p-6">
+                    <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4 mb-4">
                         <div className="flex items-center gap-3">
-                            <Code2 className="h-5 w-5 text-teal-400" />
+                            <Code2 className="h-5 w-5 text-neutral-300" />
                             <h4 className="font-mono text-sm font-semibold text-[#e5e5e5]">
-                                Architecture Spec: <span className="text-teal-400">{activeService.title}</span>
+                                Architecture Spec: <span className="text-neutral-300">{activeService.title}</span>
                             </h4>
                         </div>
                         <button
                             onClick={() => copyCode(activeService.codeSnippet)}
-                            className="flex items-center gap-1.5 text-xs font-mono text-[#a3a3a3] hover:text-teal-400 transition"
+                            className="flex items-center gap-1.5 text-xs font-mono text-[#a3a3a3] hover:text-white transition"
                         >
                             <Copy className="h-3.5 w-3.5" /> Copy Snippet
                         </button>
                     </div>
-                    <pre className="overflow-x-auto rounded-xl bg-[#111111] p-4 font-mono text-xs text-teal-400 leading-relaxed border border-[#262626]">
+                    <pre className="overflow-x-auto rounded-xl bg-[#050505] p-4 font-mono text-xs text-neutral-300 leading-relaxed border border-white/10">
                         {activeService.codeSnippet}
                     </pre>
                 </div>
             </section>
 
             {/* REAL-WORLD MULTI-INDUSTRY SHOWCASES SECTION */}
-            <section id="industries" className="py-24 border-t border-[#262626] bg-[#111111] grid-lines">
+            <section id="industries" className="py-24 border-t border-white/10 bg-[#050505] grid-lines">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="eyebrow">INDUSTRIES</span>
@@ -789,7 +789,7 @@ const HomePage = () => {
                                 <button
                                     key={item.id}
                                     onClick={() => setActiveIndustryKey(item.id)}
-                                    className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition ${isSelected ? 'bg-teal-400 text-black' : 'bg-[#111111] text-[#a3a3a3] border border-[#262626] hover:border-[#262626]'}`}
+                                    className={`flex items-center gap-2 rounded-xl px-4 py-2.5 text-xs font-semibold transition ${isSelected ? 'bg-teal-400 text-black' : 'bg-[#050505] text-[#a3a3a3] border border-white/10 hover:border-white/10'}`}
                                 >
                                     <Icon className="h-4 w-4" />
                                     <span>{item.sector}</span>
@@ -799,11 +799,11 @@ const HomePage = () => {
                     </div>
 
                     {/* Active Industry Deep-Dive Box */}
-                    <div className="rounded-3xl cyber-glass border border-[#262626] p-8 lg:p-12">
+                    <div className="rounded-3xl cyber-glass border border-white/10 p-8 lg:p-12">
                         <div className="grid gap-8 lg:grid-cols-2 items-start">
                             <div>
                                 <div className="flex items-center gap-3 mb-4">
-                                    <span className="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-mono text-teal-400 border border-teal-500/30">
+                                    <span className="rounded-full bg-teal-500/10 px-3 py-1 text-xs font-mono text-neutral-300 border border-teal-500/30">
                                         {activeIndustry.badge}
                                     </span>
                                 </div>
@@ -819,7 +819,7 @@ const HomePage = () => {
                                     </div>
 
                                     <div className="rounded-xl border border-teal-500/30 bg-teal-500/10 p-4">
-                                        <p className="font-mono text-xs font-bold text-teal-400 mb-1">⚡ HOW AGENTS SOLVE IT:</p>
+                                        <p className="font-mono text-xs font-bold text-neutral-300 mb-1">⚡ HOW AGENTS SOLVE IT:</p>
                                         <p className="text-[#a3a3a3]">{activeIndustry.solution}</p>
                                     </div>
                                 </div>
@@ -834,9 +834,9 @@ const HomePage = () => {
                             </div>
 
                             {/* Interactive Input/Output Payload Showcase */}
-                            <div className="rounded-2xl border border-[#262626] bg-[#111111] p-6 font-mono text-xs">
-                                <div className="border-b border-[#262626] pb-3 mb-4 flex items-center justify-between text-[#a3a3a3]">
-                                    <span className="flex items-center gap-1.5 text-teal-400 font-semibold">
+                            <div className="rounded-2xl border border-white/10 bg-[#050505] p-6 font-mono text-xs">
+                                <div className="border-b border-white/10 pb-3 mb-4 flex items-center justify-between text-[#a3a3a3]">
+                                    <span className="flex items-center gap-1.5 text-neutral-300 font-semibold">
                                         <Terminal className="h-4 w-4" /> Real Event Payload Trace
                                     </span>
                                     <span className="text-[10px] text-[#a3a3a3]">STP Verified</span>
@@ -844,14 +844,14 @@ const HomePage = () => {
 
                                 <div className="mb-4">
                                     <p className="text-[10px] text-[#a3a3a3] uppercase mb-1">INCOMING EVENT / API TRIGGER:</p>
-                                    <pre className="rounded-xl bg-[#111111] p-3 text-[#a3a3a3] leading-relaxed overflow-x-auto border border-[#262626]">
+                                    <pre className="rounded-xl bg-[#050505] p-3 text-[#a3a3a3] leading-relaxed overflow-x-auto border border-white/10">
                                         {activeIndustry.inputSample}
                                     </pre>
                                 </div>
 
                                 <div>
-                                    <p className="text-[10px] text-teal-400 uppercase mb-1">OUTGOING AGENT RESPONSE:</p>
-                                    <pre className="rounded-xl bg-teal-500/10 p-3 text-teal-400 leading-relaxed overflow-x-auto border border-teal-500/30">
+                                    <p className="text-[10px] text-neutral-300 uppercase mb-1">OUTGOING AGENT RESPONSE:</p>
+                                    <pre className="rounded-xl bg-teal-500/10 p-3 text-neutral-300 leading-relaxed overflow-x-auto border border-teal-500/30">
                                         {activeIndustry.outputSample}
                                     </pre>
                                 </div>
@@ -862,7 +862,7 @@ const HomePage = () => {
             </section>
 
             {/* Paid Project Certification Cohorts Section */}
-            <section id="certifications" className="py-24 border-t border-[#262626] bg-[#111111]">
+            <section id="certifications" className="py-24 border-t border-white/10 bg-[#050505]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
                         <div>
@@ -873,7 +873,7 @@ const HomePage = () => {
                         </div>
                         <a
                             href="/careers#certifications"
-                            className="inline-flex items-center gap-2 rounded-xl bg-teal-500/10 border border-teal-500/30 px-5 py-2.5 text-xs font-bold text-teal-400 hover:bg-teal-500/10 transition"
+                            className="inline-flex items-center gap-2 rounded-xl bg-teal-500/10 border border-teal-500/30 px-5 py-2.5 text-xs font-bold text-neutral-300 hover:bg-teal-500/10 transition"
                         >
                             <span>Explore Full Syllabus & Cohorts</span>
                             <ArrowRight className="h-4 w-4" />
@@ -882,21 +882,21 @@ const HomePage = () => {
 
                     <div className="grid gap-6 md:grid-cols-3">
                         {CERTIFICATION_COHORTS_PREVIEW.map((c, idx) => (
-                            <div key={idx} className="rounded-2xl cyber-glass p-6 border border-[#262626] flex flex-col justify-between">
+                            <div key={idx} className="rounded-2xl cyber-glass p-6 border border-white/10 flex flex-col justify-between">
                                 <div>
-                                    <span className="text-[11px] font-mono text-teal-400 bg-teal-500/10 px-2.5 py-1 rounded border border-teal-500/30">
+                                    <span className="text-[11px] font-mono text-neutral-300 bg-teal-500/10 px-2.5 py-1 rounded border border-teal-500/30">
                                         {c.duration}
                                     </span>
                                     <h3 className="font-display text-lg font-bold text-[#e5e5e5] mt-3 mb-1">{c.title}</h3>
-                                    <p className="text-xs font-mono text-teal-400 font-bold mb-3">{format(c.priceUSD)} / cohort</p>
+                                    <p className="text-xs font-mono text-neutral-300 font-bold mb-3">{format(c.priceUSD)} / cohort</p>
                                     <p className="text-xs text-[#a3a3a3] leading-relaxed mb-4">{c.desc}</p>
-                                    <p className="text-[11px] font-mono text-teal-400 bg-[#111111] p-2 rounded border border-[#262626] mb-6">
+                                    <p className="text-[11px] font-mono text-neutral-300 bg-[#050505] p-2 rounded border border-white/10 mb-6">
                                         💰 Includes {format(c.stipendUSD)} Real Client Stipend
                                     </p>
                                 </div>
                                 <a
                                     href="/careers#certifications"
-                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#111111] border border-[#262626] py-2.5 text-xs font-bold text-[#e5e5e5] hover:bg-teal-300 hover:text-white transition"
+                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#050505] border border-white/10 py-2.5 text-xs font-bold text-[#e5e5e5] hover:bg-teal-300 hover:text-white transition"
                                 >
                                     <span>Apply For Cohort</span>
                                 </a>
@@ -908,7 +908,7 @@ const HomePage = () => {
 
             {/* Dynamic Multi-Currency ROI Calculator */}
             <section id="calculator" className="py-24 max-w-7xl mx-auto px-6 lg:px-8">
-                <div className="rounded-3xl border border-teal-500/30 bg-[#171717] p-8 lg:p-12">
+                <div className="rounded-3xl border border-teal-500/30 bg-[#0a0a0a] p-8 lg:p-12">
                     <div className="grid gap-12 lg:grid-cols-2 items-center">
                         <div>
                             <span className="eyebrow">ROI CALCULATOR</span>
@@ -923,7 +923,7 @@ const HomePage = () => {
                                 <div>
                                     <div className="flex justify-between text-xs font-mono text-[#a3a3a3] mb-2">
                                         <span>Monthly Manual Process Hours:</span>
-                                        <span className="text-teal-400 font-bold">{manualHours} hrs</span>
+                                        <span className="text-neutral-300 font-bold">{manualHours} hrs</span>
                                     </div>
                                     <input
                                         type="range"
@@ -932,14 +932,14 @@ const HomePage = () => {
                                         step="10"
                                         value={manualHours}
                                         onChange={(e) => setManualHours(Number(e.target.value))}
-                                        className="w-full h-2 bg-[#171717] rounded-lg appearance-none cursor-pointer accent-teal-400"
+                                        className="w-full h-2 bg-[#0a0a0a] rounded-lg appearance-none cursor-pointer accent-teal-400"
                                     />
                                 </div>
 
                                 <div>
                                     <div className="flex justify-between text-xs font-mono text-[#a3a3a3] mb-2">
                                         <span>Fully Loaded Hourly Cost ({current.code}):</span>
-                                        <span className="text-teal-400 font-bold">{format(hourlyCostUSD)}/hr</span>
+                                        <span className="text-neutral-300 font-bold">{format(hourlyCostUSD)}/hr</span>
                                     </div>
                                     <input
                                         type="range"
@@ -948,26 +948,26 @@ const HomePage = () => {
                                         step="5"
                                         value={hourlyCostUSD}
                                         onChange={(e) => setHourlyCostUSD(Number(e.target.value))}
-                                        className="w-full h-2 bg-[#171717] rounded-lg appearance-none cursor-pointer accent-teal-400"
+                                        className="w-full h-2 bg-[#0a0a0a] rounded-lg appearance-none cursor-pointer accent-teal-400"
                                     />
                                 </div>
                             </div>
                         </div>
 
-                        <div className="rounded-2xl border border-[#262626] bg-[#111111] p-6 sm:p-8 text-center">
+                        <div className="rounded-2xl border border-white/10 bg-[#050505] p-6 sm:p-8 text-center">
                             <p className="text-xs font-mono text-[#a3a3a3] uppercase tracking-widest">ESTIMATED MONTHLY SAVINGS ({current.code})</p>
                             <h3 className="mt-2 font-display text-4xl sm:text-5xl font-extrabold glow-gradient-text">
                                 {format(monthlySavingsUSD)} / mo
                             </h3>
 
-                            <div className="mt-6 grid grid-cols-2 gap-4 border-t border-[#262626] pt-6 text-left">
+                            <div className="mt-6 grid grid-cols-2 gap-4 border-t border-white/10 pt-6 text-left">
                                 <div>
                                     <p className="text-[10px] font-mono text-[#a3a3a3] uppercase">YEARLY HOURS RECLAIMED</p>
                                     <p className="text-xl font-bold text-[#e5e5e5] font-mono">{hoursSavedYearly.toLocaleString()} hrs</p>
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-mono text-[#a3a3a3] uppercase">TARGET STP ACCURACY</p>
-                                    <p className="text-xl font-bold text-teal-400 font-mono">99.4%</p>
+                                    <p className="text-xl font-bold text-neutral-300 font-mono">99.4%</p>
                                 </div>
                             </div>
 
@@ -997,15 +997,15 @@ const HomePage = () => {
 
                         <div className="mt-8 space-y-4">
                             <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
-                                <ShieldCheck className="h-5 w-5 text-teal-400" />
+                                <ShieldCheck className="h-5 w-5 text-neutral-300" />
                                 <span>Built for HIPAA, ABDM & DPDP-aligned data practices</span>
                             </div>
                             <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
-                                <Lock className="h-5 w-5 text-teal-400" />
+                                <Lock className="h-5 w-5 text-neutral-300" />
                                 <span>Your data is never used to train models</span>
                             </div>
                             <div className="flex items-center gap-3 text-sm text-[#a3a3a3]">
-                                <Server className="h-5 w-5 text-teal-400" />
+                                <Server className="h-5 w-5 text-neutral-300" />
                                 <span>Run in our cloud or your own private cloud</span>
                             </div>
                         </div>
@@ -1013,7 +1013,7 @@ const HomePage = () => {
                         <ContactCard />
                     </div>
 
-                    <div className="rounded-2xl cyber-glass border border-[#262626] p-8">
+                    <div className="rounded-2xl cyber-glass border border-white/10 p-8">
                         <ContactForm />
                     </div>
                 </div>
@@ -1022,17 +1022,17 @@ const HomePage = () => {
             <CtaBand />
 
             {/* Footer */}
-            <footer className="border-t border-[#262626] bg-[#111111] py-12">
+            <footer className="border-t border-white/10 bg-[#050505] py-12">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6">
                     <div className="flex items-center gap-3">
-                        <Sparkles className="h-5 w-5 text-teal-400" />
+                        <Sparkles className="h-5 w-5 text-neutral-300" />
                         <span className="font-display font-bold text-[#e5e5e5]">Stellar AI Agents</span>
                                             </div>
 
                     <div className="flex items-center gap-6 text-xs text-[#a3a3a3]">
-                        <a href="/careers" className="hover:text-teal-400 transition">Careers & Internships</a>
-                        <a href="/careers#certifications" className="hover:text-teal-400 transition">Certifications</a>
-                        <a href="#top" className="hover:text-teal-400 transition">Data Security</a>
+                        <a href="/careers" className="hover:text-white transition">Careers & Internships</a>
+                        <a href="/careers#certifications" className="hover:text-white transition">Certifications</a>
+                        <a href="#top" className="hover:text-white transition">Data Security</a>
                     </div>
                 </div>
                 <FooterCompany />

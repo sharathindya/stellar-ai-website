@@ -36,11 +36,11 @@ export const CtaBand = ({ primaryHref = '#contact', primaryLabel = 'Book a free 
                 <p className="mt-3 text-[#a3a3a3]">{sub}</p>
             </div>
             <div className="flex flex-wrap gap-3">
-                <a href={primaryHref} className="inline-flex min-h-[48px] items-center gap-2 rounded-xl bg-teal-400 px-6 text-sm font-semibold text-black transition hover:bg-teal-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300">
+                <a href={primaryHref} className="inline-flex min-h-[48px] items-center gap-2 rounded-full bg-white px-6 text-sm font-semibold text-black transition hover:bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300">
                     {primaryLabel} <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
-                <a href="mailto:support@stellaragents.in" className="inline-flex min-h-[48px] items-center gap-2 rounded-xl border border-[#333] px-6 text-sm font-semibold text-[#e5e5e5] transition hover:border-teal-400">
-                    <Mail className="h-4 w-4 text-teal-400" aria-hidden="true" /> support@stellaragents.in
+                <a href="mailto:support@stellaragents.in" className="inline-flex min-h-[48px] items-center gap-2 rounded-xl border border-white/15 px-6 text-sm font-semibold text-[#e5e5e5] transition hover:border-white/40">
+                    <Mail className="h-4 w-4 text-neutral-300" aria-hidden="true" /> support@stellaragents.in
                 </a>
             </div>
         </div>

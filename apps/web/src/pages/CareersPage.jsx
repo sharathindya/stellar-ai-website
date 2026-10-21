@@ -184,7 +184,7 @@ const CareersPage = () => {
         : OPEN_POSITIONS_RAW.filter(p => p.category === selectedCategory);
 
     return (
-        <div className="min-h-screen bg-[#0a0a0a] text-[#e5e5e5] font-sans">
+        <div className="min-h-screen bg-black text-[#e5e5e5] font-sans">
             <Helmet>
                 <title>Careers & Paid Certifications | Stellar AI Startup</title>
                 <meta
@@ -200,28 +200,28 @@ const CareersPage = () => {
             />
 
             {/* Glowing Navbar */}
-            <header className="sticky top-0 z-50 border-b border-[#1f1f1f] bg-[#0a0a0a]/85 backdrop-blur-md">
+            <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-black/70 backdrop-blur-md">
                 <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-6 lg:px-8">
                     <a href="/" className="flex items-center gap-3 group">
                         <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-teal-400 p-[1px]">
-                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-[#111111]">
-                                <Sparkles className="h-5 w-5 text-teal-400" />
+                            <div className="flex h-full w-full items-center justify-center rounded-[11px] bg-[#050505]">
+                                <Sparkles className="h-5 w-5 text-neutral-300" />
                             </div>
                         </div>
                         <div>
                             <span className="font-display text-lg font-bold tracking-tight text-[#e5e5e5] flex items-center gap-1.5">
                                 Stellar<span className="glow-gradient-text">AI</span>
                             </span>
-                            <span className="block text-[10px] font-mono tracking-widest text-teal-400 uppercase">CAREERS & ACADEMY</span>
+                            <span className="block text-[10px] font-mono tracking-widest text-neutral-300 uppercase">CAREERS & ACADEMY</span>
                         </div>
                     </a>
 
                     <nav className="hidden items-center gap-8 md:flex">
-                        <a href="/" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Home Platform</a>
-                        <a href="#positions" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Startup Roles</a>
-                        <a href="#internships" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Paid Internships</a>
-                        <a href="#certifications" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Paid Certifications</a>
-                        <a href="#credentials" className="text-sm font-medium text-[#a3a3a3] transition hover:text-teal-400">Industry Standards</a>
+                        <a href="/" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Home Platform</a>
+                        <a href="#positions" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Startup Roles</a>
+                        <a href="#internships" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Paid Internships</a>
+                        <a href="#certifications" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Paid Certifications</a>
+                        <a href="#credentials" className="text-sm font-medium text-[#a3a3a3] transition hover:text-white">Industry Standards</a>
                     </nav>
 
                     <div className="flex items-center gap-4">
@@ -230,7 +230,7 @@ const CareersPage = () => {
 
                         <a
                             href="#positions"
-                            className="inline-flex items-center gap-2 rounded-full bg-teal-400 px-5 py-2.5 text-xs font-bold text-black transition hover:bg-teal-300"
+                            className="inline-flex items-center gap-2 rounded-full border border-white/25 px-5 py-2 text-xs font-medium text-white transition hover:bg-white hover:text-black"
                         >
                             <span>View Open Roles</span>
                         </a>
@@ -243,8 +243,8 @@ const CareersPage = () => {
                 <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[450px] w-[750px] rounded-full bg-teal-500/10 opacity-60 hidden" />
 
                 <div className="relative max-w-7xl mx-auto px-6 lg:px-8 text-center">
-                    <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-xs font-mono text-teal-400 mb-6">
-                        <Trophy className="h-4 w-4 text-teal-400" />
+                    <div className="inline-flex items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-4 py-1.5 text-xs font-mono text-neutral-300 mb-6">
+                        <Trophy className="h-4 w-4 text-neutral-300" />
                         <span>CAREERS AT STELLAR AI</span>
                     </div>
 
@@ -259,16 +259,16 @@ const CareersPage = () => {
                     <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
                         <a
                             href="#positions"
-                            className="inline-flex items-center gap-2 rounded-xl bg-teal-400 px-7 py-3.5 text-sm font-bold text-black transition hover:bg-teal-300"
+                            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold text-black transition hover:bg-neutral-200"
                         >
                             <Briefcase className="h-4 w-4" />
                             <span>Explore 4 Open Roles</span>
                         </a>
                         <a
                             href="#certifications"
-                            className="inline-flex items-center gap-2 rounded-xl border border-[#262626] bg-[#111111] px-7 py-3.5 text-sm font-semibold text-[#e5e5e5] transition hover:border-teal-400"
+                            className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-[#050505] px-7 py-3.5 text-sm font-semibold text-[#e5e5e5] transition hover:border-white/40"
                         >
-                            <GraduationCap className="h-4 w-4 text-teal-400" />
+                            <GraduationCap className="h-4 w-4 text-neutral-300" />
                             <span>Paid Certification Cohorts</span>
                         </a>
                     </div>
@@ -286,12 +286,12 @@ const CareersPage = () => {
                     </div>
 
                     {/* Filter Category */}
-                    <div className="flex items-center gap-2 rounded-xl bg-[#111111] p-1.5 border border-[#262626]">
+                    <div className="flex items-center gap-2 rounded-xl bg-[#050505] p-1.5 border border-white/10">
                         {['All', 'Engineering', 'Healthcare AI', 'Growth & Product'].map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setSelectedCategory(cat)}
-                                className={`rounded-lg px-4 py-2 text-xs font-semibold transition ${selectedCategory === cat ? 'bg-teal-500/10 text-teal-400 border border-teal-400/30' : 'text-[#a3a3a3] hover:text-[#e5e5e5]'}`}
+                                className={`rounded-lg px-4 py-2 text-xs font-semibold transition ${selectedCategory === cat ? 'bg-teal-500/10 text-neutral-300 border border-teal-400/30' : 'text-[#a3a3a3] hover:text-[#e5e5e5]'}`}
                             >
                                 {cat}
                             </button>
@@ -303,11 +303,11 @@ const CareersPage = () => {
                     {filteredPositions.map((pos) => (
                         <div
                             key={pos.id}
-                            className="rounded-2xl cyber-glass border border-[#262626] p-6 flex flex-col justify-between hover:border-teal-400 transition group"
+                            className="rounded-2xl cyber-glass border border-white/10 p-6 flex flex-col justify-between hover:border-white/40 transition group"
                         >
                             <div>
                                 <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                                    <span className="rounded-full bg-teal-500/10 px-3 py-1 text-[11px] font-mono text-teal-400 border border-teal-500/30">
+                                    <span className="rounded-full bg-teal-500/10 px-3 py-1 text-[11px] font-mono text-neutral-300 border border-teal-500/30">
                                         {pos.category}
                                     </span>
                                     <span className="text-xs font-mono text-[#a3a3a3] flex items-center gap-1">
@@ -315,22 +315,22 @@ const CareersPage = () => {
                                     </span>
                                 </div>
 
-                                <h3 className="font-display text-xl font-bold text-[#e5e5e5] group-hover:text-teal-400 transition mb-2">
+                                <h3 className="font-display text-xl font-bold text-[#e5e5e5] group-hover:text-white transition mb-2">
                                     {pos.title}
                                 </h3>
-                                <p className="text-xs font-mono text-teal-400 font-semibold mb-3">
+                                <p className="text-xs font-mono text-neutral-300 font-semibold mb-3">
                                     {format(pos.minSalaryUSD, { compact: true })} - {format(pos.maxSalaryUSD, { compact: true })} + {pos.equity}
                                 </p>
                                 <p className="text-sm text-[#a3a3a3] mb-6 leading-relaxed">
                                     {pos.desc}
                                 </p>
 
-                                <div className="border-t border-[#262626] pt-4 mb-6">
+                                <div className="border-t border-white/10 pt-4 mb-6">
                                     <p className="text-[11px] font-mono text-[#a3a3a3] uppercase tracking-wider mb-2">KEY REQUIREMENTS:</p>
                                     <ul className="space-y-1.5">
                                         {pos.reqs.map((req, idx) => (
                                             <li key={idx} className="flex items-start gap-2 text-xs text-[#a3a3a3]">
-                                                <CheckCircle2 className="h-3.5 w-3.5 text-teal-400 shrink-0 mt-0.5" />
+                                                <CheckCircle2 className="h-3.5 w-3.5 text-neutral-300 shrink-0 mt-0.5" />
                                                 <span>{req}</span>
                                             </li>
                                         ))}
@@ -340,7 +340,7 @@ const CareersPage = () => {
 
                             <button
                                 onClick={() => handleOpenApply(pos.title)}
-                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#111111] border border-[#262626] py-3 text-xs font-bold uppercase tracking-wider text-[#e5e5e5] hover:bg-teal-300 hover:text-white hover:border-teal-400 transition"
+                                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#050505] border border-white/10 py-3 text-xs font-bold uppercase tracking-wider text-[#e5e5e5] hover:bg-teal-300 hover:text-white hover:border-white/40 transition"
                             >
                                 <span>Apply For Position</span>
                                 <ArrowRight className="h-4 w-4" />
@@ -351,7 +351,7 @@ const CareersPage = () => {
             </section>
 
             {/* Paid Startup Internships */}
-            <section id="internships" className="py-20 border-t border-[#262626] bg-[#111111]">
+            <section id="internships" className="py-20 border-t border-white/10 bg-[#050505]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="eyebrow">EARN WHILE YOU LEARN</span>
@@ -365,10 +365,10 @@ const CareersPage = () => {
 
                     <div className="grid gap-8 md:grid-cols-3">
                         {INTERNSHIPS_RAW.map((intern) => (
-                            <div key={intern.id} className="rounded-2xl cyber-glass p-6 border border-[#262626] flex flex-col justify-between">
+                            <div key={intern.id} className="rounded-2xl cyber-glass p-6 border border-white/10 flex flex-col justify-between">
                                 <div>
                                     <div className="flex items-center justify-between mb-4">
-                                        <span className="rounded-full bg-teal-500/10 px-3 py-1 text-[11px] font-mono text-teal-400 border border-teal-500/30">
+                                        <span className="rounded-full bg-teal-500/10 px-3 py-1 text-[11px] font-mono text-neutral-300 border border-teal-500/30">
                                             {intern.type}
                                         </span>
                                         <span className="text-xs font-mono text-[#a3a3a3] flex items-center gap-1">
@@ -377,17 +377,17 @@ const CareersPage = () => {
                                     </div>
 
                                     <h3 className="font-display text-lg font-bold text-[#e5e5e5] mb-2">{intern.title}</h3>
-                                    <p className="text-xs font-mono text-teal-400 font-bold mb-4">
+                                    <p className="text-xs font-mono text-neutral-300 font-bold mb-4">
                                         {format(intern.stipendUSD)} / Month + Mentorship
                                     </p>
                                     <p className="text-xs text-[#a3a3a3] leading-relaxed mb-6">{intern.desc}</p>
 
-                                    <div className="border-t border-[#262626] pt-4 mb-6">
+                                    <div className="border-t border-white/10 pt-4 mb-6">
                                         <p className="text-[10px] font-mono text-[#a3a3a3] uppercase tracking-wider mb-2">INTERNSHIP PERKS:</p>
                                         <ul className="space-y-1.5">
                                             {intern.perks.map((perk, idx) => (
                                                 <li key={idx} className="flex items-center gap-2 text-xs text-[#a3a3a3]">
-                                                    <Sparkles className="h-3.5 w-3.5 text-teal-400 shrink-0" />
+                                                    <Sparkles className="h-3.5 w-3.5 text-neutral-300 shrink-0" />
                                                     <span>{perk}</span>
                                                 </li>
                                             ))}
@@ -397,7 +397,7 @@ const CareersPage = () => {
 
                                 <button
                                     onClick={() => handleOpenApply(intern.title)}
-                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-teal-500/10 border border-teal-500/30 py-3 text-xs font-bold uppercase tracking-wider text-teal-400 hover:bg-teal-300 hover:text-[#e5e5e5] transition"
+                                    className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-teal-500/10 border border-teal-500/30 py-3 text-xs font-bold uppercase tracking-wider text-neutral-300 hover:bg-teal-300 hover:text-[#e5e5e5] transition"
                                 >
                                     <span>Apply for Internship</span>
                                 </button>
@@ -421,10 +421,10 @@ const CareersPage = () => {
 
                 <div className="grid gap-8 lg:grid-cols-3">
                     {CERTIFICATION_COHORTS_RAW.map((cohort) => (
-                        <div key={cohort.id} className="rounded-2xl cyber-glass p-8 border border-[#262626] hover:border-teal-400 transition relative flex flex-col justify-between">
+                        <div key={cohort.id} className="rounded-2xl cyber-glass p-8 border border-white/10 hover:border-white/40 transition relative flex flex-col justify-between">
                             <div>
                                 <div className="flex items-center justify-between mb-4">
-                                    <span className="rounded-full bg-teal-500/10 px-3 py-1 text-[11px] font-mono text-teal-400 border border-teal-500/30">
+                                    <span className="rounded-full bg-teal-500/10 px-3 py-1 text-[11px] font-mono text-neutral-300 border border-teal-500/30">
                                         {cohort.badge}
                                     </span>
                                     <span className="text-xs font-mono text-[#a3a3a3]">{cohort.duration}</span>
@@ -435,17 +435,17 @@ const CareersPage = () => {
                                     <span className="font-display text-3xl font-extrabold text-[#e5e5e5]">{format(cohort.priceUSD)}</span>
                                     <span className="text-xs text-[#a3a3a3]">/ cohort</span>
                                 </div>
-                                <p className="text-xs font-mono text-teal-400 bg-teal-500/10 p-2.5 rounded-lg border border-teal-500/30 mb-4">
+                                <p className="text-xs font-mono text-neutral-300 bg-teal-500/10 p-2.5 rounded-lg border border-teal-500/30 mb-4">
                                     💰 Includes {format(cohort.stipendUSD)} Real Client Project Stipend
                                 </p>
                                 <p className="text-xs text-[#a3a3a3] leading-relaxed mb-6">{cohort.summary}</p>
 
-                                <div className="border-t border-[#262626] pt-4 mb-6">
+                                <div className="border-t border-white/10 pt-4 mb-6">
                                     <p className="text-[10px] font-mono text-[#a3a3a3] uppercase tracking-wider mb-2">SYLLABUS HIGHLIGHTS:</p>
                                     <ul className="space-y-2">
                                         {cohort.modules.map((mod, mIdx) => (
                                             <li key={mIdx} className="flex items-start gap-2 text-xs text-[#a3a3a3] leading-tight">
-                                                <Check className="h-3.5 w-3.5 text-teal-400 shrink-0 mt-0.5" />
+                                                <Check className="h-3.5 w-3.5 text-neutral-300 shrink-0 mt-0.5" />
                                                 <span>{mod}</span>
                                             </li>
                                         ))}
@@ -466,7 +466,7 @@ const CareersPage = () => {
             </section>
 
             {/* Technical Specs & Industry Certifications Required */}
-            <section id="credentials" className="py-20 border-t border-[#262626] bg-[#111111]">
+            <section id="credentials" className="py-20 border-t border-white/10 bg-[#050505]">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="eyebrow">SECURITY & INDUSTRY STANDARDS</span>
@@ -480,12 +480,12 @@ const CareersPage = () => {
 
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {COMPLIANCE_CREDENTIALS.map((cred, cIdx) => (
-                            <div key={cIdx} className="rounded-2xl border border-[#262626] bg-[#111111] p-6 flex items-start gap-4">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/30 shrink-0">
+                            <div key={cIdx} className="rounded-2xl border border-white/10 bg-[#050505] p-6 flex items-start gap-4">
+                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-neutral-300 border border-teal-500/30 shrink-0">
                                     <ShieldCheck className="h-5 w-5" />
                                 </div>
                                 <div>
-                                    <span className="rounded bg-[#171717] px-2 py-0.5 text-[10px] font-mono text-teal-400">{cred.tag}</span>
+                                    <span className="rounded bg-[#0a0a0a] px-2 py-0.5 text-[10px] font-mono text-neutral-300">{cred.tag}</span>
                                     <h4 className="font-display text-base font-bold text-[#e5e5e5] mt-1">{cred.name}</h4>
                                     <p className="text-xs text-[#a3a3a3] mt-1 leading-relaxed">{cred.desc}</p>
                                 </div>
@@ -498,12 +498,12 @@ const CareersPage = () => {
             {/* Candidate / Enrollment Application Modal */}
             <AnimatePresence>
                 {applyModalOpen && (
-                    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#111111]">
+                    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#050505]">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.95 }}
-                            className="relative w-full max-w-lg rounded-2xl cyber-glass border border-[#262626] p-6 sm:p-8"
+                            className="relative w-full max-w-lg rounded-2xl cyber-glass border border-white/10 p-6 sm:p-8"
                         >
                             <button
                                 onClick={() => setApplyModalOpen(false)}
@@ -515,7 +515,7 @@ const CareersPage = () => {
                             <h3 className="font-display text-xl font-bold text-[#e5e5e5] mb-1">
                                 Application Form
                             </h3>
-                            <p className="text-xs font-mono text-teal-400 mb-6">{selectedRoleTitle}</p>
+                            <p className="text-xs font-mono text-neutral-300 mb-6">{selectedRoleTitle}</p>
 
                             <form onSubmit={handleSubmitApplication} className="space-y-4">
                                 <div>
@@ -526,7 +526,7 @@ const CareersPage = () => {
                                         value={candidateName}
                                         onChange={(e) => setCandidateName(e.target.value)}
                                         placeholder="Jane Doe"
-                                        className="w-full rounded-xl border border-[#262626] bg-[#111111] px-4 py-2.5 text-sm text-[#e5e5e5] placeholder-[#737373] focus:border-teal-400 focus:outline-none"
+                                        className="w-full rounded-xl border border-white/10 bg-[#050505] px-4 py-2.5 text-sm text-[#e5e5e5] placeholder-[#737373] focus:border-teal-400 focus:outline-none"
                                     />
                                 </div>
 
@@ -538,7 +538,7 @@ const CareersPage = () => {
                                         value={candidateEmail}
                                         onChange={(e) => setCandidateEmail(e.target.value)}
                                         placeholder="jane@example.com"
-                                        className="w-full rounded-xl border border-[#262626] bg-[#111111] px-4 py-2.5 text-sm text-[#e5e5e5] placeholder-[#737373] focus:border-teal-400 focus:outline-none"
+                                        className="w-full rounded-xl border border-white/10 bg-[#050505] px-4 py-2.5 text-sm text-[#e5e5e5] placeholder-[#737373] focus:border-teal-400 focus:outline-none"
                                     />
                                 </div>
 
@@ -550,7 +550,7 @@ const CareersPage = () => {
                                         value={candidatePortfolio}
                                         onChange={(e) => setCandidatePortfolio(e.target.value)}
                                         placeholder="https://github.com/janedoe"
-                                        className="w-full rounded-xl border border-[#262626] bg-[#111111] px-4 py-2.5 text-sm text-[#e5e5e5] placeholder-[#737373] focus:border-teal-400 focus:outline-none"
+                                        className="w-full rounded-xl border border-white/10 bg-[#050505] px-4 py-2.5 text-sm text-[#e5e5e5] placeholder-[#737373] focus:border-teal-400 focus:outline-none"
                                     />
                                 </div>
 
@@ -561,7 +561,7 @@ const CareersPage = () => {
                                         value={candidateNotes}
                                         onChange={(e) => setCandidateNotes(e.target.value)}
                                         placeholder="Tell us about your background or why you'd like to join..."
-                                        className="w-full rounded-xl border border-[#262626] bg-[#111111] px-4 py-2.5 text-sm text-[#e5e5e5] placeholder-[#737373] focus:border-teal-400 focus:outline-none"
+                                        className="w-full rounded-xl border border-white/10 bg-[#050505] px-4 py-2.5 text-sm text-[#e5e5e5] placeholder-[#737373] focus:border-teal-400 focus:outline-none"
                                     />
                                 </div>
 
@@ -580,17 +580,17 @@ const CareersPage = () => {
             <CtaBand primaryHref="#positions" primaryLabel="See open roles" title="Build AI agents with us" sub="Roles, paid internships and certification cohorts. Questions? Write to us." />
 
             {/* Footer */}
-            <footer className="border-t border-[#262626] bg-[#111111] py-12">
+            <footer className="border-t border-white/10 bg-[#050505] py-12">
                 <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-wrap items-center justify-between gap-6">
                     <div className="flex items-center gap-3">
-                        <Sparkles className="h-5 w-5 text-teal-400" />
+                        <Sparkles className="h-5 w-5 text-neutral-300" />
                         <span className="font-display font-bold text-[#e5e5e5]">Stellar AI Academy & Careers</span>
                     </div>
 
                     <div className="flex items-center gap-6 text-xs text-[#a3a3a3]">
-                        <a href="/" className="hover:text-teal-400 transition">Main Platform</a>
-                        <a href="#positions" className="hover:text-teal-400 transition">Careers</a>
-                        <a href="#certifications" className="hover:text-teal-400 transition">Paid Certifications</a>
+                        <a href="/" className="hover:text-white transition">Main Platform</a>
+                        <a href="#positions" className="hover:text-white transition">Careers</a>
+                        <a href="#certifications" className="hover:text-white transition">Paid Certifications</a>
                     </div>
                 </div>
                 <FooterCompany />
